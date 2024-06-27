@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Main Post Title"
+date: 2024-06-27
+categories: main
+image: /assets/images/main-post-image.png
+links:
+  - name: "Subpost 1"
+    url: "/2024/06/27/subpost-1"
+  - name: "Subpost 2"
+    url: "/2024/06/27/subpost-2"
+  - name: "Subpost 3"
+    url: "/2024/06/27/subpost-3"
+  - name: "Subpost 4"
+    url: "/2024/06/27/subpost-4"
+  - name: "Subpost 5"
+    url: "/2024/06/27/subpost-5"
+  - name: "Subpost 6"
+    url: "/2024/06/27/subpost-6"
+  - name: "Subpost 7"
+    url: "/2024/06/27/subpost-7"
+---
+This is the main post content. Blah blah.
+
+Links to other subposts:
+{% for link in page.links %}
+- [{{ link.name }}]({{ link.url }})
+{% endfor %}
