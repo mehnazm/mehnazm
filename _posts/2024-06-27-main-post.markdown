@@ -6,7 +6,7 @@ categories: main
 image: /assets/images/main-post-image.png
 links:
   - name: "Subpost 1"
-    url: "/2024/06/27/subpost-1"
+    url: "/subposts/Post1Sub1"
   - name: "Subpost 2"
     url: "/2024/06/27/subpost-2"
   - name: "Subpost 3"
