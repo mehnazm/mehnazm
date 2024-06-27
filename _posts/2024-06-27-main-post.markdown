@@ -20,7 +20,24 @@ links:
   - name: "Subpost 7"
     url: "/2024/06/27/subpost-7"
 ---
-This is the main post content. Blah blah.
+My first post is essentially a planning document for a marketplace monetization experiment. My aim was to create a case study that can serve as a framework for myself when setting up experiments in the future. A reference that can remind me of key questions to ask, how to go about sizing scope, how to imagine plausible outcomes by creating simple models, and how to group and interpret metrics. 
+
+The write up is..long. In an effort to be comprehensive, I have traded in brevity. I would not impose a document of this length on any unfortunate stakeholders; rather something like this would serve as the source document from which I would offer them bite-sized chunks. Such a document would be free to access (depending on context specific restrictions!) for anyone curious to take a look, however.
+
+To make a long post digestible, even to myself, I am breaking it up into a series as follows:
+
+
+
+1. First I share the context of the experiment and do a simple sizing exercise to estimate the number of target users. [Does reducing fees increase revenue? Context and TAM](/subposts/Post1Sub1)
+2. Next I create a simple model to conceptualize the results of testing various allotments. [Does reducing fees increase revenue? A conceptual model](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-5a3?r=3vsrzd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+3. Then I examine the external impact of the test beyond the treatment group. This is followed by a look into the ASP and conversion combinations required to breakeven.  [Does reducing fees increase revenue? Externalities and breaking even ](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-dca?r=3vsrzd&utm_campaign=post&utm_medium=web)
+4. The impact of the test on marketplace dynamics over time is considered next. [Does reducing fees increase revenue? Dynamics over time](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-9d5?r=3vsrzd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+5. The testing approach, the ability to infer a result from others, the steps to be taken if the test fails are then discussed. [Does reducing fees increase revenue? Testing approach, inferring results, next steps if test fails ](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-0fb?r=3vsrzd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+6. The above is followed by a detailed discussion on metrics. [Does reducing fees increase revenue? Metrics](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-629?r=3vsrzd&utm_campaign=post&utm_medium=web) 
+7. And finally I end with the takeaway section. [Does reducing fees increase revenue? Takeaway](https://open.substack.com/pub/mehnazm/p/does-reducing-fees-increase-revenue-d54?r=3vsrzd&utm_campaign=post&utm_medium=web)
+
+The charts and the data behind them can all be found in [this Google sheets](https://docs.google.com/spreadsheets/d/1Iepg-qkXchzvtlwGRkfqKedoYjYhIrYqIr1l-UwbtY4/edit?usp=sharing). 
+
 
 Links to other subposts:
 {% for link in page.links %}
