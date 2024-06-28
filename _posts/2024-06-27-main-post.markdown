@@ -3,6 +3,22 @@ layout: post
 title: "A Marketplace Monetization Test Plan"
 date: 2024-06-27
 categories: main
+image: /assets/images/subpost5img2.png
+links:
+  - name: Link 1
+    url: https://example.com/link1
+  - name: Link 2
+    url: https://example.com/link2
+  - name: Link 3
+    url: https://example.com/link1
+  - name: Link 4
+    url: https://example.com/link2
+  - name: Link 5
+    url: https://example.com/link1
+  - name: Link 6
+    url: https://example.com/link2
+  - name: Link 7
+    url: https://example.com/link2    
 ---
 My first post is essentially a planning document for a marketplace monetization experiment. My aim was to create a case study that can serve as a framework for myself when setting up experiments in the future. A reference that can remind me of key questions to ask, how to go about sizing scope, how to imagine plausible outcomes by creating simple models, and how to group and interpret metrics. 
 

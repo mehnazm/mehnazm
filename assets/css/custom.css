@@ -1,0 +1,28 @@
+.post-summary {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.post-summary td {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.post-summary-image-cell {
+  width: 250px;
+}
+
+.post-summary-image {
+  max-width: 250px;
+  height: auto;
+}
+
+.post-summary-content-cell {
+  padding-left: 15px;
+}
+
+.publications-table img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
