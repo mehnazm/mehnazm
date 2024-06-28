@@ -5,14 +5,14 @@
 }
 
 .post-summary-image-cell {
-  width: 350px;
+  width: 250px;
   text-align: center;
   vertical-align: middle;
 }
 
 .post-summary-image {
   max-width: 100%;
-  max-height: 350px;
+  max-height: 250px;
   margin: 0 auto;
   display: block;
 }
@@ -30,5 +30,5 @@
 }
 
 .post-summary a {
-  font-size: 0.6em; /* Reduce font size of the links */
+  font-size: 0.7em; /* Reduce font size of the links */
 }
