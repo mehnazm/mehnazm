@@ -1,34 +1,36 @@
 .post-summary {
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
 .post-summary-image-cell {
-  width: 250px;
-  text-align: center;
-  vertical-align: middle;
+  flex: 0 0 30%; /* Adjust the percentage as needed */
+  max-width: 30%; /* Ensure the image cell does not exceed this width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-summary-content-cell {
+  flex: 1 1 70%; /* The content cell takes up the remaining space */
+  max-width: 70%;
 }
 
 .post-summary-image {
   max-width: 100%;
-  max-height: 250px;
-  margin: 0 auto;
-  display: block;
+  height: auto;
 }
 
-.post-summary-content-cell {
-  padding-left: 20px;
-}
+@media (max-width: 768px) {
+  .post-summary {
+    flex-direction: column;
+  }
 
-.post-summary h2 {
-  margin: 0 0 10px;
-}
-
-.post-summary p {
-  margin: 0 0 10px;
-}
-
-.post-summary a {
-  font-size: 0.7em; /* Reduce font size of the links */
+  .post-summary-image-cell,
+  .post-summary-content-cell {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
