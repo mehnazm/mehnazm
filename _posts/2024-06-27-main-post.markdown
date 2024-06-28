@@ -5,10 +5,22 @@ date: 2024-06-27
 categories: main 
 image: /assets/images/subpost5img2.png
 links:
-  - name: "Subpost 1"
+  - name: "1/7: Context and TAM"
     url: "/subposts/Post1Sub1"
-  - name: "Subpost 2"
+  - name: "2/7: A Conceptual Model"
     url: "/subposts/Post1Sub2"
+  - name: "3/7: Externalities and Breaking Even"
+    url: "/subposts/Post1Sub3"
+  - name: "4/7: Dynamics Over Time"
+    url: "/subposts/Post1Sub4"
+  - name: "5/7: Testing approach, inferring results, next steps if test fails"
+    url: "/subposts/Post1Sub5"
+  - name: "6/7: Metrics"
+    url: "/subposts/Post1Sub6"    
+  - name: "7/7: Takeaway"
+    url: "/subposts/Post1Sub7"
+  - name: "Google Sheets with data"
+    url: "https://docs.google.com/spreadsheets/d/1Iepg-qkXchzvtlwGRkfqKedoYjYhIrYqIr1l-UwbtY4/edit?gid=1678698739#gid=1678698739"        
 ---
 My first post is essentially a planning document for a marketplace monetization experiment. My aim was to create a case study that can serve as a framework for myself when setting up experiments in the future. A reference that can remind me of key questions to ask, how to go about sizing scope, how to imagine plausible outcomes by creating simple models, and how to group and interpret metrics. 
 
