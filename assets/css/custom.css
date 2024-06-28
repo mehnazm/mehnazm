@@ -8,8 +8,11 @@
 .post-summary-content-cell {
   display: table-cell;
   width: 50%; /* Each cell takes up 50% of the width */
-  text-align: center;
   vertical-align: middle;
+}
+
+.post-summary-image-cell {
+  text-align: center;
 }
 
 .post-summary-image {
@@ -20,6 +23,7 @@
 
 .post-summary-content-cell {
   padding-left: 20px;
+  text-align: left; /* Left-align the content */
 }
 
 .post-summary h2 {
