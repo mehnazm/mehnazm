@@ -4,15 +4,16 @@
   margin-bottom: 20px;
 }
 
-.post-summary-image-cell {
-  width: 250px;
+.post-summary-image-cell,
+.post-summary-content-cell {
+  display: table-cell;
+  width: 50%; /* Each cell takes up 50% of the width */
   text-align: center;
   vertical-align: middle;
 }
 
 .post-summary-image {
   max-width: 100%;
-  max-height: 250px;
   margin: 0 auto;
   display: block;
 }
@@ -31,23 +32,4 @@
 
 .post-summary a {
   font-size: 0.7em; /* Reduce font size of the links */
-}
-
-@media (max-width: 768px) {
-  .post-summary {
-    display: table;
-  }
-
-  .post-summary-image-cell,
-  .post-summary-content-cell {
-    display: table-cell;
-    width: 50%; /* Each cell takes up 50% of the width */
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .post-summary-content-cell {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
