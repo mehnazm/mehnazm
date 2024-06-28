@@ -31,9 +31,12 @@ url: "https://mehnazm.github.io" # the base hostname & protocol for your site, e
 theme: minima
 
 collections:
+  posts:
+    output: true
   subposts:
     output: true
     permalink: /subposts/:path/
+
 
 
 plugins:
