@@ -1,36 +1,50 @@
 .post-summary {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: table;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .post-summary-image-cell {
-  flex: 0 0 30%; /* Adjust the percentage as needed */
-  max-width: 30%; /* Ensure the image cell does not exceed this width */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.post-summary-content-cell {
-  flex: 1 1 70%; /* The content cell takes up the remaining space */
-  max-width: 70%;
+  width: 250px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .post-summary-image {
   max-width: 100%;
-  height: auto;
+  max-height: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+.post-summary-content-cell {
+  padding-left: 20px;
+}
+
+.post-summary h2 {
+  margin: 0 0 10px;
+}
+
+.post-summary p {
+  margin: 0 0 10px;
+}
+
+.post-summary a {
+  font-size: 0.7em; /* Reduce font size of the links */
 }
 
 @media (max-width: 768px) {
   .post-summary {
-    flex-direction: column;
+    display: block;
   }
 
   .post-summary-image-cell,
   .post-summary-content-cell {
-    flex: 1 1 100%;
-    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-summary-content-cell {
+    padding-left: 0;
   }
 }

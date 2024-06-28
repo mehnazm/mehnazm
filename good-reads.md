@@ -4,7 +4,6 @@ title: Good Reads
 permalink: /good-reads/
 ---
 
-# Good Reads 
 
 Here is a list of links to content that I found really interesting. I will continue to add more, both old and new, and organize them into categories, over time.
 
