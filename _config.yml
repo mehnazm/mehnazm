@@ -38,7 +38,6 @@ collections:
     permalink: /subposts/:path/
 
 
-
 plugins:
   - jekyll-feed
   - jekyll-paginate
