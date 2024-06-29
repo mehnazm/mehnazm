@@ -20,7 +20,7 @@
 
 title: Mehnaz Mannan
 description: >- # this means to ignore newlines until "baseurl:"
-  ""
+  "Exploring hypothesis and analysis"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mehnazm.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
