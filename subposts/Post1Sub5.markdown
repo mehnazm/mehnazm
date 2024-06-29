@@ -98,7 +98,7 @@ From this first set of tables we then find the percentage of test sellers who ar
 
 An illustrative example of the result is in the table below.
 
-![Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period](/assets/images/subpost5img4.png){: .half-size }
+![Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period](/assets/images/subpost5img4.png){: .half-size.center }
 
 **Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period**
 
