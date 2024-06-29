@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Does reducing fees increase revenue: Context and TAM [1/7]"
+title: "Does reducing fees increase revenue: Testing approach, inferring results, next steps if test fails [5/7]"
 date: 2024-06-27
 categories: subpost
 subpost: true
