@@ -61,6 +61,8 @@ Now that we have the upper limit of seller listings, we can conceptualize how se
 
 Let's consider setting the allotment level to 70 on top of the unlimited free listings model. This would mean that all the sellers to the left of the yellow bar in the table below would be able to list to their maximum capacity. But what about the sellers to the right of the yellow bar?
 
+![](/assets/images/subpost2img15.png )
+
 **Table 4: Depiction of the amount sellers may have to pay to list at their max capacity, in a 70 free allotment world**
 
 The green cells to the right of the yellow bar represent listing levels in the 70 allotment world, where sellers would incur the same amount in fees as they did in the 20 allotment world. The sellers in the bottom row for instance paid $15 to list 70 items in the 20 allotment world; they can now list 120 items for the same fee in the 70 allotment world.
@@ -72,6 +74,7 @@ In this illustrative model, most sellers to the right of the yellow bar would na
 
 Previously, we considered how much sellers **_can_** scale when all listings are free. Now, we question how much they **_will_** scale when some e.g. 70 listings are free. Will sellers to the right of the yellow bar refrain from scaling unless it's free, opting to spend less than their original budget? This scenario is depicted below, where sellers will only scale if the new allotment exceeds their listings in the 20 allotment world. 
 
+![](/assets/images/subpost2img16.png )
 **Table 5: Illustration of the conservative Scenario 3.1, where sellers opt to save instead of maintaining budget from 20 free allotment world to scale further**
 
 In the above table, sellers who listed 50 items in the 20 allotment world and could list up to 100 items for the same fee, choose to save money and only scale up to the free allotment of 70 listings.
@@ -83,6 +86,7 @@ In this scenario, there are a total of 461.5M listings and $0 in listing fees in
 
 Alternatively, we can imagine a scenario where sellers are less conservative with their listing budget and are willing to scale up to their original spend as in the 20 free allotment world. This is shown below.
 
+![](/assets/images/subpost2img17.png )
 **Table 6: Illustration of the less conservative Scenario 3.2, where sellers opt to maintain budget from 20 free allotment world to scale further**
 
 Here, sellers are content to keep their listing budget constant. If they can scale, they'll do so up to their budget from the 20 allotment world. For instance, sellers who listed 50 items previously and can now list up to 100 will continue to pay the same amount to list 100 items. Conversely, the 5% of sellers who would need to pay $21 to list 140 items will stick to their budget of $15 and list 120 items.
@@ -207,14 +211,14 @@ In the tables below we consider a more aggressive and less aggressive version of
 ![alt_text](/assets/images/subpost2img11.png )
 
 
-**Table 10: % of Basic Store sellers who downgrade under an aggressive assumption **
+**Table 10: % of Basic Store sellers who downgrade under an aggressive assumption**
 
 
 
 ![alt_text](/assets/images/subpost2img12.png )
 
 
-**Table 11: % of Basic Store sellers who downgrade under a less aggressive assumption **
+**Table 11: % of Basic Store sellers who downgrade under a less aggressive assumption**
 
 Using the above information and assumptions, we can plot the forgone fees chart as shown below. We see that the shape of the charts are the same in both scenarios i.e. forgone fees increase with increasing free allotment. Even for our less conservative scenario, the forgone fees may be quite significant.
 
