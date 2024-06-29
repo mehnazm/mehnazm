@@ -17,7 +17,7 @@ It is important to carefully choose metrics: too few metrics and we may lack cla
 One way to organize metrics might be to consider 1) success metrics 2) risk metrics 3) iteration metrics 4) mechanism metrics
 
 
-#### **Success metrics **
+#### **Success metrics**
 
 Success metrics would map directly to the goals of our test. In this case, the primary goal of the test is monetization, a secondary goal is improving inventory selection and a third goal is retention (by offering sellers something they have expressed interest in).
 
@@ -56,7 +56,7 @@ The iteration metrics are metrics that can help execute on next steps if the cur
 
 Finally we can take a look at the metrics which may offer insights into the factors and mechanisms that lead to success or risk metrics. Some caveats before delving into these metrics are a) These metrics may not _always_ neatly build up to the top level success and risk metrics we are interested in explaining. A marketplace being a complex, as opposed to a complicated system has components that influence each other, due to which the sum may be greater than the parts. A reductive view into constituent elements may not carry sufficient explanatory power b) It may only be possible to tell whether the direction or size of the movement of a metric is good or bad post hoc. In absence of prior data or a business philosophy that may provide a framework for interpretation, it may not be possible to tell in real time if we are trending in a good or bad direction. A later example will make this point clearer c) It must also be mentioned that often the mechanism metrics will _inform_ as opposed to enable us to take action. These will allow us to deepen our model of the marketplace and have data points to predict outcomes of future ideas. For instance let’s say the metrics tell us our tests did not generate incremental revenue because “search is broken” i.e. a massive influx of inventory made it difficult for users to find the right items. In this case, do we fix search in an attempt to get more incremental revenue or do we move on to a new monetization test? The metrics will not tell us which action is worth taking, but it will inform us of the state of the marketplace. 
 
-As mentioned before it generally is not a good idea to look at too many metrics but because in an **expensive**, **long running, near sitewide **test with many **unknowns **(such as what may trigger a negative flywheel) questions will inevitably come up and it is helpful to have the instrumentation, segmentation and data pipeline set up to easily be able to obtain these metrics. Even so, such low level metrics may be noisy and should be held to stricter statistical significance requirements e.g. p &lt; 0.01
+As mentioned before it generally is not a good idea to look at too many metrics but because in an **expensive**, **long running**, **near sitewide** test with many **unknowns** (such as what may trigger a negative flywheel) questions will inevitably come up and it is helpful to have the instrumentation, segmentation and data pipeline set up to easily be able to obtain these metrics. Even so, such low level metrics may be noisy and should be held to stricter statistical significance requirements e.g. p &lt; 0.01
 
 Now in context of this test, these lower level mechanism metrics would include:
 
