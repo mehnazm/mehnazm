@@ -13,7 +13,7 @@ Posts in the series: [Intro](https://mehnazm.github.io/main/2024/06/27/main-post
 
 ### **Section 6: What should be our testing approach?**
 
-Generally A/B tests or perhaps A/B/C/../n tests are carried out to validate ideas in our marketplace. However in case of an allotment change, a simple A/B test or A/B/C/../n test may be subject to **_network_** **_interference bias. _**
+Generally A/B tests or perhaps A/B/C/../n tests are carried out to validate ideas in our marketplace. However in case of an allotment change, a simple A/B test or A/B/C/../n test may be subject to **_network interference bias_**
 
 Basically what it means in this context is that if we had a test group with 30 allotments and a control group with 20 allotments, then the increase in listings from the test group would not just impact GMV for the test group but also that of the control group. In short, the GMV for the test and control groups are not independent. 
 
@@ -98,7 +98,7 @@ From this first set of tables we then find the percentage of test sellers who ar
 
 An illustrative example of the result is in the table below.
 
-![Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period](/assets/images/subpost5img4.png)
+![Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period](/assets/images/subpost5img4.png){: .half-size }
 
 **Table 12: Percentage of sellers who paid the same or more during the test period compared to the pre-test period**
 
