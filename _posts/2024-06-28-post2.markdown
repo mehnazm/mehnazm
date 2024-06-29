@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "A Marketplace Monetization Test Plan"
+title: "CTG, Mix Shift and Performance Effect"
 date: 2024-06-28
 categories: main 
-image: /assets/images/subpost5img2.png       
+image: /assets/images/post2/image5.png 
+excerpt: "In product and business, understanding drivers of growth is crucial for decision making. Two concepts that play a significant role in this analysis are contribution to growth (CTG) and mix shift. 
+
+Contribution to growth helps identify how much individual components contribute to overall growth. Mix shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components."      
 ---
 **The Tldr:**
 
