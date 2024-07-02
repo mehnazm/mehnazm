@@ -3,7 +3,7 @@ layout: post
 title: "CTG, Mix Shift and Performance Effect"
 date: 2024-06-28
 categories: main 
-image: /assets/images/post2/image5.png 
+image: /assets/images/post2/img3.png 
 excerpt: "In product and business, understanding drivers of growth is crucial for decision making. Two concepts that play a significant role in this analysis are contribution to growth (CTG) and mix shift. 
 
 Contribution to growth helps identify how much individual components contribute to overall growth. Mix shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components."      
@@ -29,12 +29,12 @@ Contribution to growth helps identify how much individual components contribute 
 
 Here’s a great explanation from Quora
 
-![](/assets/images/post2/image1.png)
+![](/assets/images/post2/img1.png)
 
 
 And here’s an interview question from Meta, where a Mix Shift lens would be applicable.
 
-![](/assets/images/post2/image2.png)
+![](/assets/images/post2/img2.png)
 
 
 To really concretize the above, let’s consider a hypothetical example.
@@ -43,7 +43,7 @@ Suppose we work at an ecommerce company and we see that new user Activation i.e.
 
 **Note: In this essay year-over-year for percentage values are expressed in absolute difference in the percentages i.e. in basis points.**
 
-![](/assets/images/post2/image3.png)
+![](/assets/images/post2/img3.png)
 
 **Table 1: Activation this year is 20 bps lower than last year**
 
@@ -55,7 +55,7 @@ A natural impulse may then be to find the Year-over-Year Activation changes for 
 
 
 
-![](/assets/images/post2/image4.png)
+![](/assets/images/post2/img4.png)
 
 
 
@@ -70,7 +70,7 @@ Instead, what we need to do is:
 
 
 
-![](/assets/images/post2/image5.png)
+![](/assets/images/post2/img5.png)
 
 
 
@@ -86,14 +86,14 @@ This easiest way to grasp this method is by following the below equation:
 
 
 
-![](/assets/images/post2/image6.png)
+![](/assets/images/post2/img6.png)
 
 
 Using this year’s numbers for illustration, we get:
 
 
 
-![](/assets/images/post2/image7.png)
+![](/assets/images/post2/img7.png)
 
 
 
@@ -101,7 +101,7 @@ A tabular representation of the above, with the circles indicating the inputs an
 
 
 
-![](/assets/images/post2/image8.png)
+![](/assets/images/post2/img8.png)
 
 
 
@@ -114,7 +114,7 @@ The second method is actually an extension of the first method. This might beg t
 To understand the second method, we start with the formula for the first method and introduce a new variable to reformat the equation. This will become clear through the derivation below:
 
 
-![](/assets/images/post2/image9.png)
+![](/assets/images/post2/img9.png)
 
 
 
@@ -123,10 +123,7 @@ This second method shows us that the overall activation rate can be expressed as
 A tabular representation of the above, where the arrows show the inputs to the Desktop traffic share (i.e. weight) calculation; and the circles show the inputs to the Contribution to Activation Rate calculation is shared below.
 
 
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img10.png)
 
 **Table 5: Desktop contribution to overall rate = Desktop rate * Desktop traffic share; where Desktop traffic share = Desktop visitors / Overall visitors**
 
@@ -134,13 +131,8 @@ A tabular representation of the above, where the arrows show the inputs to the D
 
 We have gone through the steps for calculating Contribution to Growth before, but let us now succinctly illustrate it with a formula as well. Note that components of the equation are color coded to make them easier to track as they are reformatted and repositioned.
 
-      
 
-
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img11.png)
 
 Since the tabular view for this calculation has already been shared at the beginning, we will move on to looking at what the Mix Shift analysis entails.
 
@@ -159,20 +151,13 @@ The above breakout would be useful to know, as that would help us decide how muc
 Now the mix shift formula looks to isolate how much of the contribution to growth is due to changes in traffic share or mix. Quite simply it considers if the component performance remained constant at baseline levels (at a prior year for instance) but experienced a traffic share change, how would its contribution to growth change. The tabular representation for this, using the Desktop platform as an example is shown below.
 
 
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img12.png)
 
 **Table 6: Illustrating the Traffic/Mix effect using Desktop platform’s numbers**
 
 The formula that corresponds to the above depiction is:
 
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img13.png)
 
 Having looked at the traffic/mix effect, we need to acknowledge that the Traffic/Mix Effect may not account entirely for the Component Contribution to Overall Growth. 
 
@@ -181,18 +166,12 @@ To elaborate – in Table 3, we have seen that Desktop Contribution to Growth wa
 The breakout of the Component Contribution to Growth formula into Performance/Rate Effect and Traffic/Mix Effect is derived below.
 
 
-
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img14.png)
 
 Following is a tabular representation of the above formula. The orange circles denote the input and output to Traffic/Mix effect, while the blue circles denote the input and output to Performance/Rate effect:
 
 
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img15.png)
 
 **Table 7: An example showing the rate effect and mix effect, the sum of which equals the component’s contribution to overall growth**
 
@@ -203,71 +182,45 @@ So far, we have examined CTG and Mix Shift using a single dimension: Device Type
 The tables below illustrate that the approach to CTG calculations remains the same for any additional dimension. For instance, the Direct Contribution calculation, indicated by the purple circles, follows the same pattern as the Desktop Contribution, indicated by the blue circles. Of course, the CTG breakdown across each new dimension is different as can also be seen below.
 
 
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img16.png)
 
 **Table 8: An example showing that the total CTG across segments of different dimensions remains consistent**
 
 Even the intersection of the two dimensions, as shown in the table below, follows the same CTG calculation pattern, indicated by the orange circles. Moreover, the sum of the granular CTG adds up to the higher-level CTG, as indicated by the arrows.
 
 
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img17.png)
 
 **Table 9: An example showing that the rollup of granular CTG is the same as the independently calculated aggregate CTG from Table 8**
 
 That Desktop Growth can be broken down into Direct, Desktop Growth and Paid, Desktop Growth is shown algebraically below. The colored boxes around terms are to help track them as they are moved and reformatted.
 
-
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img18.png)
 
 We now turn our attention to the Rate Effect and Mix Effect calculations for additional dimensions. The blue and purple boxes in the tables below show that CTG = Rate Effect + Mix Effect for each dimension, as expected. However as shown by the red boxes, the Rate Effect and Mix Effect calculated across different dimensions do not match against each other. 
 
 In other words, while we can comment on overall growth changing by -20 bps and we can see the split of this 20 bps of change across the different dimensions, we cannot however comment on how much of the change in growth was due to rate effect or mix effect _independent_ of dimensions. The total rate effect and mix effect is a function of the dimension under consideration.
 
 
-
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img19.png)
 
 **Table 10: Illustration that while CTG calculated by different approaches remains consistent, total Rate Effect and Mix Effect depends on the dimension for which it is calculated**
 
 Moreover, as can be seen from the tables below, the addition of the granular Rate Effect and Mix Effect does not necessarily roll up to independently calculated aggregate Rate Effect and Mix Effect for a dimension. This can be seen as in the case of the red box highlighting the Desktop Rate Effect and Mix Effect below.
 
-
-
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![](/assets/images/post2/img20.png)
 
 **Table 11: Illustration that the granular Rate Effect or Mix Effect may not roll up to the independently calculated aggregate Rate Effect or Mix Effect**
 
 In fact it can be shown algebraically the Desktop Performance effect does not break down into the sum of Direct Desktop Performance effect and Paid Desktop Performance effect. This is due to the presence of interaction terms that is highlighted in the derivation below.
 
+![](/assets/images/post2/img21.png)
 
 
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post2/img22.png)
 
 
-
-
-
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post2/img23.png)
 
 
 A similar exercise to the above can be used to also illustrate that Desktop Mix effect does not break down into the sum of Direct Desktop Mix effect and Paid Desktop Mix effect, again due to the presence of interaction terms.
