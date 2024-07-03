@@ -122,7 +122,7 @@ This second method shows us that the overall activation rate can be expressed as
 A tabular representation of the above, where the arrows show the inputs to the Desktop traffic share (i.e. weight) calculation; and the circles show the inputs to the Contribution to Activation Rate calculation is shared below.
 
 
-![](/assets/images/post2/img10.jpg)
+![](/assets/images/post2/img10.jpg){: .half-size.center }
 
 **Table 5: Desktop contribution to overall rate = Desktop rate * Desktop traffic share; where Desktop traffic share = Desktop visitors / Overall visitors**
 
