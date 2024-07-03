@@ -29,12 +29,12 @@ Contribution to growth helps identify how much individual components contribute 
 
 Here’s a great explanation from Quora
 
-![](/assets/images/post2/img1.png)
+![](/assets/images/post2/img1.png){: .half-size.center }
 
 
 And here’s an interview question from Meta, where a Mix Shift lens would be applicable.
 
-![](/assets/images/post2/img2.png)
+![](/assets/images/post2/img2.png){: .half-size.center }
 
 
 To really concretize the above, let’s consider a hypothetical example.
@@ -43,7 +43,7 @@ Suppose we work at an ecommerce company and we see that new user Activation i.e.
 
 **Note: In this essay year-over-year for percentage values are expressed in absolute difference in the percentages i.e. in basis points.**
 
-![](/assets/images/post2/img3.png)
+![](/assets/images/post2/img3.png){: .half-size.center }
 
 **Table 1: Activation this year is 20 bps lower than last year**
 
