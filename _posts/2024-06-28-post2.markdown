@@ -55,7 +55,7 @@ A natural impulse may then be to find the Year-over-Year Activation changes for 
 
 
 
-![](/assets/images/post2/img4.png)
+![](/assets/images/post2/img4.png){: .half-size.center }
 
 
 
@@ -70,7 +70,7 @@ Instead, what we need to do is:
 
 
 
-![](/assets/images/post2/img5.png)
+![](/assets/images/post2/img5.png){: .half-size.center }
 
 
 
@@ -86,7 +86,7 @@ This easiest way to grasp this method is by following the below equation:
 
 
 
-![](/assets/images/post2/img6.png)
+![](/assets/images/post2/img6.png){: .half-size.center }
 
 
 Using this year’s numbers for illustration, we get:
@@ -195,7 +195,7 @@ Even the intersection of the two dimensions, as shown in the table below, follow
 
 That Desktop Growth can be broken down into Direct, Desktop Growth and Paid, Desktop Growth is shown algebraically below. The colored boxes around terms are to help track them as they are moved and reformatted.
 
-![](/assets/images/post2/img18.png)
+![](/assets/images/post2/img18.png){: .half-size.center }
 
 We now turn our attention to the Rate Effect and Mix Effect calculations for additional dimensions. The blue and purple boxes in the tables below show that CTG = Rate Effect + Mix Effect for each dimension, as expected. However as shown by the red boxes, the Rate Effect and Mix Effect calculated across different dimensions do not match against each other. 
 
