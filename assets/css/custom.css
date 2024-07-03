@@ -56,3 +56,24 @@
   padding: 5px; /* Add padding inside the border */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual effect */
 }
+
+.upcoming-posts {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.upcoming-posts h2 {
+  margin-top: 0;
+}
+
+.upcoming-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.upcoming-posts li {
+  margin-bottom: 5px;
+}
