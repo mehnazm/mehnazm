@@ -55,7 +55,7 @@ A natural impulse may then be to find the Year-over-Year Activation changes for 
 
 
 
-![](/assets/images/post2/img4.jpg){: .half-size.center }
+![](/assets/images/post2/img4.jpg)
 
 
 
@@ -70,8 +70,7 @@ Instead, what we need to do is:
 
 
 
-![](/assets/images/post2/img5.jpg){: .half-size.center }
-
+![](/assets/images/post2/img5.jpg)
 
 
 **Table 3: Illustrating that Year-over-Year component contribution to overall rate changes is equal to component contribution to overall growth**
@@ -93,7 +92,7 @@ Using this year’s numbers for illustration, we get:
 
 
 
-![](/assets/images/post2/img7.png)
+![](/assets/images/post2/img7.png){: .half-size.center }
 
 
 
@@ -101,7 +100,7 @@ A tabular representation of the above, with the circles indicating the inputs an
 
 
 
-![](/assets/images/post2/img8.png)
+![](/assets/images/post2/img8.png){: .half-size.center }
 
 
 
@@ -220,7 +219,7 @@ In fact it can be shown algebraically the Desktop Performance effect does not br
 ![](/assets/images/post2/img22.png)
 
 
-![](/assets/images/post2/img23.png){: .half-size.center }
+![](/assets/images/post2/img23.png){: .half-size}
 
 
 A similar exercise to the above can be used to also illustrate that Desktop Mix effect does not break down into the sum of Direct Desktop Mix effect and Paid Desktop Mix effect, again due to the presence of interaction terms.
