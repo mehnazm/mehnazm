@@ -55,7 +55,7 @@ A natural impulse may then be to find the Year-over-Year Activation changes for 
 
 
 
-![](/assets/images/post2/img4.png){: .half-size.center }
+![](/assets/images/post2/img4.jpg){: .half-size.center }
 
 
 
@@ -70,7 +70,7 @@ Instead, what we need to do is:
 
 
 
-![](/assets/images/post2/img5.png){: .half-size.center }
+![](/assets/images/post2/img5.jpg){: .half-size.center }
 
 
 
@@ -123,7 +123,7 @@ This second method shows us that the overall activation rate can be expressed as
 A tabular representation of the above, where the arrows show the inputs to the Desktop traffic share (i.e. weight) calculation; and the circles show the inputs to the Contribution to Activation Rate calculation is shared below.
 
 
-![](/assets/images/post2/img10.png)
+![](/assets/images/post2/img10.jpg)
 
 **Table 5: Desktop contribution to overall rate = Desktop rate * Desktop traffic share; where Desktop traffic share = Desktop visitors / Overall visitors**
 
@@ -151,7 +151,7 @@ The above breakout would be useful to know, as that would help us decide how muc
 Now the mix shift formula looks to isolate how much of the contribution to growth is due to changes in traffic share or mix. Quite simply it considers if the component performance remained constant at baseline levels (at a prior year for instance) but experienced a traffic share change, how would its contribution to growth change. The tabular representation for this, using the Desktop platform as an example is shown below.
 
 
-![](/assets/images/post2/img12.png)
+![](/assets/images/post2/img12.jpg)
 
 **Table 6: Illustrating the Traffic/Mix effect using Desktop platform’s numbers**
 
