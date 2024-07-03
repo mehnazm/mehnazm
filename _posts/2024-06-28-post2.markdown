@@ -29,12 +29,12 @@ Contribution to growth helps identify how much individual components contribute 
 
 Here’s a great explanation from Quora
 
-![](/assets/images/post2/img1.png){: .half-size.center }
+![](/assets/images/post2/img1.png)
 
 
 And here’s an interview question from Meta, where a Mix Shift lens would be applicable.
 
-![](/assets/images/post2/img2.png){: .half-size.center }
+![](/assets/images/post2/img2.png)
 
 
 To really concretize the above, let’s consider a hypothetical example.
@@ -220,7 +220,7 @@ In fact it can be shown algebraically the Desktop Performance effect does not br
 ![](/assets/images/post2/img22.png)
 
 
-![](/assets/images/post2/img23.png)
+![](/assets/images/post2/img23.png){: .half-size.center }
 
 
 A similar exercise to the above can be used to also illustrate that Desktop Mix effect does not break down into the sum of Direct Desktop Mix effect and Paid Desktop Mix effect, again due to the presence of interaction terms.
