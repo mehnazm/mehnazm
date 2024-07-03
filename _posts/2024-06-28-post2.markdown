@@ -3,7 +3,9 @@ layout: post
 title: "CTG, Mix Shift and Performance Effect"
 date: 2024-06-28
 categories: main 
-image: /assets/images/post2/img3.png     
+image: /assets/images/post2/img3.png 
+excerpt: "Contribution to growth (CTG), Mix Shift and Rate Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.CTG can be broken down to Mix Shift + Rate Effect.Granular CTG adds up to independently calculated aggregate CTG. 
+"      
 ---
 **The Tldr:**
 
