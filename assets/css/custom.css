@@ -63,6 +63,7 @@
   margin-bottom: 20px;
   background-color: #f9f9f9;
   border-radius: 5px; /* Optional: Adds rounded corners */
+  text-align: left; /* Left-align the text */
 }
 
 .upcoming-posts h2 {
@@ -76,4 +77,10 @@
 
 .upcoming-posts li {
   margin-bottom: 5px;
+}
+
+.published-posts-heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
 }
