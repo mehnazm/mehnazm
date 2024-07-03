@@ -29,12 +29,12 @@ Contribution to growth helps identify how much individual components contribute 
 
 Here’s a great explanation from Quora
 
-![](/assets/images/post2/img1.png)
+![](/assets/images/post2/img1.png){:.border}
 
 
 And here’s an interview question from Meta, where a Mix Shift lens would be applicable.
 
-![](/assets/images/post2/img2.png)
+![](/assets/images/post2/img2.png){:.border}
 
 
 To really concretize the above, let’s consider a hypothetical example.
