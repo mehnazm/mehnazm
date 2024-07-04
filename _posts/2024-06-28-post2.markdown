@@ -136,17 +136,17 @@ Since the tabular view for this calculation has already been shared at the begin
 
 **Mix shift**
 
-Before diving into the Mix shift formula, let us quickly recap what we have examined so far, as that will set the context for why looking into mix shift is interesting. 
+Before diving into the Mix shift formula, let us quickly recap what we have examined so far, as that will set the context for why looking into Mix Shift is interesting. 
 
 We have seen between this year and last year there has been a 20 bps drop in overall activation rate. We have also seen that the entirety of this drop is attributable to the Desktop platform. 
 
-In the section Contribution to Rate: Method 2, we have seen that: Component Contribution to Overall Rate = Component Traffic Share x Component Rate. And per Contribution to Growth Formula section, this implies that **Component Contribution to Growth can be driven by Component Traffic Share changes and/or Component Rate changes**.
+In the section Contribution to Rate: Method 2, we have seen that: Component Contribution to Overall Rate = Component Traffic Share x Component Rate. And per Contribution to Growth Formula section, this implies that **Component Contribution to Growth can be driven by Component Traffic Share (Mix) changes and/or Component Rate (Performance) changes**.
 
-Given the above, the question now becomes, has Desktop’s contribution to the overall drop been due to Desktop activation rate getting worse? Or has it been due to more visitors accessing Mobile this year relative to Desktop? It may also be due to both-in which case, we would want to know how much performance vs. traffic change contributed to Desktop’s contribution change. 
+Given the above, the question now becomes, has Desktop’s contribution to the overall drop been due to Desktop Activation Rate getting worse? Or has it been due to more visitors accessing Mobile this year relative to Desktop? It may also be due to both-in which case, we would want to know how much Performance vs. Traffic change contributed to Desktop’s contribution change. 
 
-The above breakout would be useful to know, as that would help us decide how much to invest in the solution for each problem.
+The above breakout would be useful to know, as that would help us decide where and how much to invest in the solution for each problem.
 
-Now the mix shift formula looks to isolate how much of the contribution to growth is due to changes in traffic share or mix. Quite simply it considers if the component performance remained constant at baseline levels (at a prior year for instance) but experienced a traffic share change, how would its contribution to growth change. The tabular representation for this, using the Desktop platform as an example is shown below.
+Now the Mix Shift formula looks to isolate how much of the Contribution to Growth is due to changes in Traffic Share or Mix. Quite simply it considers if the component performance remained constant at baseline levels (at a prior year for instance) but experienced a Traffic Share change, how would its Contribution to Growth change. The tabular representation for this, using the Desktop platform as an example is shown below.
 
 
 ![](/assets/images/post2/img12.jpg)
@@ -157,7 +157,7 @@ The formula that corresponds to the above depiction is:
 
 ![](/assets/images/post2/img13.png)
 
-Having looked at the traffic/mix effect, we need to acknowledge that the Traffic/Mix Effect may not account entirely for the Component Contribution to Overall Growth. 
+Having looked at the Traffic/Mix effect, we need to acknowledge that it may not account entirely for the Component Contribution to Overall Growth. 
 
 To elaborate – in Table 3, we have seen that Desktop Contribution to Growth was -0.20 bps, while in Table 6 we have seen that Traffic/Mix effect accounts for -0.12 bps. The -0.08 bps of difference between Desktop Contribution to Growth and its Traffic/Mix effect is due to Component Rate/Performance changes i.e. Desktop Activation Rate changes. 
 
@@ -195,7 +195,7 @@ That Desktop Growth can be broken down into Direct, Desktop Growth and Paid, Des
 
 ![](/assets/images/post2/img18.png){: .half-size.center }
 
-We now turn our attention to the Rate Effect and Mix Effect calculations for additional dimensions. The blue and purple boxes in the tables below show that CTG = Rate Effect + Mix Effect for each dimension, as expected. However as shown by the red boxes, the Rate Effect and Mix Effect calculated across different dimensions do not match against each other. 
+We now turn our attention to the Performance Effect and Mix Effect calculations for additional dimensions. The blue and purple boxes in the tables below show that CTG = Performance Effect + Mix Effect for each dimension, as expected. However as shown by the red boxes, the Performance Effect and Mix Effect calculated across different dimensions do not match against each other. 
 
 In other words, while we can comment on overall growth changing by -20 bps and we can see the split of this 20 bps of change across the different dimensions, we cannot however comment on how much of the change in growth was due to rate effect or mix effect _independent_ of dimensions. The total rate effect and mix effect is a function of the dimension under consideration.
 
@@ -204,7 +204,7 @@ In other words, while we can comment on overall growth changing by -20 bps and w
 
 **Table 10: Illustration that while CTG calculated by different approaches remains consistent, total Rate Effect and Mix Effect depends on the dimension for which it is calculated**{: .image-title}
 
-Moreover, as can be seen from the tables below, the addition of the granular Rate Effect and Mix Effect does not necessarily roll up to independently calculated aggregate Rate Effect and Mix Effect for a dimension. This can be seen as in the case of the red box highlighting the Desktop Rate Effect and Mix Effect below.
+Moreover, as can be seen from the tables below, the addition of the granular Rate Effect and Mix Effect does not necessarily roll up to independently calculated aggregate Rate Effect and Mix Effect for a dimension. This can be seen as in the case of the red box highlighting the Desktop Performance Effect and Mix Effect below.
 
 ![](/assets/images/post2/img20.png)
 
