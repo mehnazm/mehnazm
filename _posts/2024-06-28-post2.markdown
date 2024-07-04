@@ -123,7 +123,7 @@ A tabular representation of the above, where the arrows show the inputs to the D
 
 ![](/assets/images/post2/img10.jpg){: .half-size.center }
 
-**Table 5: Desktop contribution to overall rate = Desktop rate * Desktop traffic share; where Desktop traffic share = Desktop visitors / Overall visitors**
+**Table 5: Desktop contribution to overall rate = Desktop rate * Desktop traffic share; where Desktop traffic share = Desktop visitors / Overall visitors**{: .image-title}
 
 **Contribution to Growth Formula**
 
@@ -151,7 +151,7 @@ Now the mix shift formula looks to isolate how much of the contribution to growt
 
 ![](/assets/images/post2/img12.jpg)
 
-**Table 6: Illustrating the Traffic/Mix effect using Desktop platform’s numbers**
+**Table 6: Illustrating the Traffic/Mix effect using Desktop platform’s numbers**{: .image-title}
 
 The formula that corresponds to the above depiction is:
 
@@ -171,7 +171,7 @@ Following is a tabular representation of the above formula. The orange circles d
 
 ![](/assets/images/post2/img15.png)
 
-**Table 7: An example showing the rate effect and mix effect, the sum of which equals the component’s contribution to overall growth**
+**Table 7: An example showing the rate effect and mix effect, the sum of which equals the component’s contribution to overall growth**{: .image-title}
 
 **CTG and Mix Shift across multiple dimensions:**
 
@@ -182,14 +182,14 @@ The tables below illustrate that the approach to CTG calculations remains the sa
 
 ![](/assets/images/post2/img16.png)
 
-**Table 8: An example showing that the total CTG across segments of different dimensions remains consistent**
+**Table 8: An example showing that the total CTG across segments of different dimensions remains consistent**{: .image-title}
 
 Even the intersection of the two dimensions, as shown in the table below, follows the same CTG calculation pattern, indicated by the orange circles. Moreover, the sum of the granular CTG adds up to the higher-level CTG, as indicated by the arrows.
 
 
 ![](/assets/images/post2/img17.png)
 
-**Table 9: An example showing that the rollup of granular CTG is the same as the independently calculated aggregate CTG from Table 8**
+**Table 9: An example showing that the rollup of granular CTG is the same as the independently calculated aggregate CTG from Table 8**{: .image-title}
 
 That Desktop Growth can be broken down into Direct, Desktop Growth and Paid, Desktop Growth is shown algebraically below. The colored boxes around terms are to help track them as they are moved and reformatted.
 
@@ -202,13 +202,13 @@ In other words, while we can comment on overall growth changing by -20 bps and w
 
 ![](/assets/images/post2/img19.png)
 
-**Table 10: Illustration that while CTG calculated by different approaches remains consistent, total Rate Effect and Mix Effect depends on the dimension for which it is calculated**
+**Table 10: Illustration that while CTG calculated by different approaches remains consistent, total Rate Effect and Mix Effect depends on the dimension for which it is calculated**{: .image-title}
 
 Moreover, as can be seen from the tables below, the addition of the granular Rate Effect and Mix Effect does not necessarily roll up to independently calculated aggregate Rate Effect and Mix Effect for a dimension. This can be seen as in the case of the red box highlighting the Desktop Rate Effect and Mix Effect below.
 
 ![](/assets/images/post2/img20.png)
 
-**Table 11: Illustration that the granular Rate Effect or Mix Effect may not roll up to the independently calculated aggregate Rate Effect or Mix Effect**
+**Table 11: Illustration that the granular Rate Effect or Mix Effect may not roll up to the independently calculated aggregate Rate Effect or Mix Effect**{: .image-title}
 
 In fact it can be shown algebraically the Desktop Performance effect does not break down into the sum of Direct Desktop Performance effect and Paid Desktop Performance effect. This is due to the presence of interaction terms that is highlighted in the derivation below.
 
