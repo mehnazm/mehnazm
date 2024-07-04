@@ -24,7 +24,7 @@ Templates and examples for calculating CTG, Mix Shift and Performance Effect are
 
 In product and business, understanding drivers of growth is crucial for decision making. Concepts that play a significant role in this analysis are contribution to growth (CTG), Mix Shift and Performance Effect.
 
-Contribution to growth helps identify how much individual components contribute to overall growth. Mix Shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components. Performance Effect is simple the part of the component's CTG that was due to its _own_ performance and not due to change in its relative size amongst components - in other words, Peformance Effect = CTG - Mix Shift
+Contribution to growth helps identify how much individual components contribute to overall growth. Mix Shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components. Performance Effect is simply the part of the component's CTG that was due to its _own_ performance and not due to change in its relative size amongst components - in other words, Peformance Effect = CTG - Mix Shift
 
 Here’s a great explanation from Quora
 
@@ -44,7 +44,7 @@ Suppose we work at an ecommerce company and we see that new user Activation i.e.
 
 ![](/assets/images/post2/img3.png){: .half-size.center }
 
-**Table 1: Activation this year is 20 bps lower than last year** {:.image-title}
+**Table 1: Activation this year is 20 bps lower than last year**{: .image-title}
 
 Users access the business through either the Desktop or Mobile website. We are therefore interested in knowing the contribution of each platform to the 20 bps drop.
 
