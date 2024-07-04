@@ -4,27 +4,27 @@ title: "CTG, Mix Shift and Performance Effect"
 date: 2024-06-28
 categories: main 
 image: /assets/images/post2/img3.png 
-excerpt: "Contribution to growth (CTG), Mix Shift and Rate Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.CTG can be broken down to Mix Shift + Rate Effect.Granular CTG adds up to independently calculated aggregate CTG. 
+excerpt: "Contribution to growth (CTG), Mix Shift and Performance Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.CTG can be broken down to Mix Shift + Performance Effect.Granular CTG adds up to independently calculated aggregate CTG. 
 "      
 ---
 **The Tldr:**
 
-Contribution to growth (CTG), Mix Shift and Rate Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.
+Contribution to growth (CTG), Mix Shift and Performance Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.
 
-CTG can be broken down to Mix Shift + Rate Effect
+CTG can be broken down to Mix Shift + Performance Effect
 
 Granular CTG adds up to independently calculated aggregate CTG. 
 
-Granular Mix Shift or Rate Effect does not however add up to independently calculated aggregate Mix Shift or Rate Effect. This is due to the presence of interaction terms. 
+Granular Mix Shift or Performance Effect does not however add up to independently calculated aggregate Mix Shift or Performance Effect. This is due to the presence of interaction terms. 
 
-Templates and examples for calculating CTG, Mix Shift and Rate Effect are [in this spreadsheet](https://docs.google.com/spreadsheets/d/1JAfmIyM-XRQn6iOBAYegIy9ibr70gEvQdY8jb34AiuQ/edit?usp=sharing). For details on relevant formulas, applications and their derivations, read on below.
+Templates and examples for calculating CTG, Mix Shift and Performance Effect are [in this spreadsheet](https://docs.google.com/spreadsheets/d/1JAfmIyM-XRQn6iOBAYegIy9ibr70gEvQdY8jb34AiuQ/edit?usp=sharing). For details on relevant formulas, applications and their derivations, read on below.
 
 
 ---
 
-In product and business, understanding drivers of growth is crucial for decision making. Two concepts that play a significant role in this analysis are contribution to growth (CTG) and mix shift. 
+In product and business, understanding drivers of growth is crucial for decision making. Concepts that play a significant role in this analysis are contribution to growth (CTG), Mix Shift and Performance Effect.
 
-Contribution to growth helps identify how much individual components contribute to overall growth. Mix shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components.
+Contribution to growth helps identify how much individual components contribute to overall growth. Mix Shift digs further into the individual elements to delineate how much of its contribution comes from changes in its own performance vs. changes in its relative size amongst the components. Performance Effect is simple the part of the component's CTG that was due to its _own_ performance and not due to change in its relative size amongst components - in other words, Peformance Effect = CTG - Mix Shift
 
 Here’s a great explanation from Quora
 
@@ -44,7 +44,7 @@ Suppose we work at an ecommerce company and we see that new user Activation i.e.
 
 ![](/assets/images/post2/img3.png){: .half-size.center }
 
-**Table 1: Activation this year is 20 bps lower than last year**
+**Table 1: Activation this year is 20 bps lower than last year** {:.image-title}
 
 Users access the business through either the Desktop or Mobile website. We are therefore interested in knowing the contribution of each platform to the 20 bps drop.
 
@@ -74,7 +74,7 @@ Instead, what we need to do is:
 
 **Table 3: Illustrating that Year-over-Year component contribution to overall rate changes is equal to component contribution to overall growth**
 
-So in contrast to the incorrect approach where the _actual _activation was used, the right calculation requires using the within year _contribution _to activation. Using this calculation we find that in our example, 19 of the 20 bps drop is attributable to Desktop. 
+So in contrast to the incorrect approach where the _actual_ activation was used, the right calculation requires using the within year _contribution_ to activation. Using this calculation we find that in our example, 19 of the 20 bps drop is attributable to Desktop. 
 
 Now the question becomes - how do we find the within year contribution to activation? There are a few methods for doing so, two of which are illustrated below.
 
