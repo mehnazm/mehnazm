@@ -85,7 +85,9 @@
   font-size: 1.5em;
 }
 
-.image-title {
+p strong.image-title {
+  display: block;
   text-align: center;
+  width: 100%;
   margin-top: 10px;
 }
