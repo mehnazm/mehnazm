@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Good Posts
-permalink: /Good Posts/
+permalink: /good-posts/
 ---
 
 
