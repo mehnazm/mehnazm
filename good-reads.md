@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Good Reads
-permalink: /good-reads/
+title: Good Posts
+permalink: /Good Posts/
 ---
 
 
-Here is a list of links to content that I found really interesting. I will continue to add more, both old and new, and organize them into categories, over time (will limit it to under 100 links to maintain a level of restriction to what was most meaningful)
+Here is a list of links to insights that I found really interesting. I will continue to add more, both old and new, and organize them into categories, over time (will limit it to under 100 links to maintain a level of restriction to what was most meaningful)
 
 1. [Are RCTs a good way to do economics](https://someunpleasant.substack.com/p/real-chaos-today?utm_source=post-email-title&publication_id=261003&post_id=59956889&utm_campaign=email-post-title&isFreemail=true&r=9hzj0&triedRedirect=true&utm_medium=email) - I found this interesting because the concerns it articulates around RCTs parallel the ones I have with A/B testing.
 
-2. [Complexity Convection](https://every.to/divinations/complexity-convection-765851) - This article stayed with me for its insights on the value of keeping products and businesses simple and the pressures and incentives that work against it.
+2. [Developing a growth model + marketplace growth strategy](https://www.youtube.com/watch?v=AlTQ6O2qooI) - Some takeaways from this: 1)Retention is likely the most important growth metric 2)Retention is the hardest to move but core product levers such as depth of supply, interaction with supply matters more than growth levers like notificaitons 3)Early lifecycle experience is a good indicator of future retention (and so early intervention is more effective than when customers are about to churn). On a separate note, a common analytical failure mode: "Our best users do x, why can't we make others do the same". This generally does not work-the others have different intent/context. The goal would be to figure out where the value for "the others" lie. Regarding marketplace expansion, might make more sense to after adjacent/easier/network effect accentuating space compared to higher TAM. Also, product i.e. incredible E2E experience (atomic networks?) matters more than GTM investments in liquidity (@45:30). 
+
 
 3. [Disrupting Disruption](https://every.to/divinations/disrupting-disruption-734208) - A thought provoking challenge to Clayton Christensen's Disruption Theory. I liked the use of concrete examples such as Uber, iPhone, Costco, Walmart, Southwest Airlines.
 
@@ -21,4 +22,4 @@ Here is a list of links to content that I found really interesting. I will conti
 
 7. [Don’t Become a Victim of One Key Metric](https://caseyaccidental.com/one-key-metric-victim) -  An example here reminded me of the Munger quote, 'Show me the incentive and I'll show you the outcome.' Grubhub and Seamless had similar businesses with very different key metrics. Grubhub optimized for revenue, while Seamless optimized for GMV. Consequently, Seamless would show restaurants in alphabetical order in their search results, while Grubhub sorted restaurants by the average commission they earned from orders. Another example discussed how Pinterest's metric ended up incentivizing the algorithm to show clickbait images, with the comment, 'The metrics make it appear that engagement is increasing. It might be, but it is an empty calorie form that will affect engagement in a very negative way over the long term.' This made me reflect on how I try to stay away from Instagram after consuming enough 'empty calories' there, leading to a step function change in my usage after a period of high activity.
 
-
+8. [Complexity Convection](https://every.to/divinations/complexity-convection-765851) - This article stayed with me for its insights on the value of keeping products and businesses simple and the pressures and incentives that work against it.
