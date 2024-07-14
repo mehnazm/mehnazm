@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My Notes on some Good Posts
+title: My Notes on Some Good Posts
 permalink: /notes-on-good-posts/
 ---
 
