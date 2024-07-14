@@ -1,7 +1,7 @@
 ---
 layout: page
 title: My Notes on some Good Posts
-permalink: /notes-on-good-posts/
+permalink: /note-on-good-posts/
 ---
 
 
