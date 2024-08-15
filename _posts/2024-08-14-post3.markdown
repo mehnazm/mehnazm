@@ -3,9 +3,9 @@ layout: post
 title: "My Synthesis of Analytics"
 date: 2024-08-11
 categories: main 
-image: /assets/images/post2/img3.png 
-excerpt: "Contribution to growth (CTG), Mix Shift and Performance Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.CTG can be broken down to Mix Shift + Performance Effect.Granular CTG adds up to independently calculated aggregate CTG. 
-"      
+image: /assets/images/post3/img9.png 
+excerpt: "I will discuss the analytical paradigms I label as the Request-Response model and the Push model; the outputs of analysts; the key questions to ask requestors under the Request-Response model; and the importance of conducting meta-analyses. Note that I have placed the outputs of analysts in several buckets. However, these buckets are not mutually exclusive—some activities, such as metrics definition or segmentation, may stand alone as outputs for a meeting, or they may serve as inputs to other analytical activities, like Descriptive Modeling. The categorization reflects my impressionistic view, based on the time and mental energy devoted to various analytical activities in my experience."      
+
 ---
 Having worked in analytics across various settings—from roles embedded within business units to centralized product analytics organizations, spanning an online marketplace, a big-box retailer, a D2C brand, and from the largest employer in the US to a 200-employee startup—I have observed some common patterns in analytical needs. This post aims to synthesize those observations.
 
@@ -145,7 +145,8 @@ and below is another one from Google:
 
 
 
-![](/assets/images/post3/img2.jpg)
+![](/assets/images/post3/img2.jpg){: .half-size.center }
+
 
 Image Source: [“Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation”](http://tomtunguz.com/the-fundamental-equation-of-a-startup)
 
@@ -153,21 +154,21 @@ Descriptive analysis, grounded in these models, provides insights into how thing
 
 Examples of descriptive analytics include: weekly business reviews, year-over-year sales reports, as well the [case study here](https://open.substack.com/pub/dataanalysis/p/how-to-pass-a-technical-assignment?r=9hzj0&utm_medium=ios) (which starts with Descriptive Analysis and then moves on to Scenario Modeling).
 
-Exploratory analysis :
+##### **Exploratory analysis :**
 
 Exploratory analysis is a form of descriptive analysis. In such analyses, it can be tempting to dive straight into the data to extract statistics like mean, median, distributions, and correlations. However, it’s generally more effective to start with a clear list of questions and hypotheses. This approach helps manage the scope of the analysis and ensures that the findings are both interpretable and actionable. While raw statistics are valuable for building algorithmic models, in the context of business decision-making, the focus should be on generating insights that can directly inform actions.
 
-Analysis of Dynamics
+##### **Analysis of Dynamics :**
 
 A significant aspect of descriptive analysis is what I call the “Analysis of Dynamics”. This involves examining changes over time, such as in [cohort analysis](https://andrewchen.com/the-easiest-spreadsheet-for-churn-mrr-and-cohort-analysis-guest-post/), or across different stages, as seen in funnel analysis, [growth loops](https://www.reforge.com/blog/growth-loops), or path analysis. These analyses are not limited to user behavior; they can also apply to [product health](https://articles.sequoiacap.com/measuring-product-health), inventory levels, and other critical business aspects.
 
 To illustrate the practical application of descriptive and dynamic analysis, consider the following case study:
 
-Case Study: Analyzing the Favorites Page and Basket Building
+###### **Case Study: Analyzing the Favorites Page and Basket Building**
 
 This case study demonstrates how descriptive and dynamic analyses were used to uncover issues with the Favorites page and understand customer behavior in basket building.
 
-Favorites Page Analysis:
+###### **Favorites Page Analysis:**
 
 The Favorites page stored items that customers explicitly favorited and all items from any past purchases. However, the product health metrics showed low overall adoption of the page (i.e., add-to-carts from that page), especially among longer-tenured customers. 
 
@@ -175,7 +176,7 @@ Data indicated that 80% of the items in returning customer baskets were already 
 
 Further analysis revealed a clear turning point in Favorites page adoption when the number of items exceeded the first page. This insight led to hypotheses that the Favorites page might be too cluttered, sparking both backend (e.g., ranking items by frequency instead of recency) and frontend experiments (e.g., grouping items into category modules similar to those on the Browse page).
 
-Time to Build Basket Analysis:
+###### **Time to Build Basket Analysis:**
 
 The analysis of the Favorites page also prompted thoughts about the efficiency of sitewide basket building. A subsequent analysis explored how quickly returning customers familiar with the site build their baskets. It was found that most returning customers build their baskets in about four sessions over a little more than a week, spending about 10 minutes per session. Since 80% of the items in the baskets were present in prior orders, it appears that customers add the same items on a recurring basis as the items run out or as the customers remember. This analysis led to discussions about features that could enable customers to build their baskets faster, potentially saving them time and enhancing customer loyalty vs. focusing on upsell and cross-sell opportunities in each visit, which might increase average order value (AOV).
 
@@ -184,16 +185,14 @@ The analysis of the Favorites page also prompted thoughts about the efficiency o
 
 While descriptive modeling shows how things were and are, scenario modeling helps us understand how things could be under various conditions—this is the classic “what-if” analysis. Scenario modeling can build on top of existing descriptive models by tweaking model parameter values or introducing new parameters. When dealing with new features, products, or initiatives, scenario modeling may first require building a new descriptive model first. This type of analysis is often used to estimate outcomes such as ROI or margins:
 
-
-![](/assets/images/post3/img3.jpg)
+![](/assets/images/post3/img3.jpg){: .half-size.center }
 
 Image Source: [Doordash and Profitable Food Delivery - Tanay's Newsletter](https://www.tanayj.com/p/doordash-and-profitable-food-delivery/comments) 
 
 It can also be used for estimating how changes in retention impact acquisition:
+   
+![](/assets/images/post3/img4.jpg){: .half-size.center }
 
-
-    
-![](/assets/images/post3/img4.jpg)
 
 Image Source: [The One Growth Metric that Moves Acquisition, Monetization, and ...](https://www.reforge.com/blog/growth-metric-acquisition-monetization-virality) 
 
@@ -204,10 +203,10 @@ A particularly sophisticated example of Scenario Modeling is: [Lyft Data Science
 
 While Scenario Modeling helps us understand how things could be under various conditions, Predictive Modeling tells us how things are likely to be, based on past and present information. Predictive modeling involves extrapolating trends to make forecasts, such as predicting weekly or monthly usage metrics:
 
-![](/assets/images/post3/img5.jpg)
+![](/assets/images/post3/img5.jpg){: .half-size.center }
 
 
-![](/assets/images/post3/img6.jpg)
+![](/assets/images/post3/img6.jpg){: .half-size.center }
 
 
 Image Source: [How To Predict Your Weekly or Monthly Usage Metrics - Brian Balfour](https://brianbalfour.com/essays/predict-your-weekly-metrics) 
@@ -219,8 +218,8 @@ It also includes applications like establishing customer lifetime value (LTV) or
 
 Accounting models involve recording and summarizing metrics based on predefined rules. Unlike models that describe how things were and are, how they could be, or how they are likely to be, accounting models tell us how things should be. A key example is attribution modeling, which assigns credit in multitouch marketing campaigns.
 
-	•	
-![](/assets/images/post3/img7.jpg)
+![](/assets/images/post3/img7.jpg){: .half-size.center }
+
 
 Image Source: [Web Analytics 2.0 by Avinash Kaushik](https://www.webanalytics20.com/) 
 
@@ -244,14 +243,15 @@ To further illustrate the application of RCA—this time triggered by an issue�
 
 ##### **Case Study: Drop in Transactions of an Online Grocery Site**
 
-**Issue: **
+###### **Issue:**
 
 A significant drop in transactions was observed on a specific day, while up-funnel metrics remained normal until the “Proceed to Checkout” button click on the View Cart page. At this point, users either left the checkout page or exited the site altogether. It was not possible to determine which users were driving the incremental drop-offs.
 
-![](/assets/images/post3/img8.jpg)
+![](/assets/images/post3/img8.jpg){: .half-size.center }
 
 
-**Approach:**
+
+###### **Approach:**
 
 Several factors could result in an increase in checkout drop-offs. By considering the user experience, the following potential causes were hypothesized:
 
@@ -268,13 +268,13 @@ The challenge in RCA is the numerous plausible sources of error, requiring an ex
 
 
 
-**Conclusion:**
+###### **Conclusion:**
 
 In this case, the culprit was the unavailability of basket driver items (e.g., milk, eggs) from a particular high-volume store. These items were in stock when added to the cart but went out of stock before the checkout day. This was identified by examining order-level data by region, flagged by out-of-stock status and specific basket driver items.
 
 The issue was subtle because online grocery baskets are generally built over a span of a week. Users added basket driver items when they were in stock, but these items were out of stock when users proceeded to checkout. Although stores were aware of the out-of-stock status, they did not realize the impact on eCommerce orders. The absence of such items reduces Average Order Value (AOV) for in-store customers who might still buy other items, but for online customers, it leads to an order loss due to different dynamics, such as switching costs and minimum AOV for free shipping.
 
-**Recommendations:**
+###### **Recommendations:**
 
 
 
@@ -341,7 +341,7 @@ Visuals work as a compact and memorable way to represent metrics and trends. Som
 
 
 
-![](/assets/images/post3/img11.jpg)
+![](/assets/images/post3/img11.jpg){: .center }
 
 
 Image Source: [Baumol effect - Wikipedia](https://en.wikipedia.org/wiki/Baumol_effect) 
@@ -349,13 +349,12 @@ Image Source: [Baumol effect - Wikipedia](https://en.wikipedia.org/wiki/Baumol_e
 Depending on the situation, some visuals may be more effective than others. For example, the two charts below illustrate the contribution of various components to the total. However, the top chart—which succinctly shows how a company transitioned from unprofitable to profitable within a year, primarily due to cost reductions in Sales & Marketing (S&M)—is more compact and information-rich compared to the bottom chart:
 
 
-![](/assets/images/post3/img12.jpg)
-
+![](/assets/images/post3/img12.jpg){: .half-size.center }
 
 
 Image Source: [FIGs and successful DTC companies](https://open.substack.com/pub/tanay/p/figs-and-successful-dtc-companies?r=9hzj0&utm_medium=ios) 
 
-![](/assets/images/post3/img13.jpg)
+![](/assets/images/post3/img13.jpg){: .half-size.center }
 
 
 Image Source: [Instacart S-1 Breakdown](https://open.substack.com/pub/tanay/p/instacart-s-1-breakdown?r=9hzj0&utm_medium=ios) 
