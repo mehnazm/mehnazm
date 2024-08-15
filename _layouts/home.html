@@ -2,6 +2,22 @@
 layout: default
 title: "Your awesome title"
 ---
+
+
+<h2 class="published-posts-heading">Published Posts</h2>
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      {% include post-summary.html post=post %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% include pagination.html %}
+</div>
+
 <div class="upcoming-posts">
   <h2>Upcoming Posts</h2>
   <ul>
@@ -31,18 +47,4 @@ title: "Your awesome title"
 
     <!-- Add more upcoming posts as needed -->
   </ul>
-</div>
-
-<h2 class="published-posts-heading">Published Posts</h2>
-
-<div class="home">
-  <h1 class="page-heading">{{ page.title }}</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-    <li>
-      {% include post-summary.html post=post %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% include pagination.html %}
 </div>

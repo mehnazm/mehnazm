@@ -135,7 +135,7 @@ Below is an example of a growth equation from Amazon:
 
 
 
-Image Source: [“Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront”](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)
+Image Source: [Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)
 
 
 
@@ -148,7 +148,7 @@ and below is another one from Google:
 ![](/assets/images/post3/img2.jpg){: .center }
 
 
-Image Source: [“Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation”](http://tomtunguz.com/the-fundamental-equation-of-a-startup)
+Image Source: [Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation](http://tomtunguz.com/the-fundamental-equation-of-a-startup)
 
 Descriptive analysis, grounded in these models, provides insights into how things were and are. Such analysis helps in understanding the “lay of the land.” 
 
