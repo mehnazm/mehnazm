@@ -145,7 +145,7 @@ and below is another one from Google:
 
 
 
-![](/assets/images/post3/img2.jpg){: .half-size.center }
+![](/assets/images/post3/img2.jpg){: .center }
 
 
 Image Source: [“Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation”](http://tomtunguz.com/the-fundamental-equation-of-a-startup)
@@ -185,13 +185,13 @@ The analysis of the Favorites page also prompted thoughts about the efficiency o
 
 While descriptive modeling shows how things were and are, scenario modeling helps us understand how things could be under various conditions—this is the classic “what-if” analysis. Scenario modeling can build on top of existing descriptive models by tweaking model parameter values or introducing new parameters. When dealing with new features, products, or initiatives, scenario modeling may first require building a new descriptive model first. This type of analysis is often used to estimate outcomes such as ROI or margins:
 
-![](/assets/images/post3/img3.jpg){: .half-size.center }
+![](/assets/images/post3/img3.jpg){: .center }
 
 Image Source: [Doordash and Profitable Food Delivery - Tanay's Newsletter](https://www.tanayj.com/p/doordash-and-profitable-food-delivery/comments) 
 
 It can also be used for estimating how changes in retention impact acquisition:
    
-![](/assets/images/post3/img4.jpg){: .half-size.center }
+![](/assets/images/post3/img4.jpg){: .center }
 
 
 Image Source: [The One Growth Metric that Moves Acquisition, Monetization, and ...](https://www.reforge.com/blog/growth-metric-acquisition-monetization-virality) 
@@ -203,7 +203,7 @@ A particularly sophisticated example of Scenario Modeling is: [Lyft Data Science
 
 While Scenario Modeling helps us understand how things could be under various conditions, Predictive Modeling tells us how things are likely to be, based on past and present information. Predictive modeling involves extrapolating trends to make forecasts, such as predicting weekly or monthly usage metrics:
 
-![](/assets/images/post3/img5.jpg){: .half-size.center }
+![](/assets/images/post3/img5.jpg){: .center }
 
 
 ![](/assets/images/post3/img6.jpg){: .half-size.center }
@@ -218,7 +218,7 @@ It also includes applications like establishing customer lifetime value (LTV) or
 
 Accounting models involve recording and summarizing metrics based on predefined rules. Unlike models that describe how things were and are, how they could be, or how they are likely to be, accounting models tell us how things should be. A key example is attribution modeling, which assigns credit in multitouch marketing campaigns.
 
-![](/assets/images/post3/img7.jpg){: .half-size.center }
+![](/assets/images/post3/img7.jpg){: .center }
 
 
 Image Source: [Web Analytics 2.0 by Avinash Kaushik](https://www.webanalytics20.com/) 
@@ -349,12 +349,12 @@ Image Source: [Baumol effect - Wikipedia](https://en.wikipedia.org/wiki/Baumol_e
 Depending on the situation, some visuals may be more effective than others. For example, the two charts below illustrate the contribution of various components to the total. However, the top chart—which succinctly shows how a company transitioned from unprofitable to profitable within a year, primarily due to cost reductions in Sales & Marketing (S&M)—is more compact and information-rich compared to the bottom chart:
 
 
-![](/assets/images/post3/img12.jpg){: .half-size.center }
+![](/assets/images/post3/img12.jpg){: .center }
 
 
 Image Source: [FIGs and successful DTC companies](https://open.substack.com/pub/tanay/p/figs-and-successful-dtc-companies?r=9hzj0&utm_medium=ios) 
 
-![](/assets/images/post3/img13.jpg){: .half-size.center }
+![](/assets/images/post3/img13.jpg){: .center }
 
 
 Image Source: [Instacart S-1 Breakdown](https://open.substack.com/pub/tanay/p/instacart-s-1-breakdown?r=9hzj0&utm_medium=ios) 
