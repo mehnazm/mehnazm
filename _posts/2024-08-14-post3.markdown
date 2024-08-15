@@ -24,7 +24,7 @@ As mentioned, I think of analytical efforts through the lens of two paradigms:
 In this paradigm, analysts respond to requests from business or product teams. These requests range from simple data pulls, such as descriptive statistics of the previous week’s sales, to more complex questions, like how sellers’ listing behavior in a marketplace changed in response to past price changes. This is the most common mode of analytical activity.
 
 
-### **2. Push Model: **
+### **2. Push Model:**
 
 In contrast, the Push Model involves analysts performing self-directed analyses to offer insights they believe will directly drive business and customer value or provide a deeper understanding of customers, regions, products, and the overall business.
 
@@ -95,7 +95,7 @@ A meta-analysis based on this updated information would help us identify the mos
 ### **Analytical Building Blocks**
 
 
-#### **1. Metrics - **
+#### **1. Metrics -**
 
 Metrics are a quantitative description of either the outcome a product or business aims to achieve or the milestones, trade-offs, or inputs along the way. As highlighted in the post<span style="text-decoration:underline;"> [Common Mistakes In Defining Metrics](https://brianbalfour.com/quick-takes/common-mistakes-defining-metrics)</span>, “Your metrics are a reflection of your strategy.  They help answer, is the strategy working?  Metrics without strategy is like looking at a bunch of random numbers.” 
 
@@ -106,7 +106,7 @@ To save time and effort on both sides, the analyst should pressure test whether 
 It may not be practical to go through an exhaustive checklist for every single metric definition. Instead, this is a reminder of the common pitfalls associated with metrics. The key is to find a balance between thorough upfront thinking and avoiding endless iterations.
 
 
-#### **2. Segmentation - **
+#### **2. Segmentation -**
 
 Segmentation in business and product analysis typically involves grouping users at both the overall business level and within various programs. The goal is to identify “like” users to address common problems they face or create. 
 
@@ -131,11 +131,15 @@ Below is an example of a growth equation from Amazon:
 
     
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img1.jpg)
 
 
 
-Image Source: [“Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront”](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)
+**Image Source: [“Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront”](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)**{: .image-title}
+
+
+
+
 
 and below is another one from Google:
 
