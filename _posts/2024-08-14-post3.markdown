@@ -119,10 +119,10 @@ In contrast, the Seller Trust and Safety team, which aims to reduce poor buyer e
 Segmentation can range from simple quantile-based grouping to complex n-dimensional clustering on composite metrics. Ultimately, it is crucial to base segmentation on customer and business problems and ensure that segments are interpretable and actionable. In other words, the process should begin by identifying the problems we want to solve and the goals we want to achieve through segmentation. Then, we can determine the most useful way of classification. Such an approach would help avoid the type of common pitfalls that[ companies including DoorDash and Airbnb have encountered.](https://www.youtube.com/watch?v=D4PDb_C8Dww&t=2732s&pp=2AGsFZACAQ==)
 
 
-### **Core Analytical Activity **
+### **Core Analytical Activity**
 
 
-#### **1. Descriptive Modeling and Analysis (includes Exploratory and Time Based Analysis) - **
+#### **1. Descriptive Modeling and Analysis (includes Exploratory and Time Based Analysis) -**
 
 Descriptive modeling involves creating a mathematical representation of a system based on both real inputs and informed assumptions, essentially describing a product or [business as an equation](https://www.danhock.co/cp/140737845). These models help us understand how different components of the system interact, and they also lay the groundwork for Scenario Modeling, as described in the next section.
 
@@ -131,11 +131,11 @@ Below is an example of a growth equation from Amazon:
 
     
 
-![](/assets/images/post3/img1.jpg)
+![](/assets/images/post3/img1.jpg){: .half-size.center }
 
 
 
-**Image Source: [“Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront”](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)**{: .image-title}
+Image Source: [“Indispensable Growth Frameworks from My Years at Facebook, Twitter and Wealthfront”](http://firstround.com/review/indispensable-growth-frameworks-from-my-years-at-facebook-twitter-and-wealthfront/)
 
 
 
@@ -145,9 +145,9 @@ and below is another one from Google:
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img2.jpg)
 
-**Image Source: [“Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation”](http://tomtunguz.com/the-fundamental-equation-of-a-startup)**
+Image Source: [“Startup Best Practices 17 — Strategic Planning Using Your Startup’s Fundamental Equation”](http://tomtunguz.com/the-fundamental-equation-of-a-startup)
 
 Descriptive analysis, grounded in these models, provides insights into how things were and are. Such analysis helps in understanding the “lay of the land.” 
 
@@ -180,51 +180,37 @@ Time to Build Basket Analysis:
 The analysis of the Favorites page also prompted thoughts about the efficiency of sitewide basket building. A subsequent analysis explored how quickly returning customers familiar with the site build their baskets. It was found that most returning customers build their baskets in about four sessions over a little more than a week, spending about 10 minutes per session. Since 80% of the items in the baskets were present in prior orders, it appears that customers add the same items on a recurring basis as the items run out or as the customers remember. This analysis led to discussions about features that could enable customers to build their baskets faster, potentially saving them time and enhancing customer loyalty vs. focusing on upsell and cross-sell opportunities in each visit, which might increase average order value (AOV).
 
 
-#### **2. Scenario Modeling (i.e. sizing opportunities and impacts) - **
+#### **2. Scenario Modeling (i.e. sizing opportunities and impacts) -**
 
 While descriptive modeling shows how things were and are, scenario modeling helps us understand how things could be under various conditions—this is the classic “what-if” analysis. Scenario modeling can build on top of existing descriptive models by tweaking model parameter values or introducing new parameters. When dealing with new features, products, or initiatives, scenario modeling may first require building a new descriptive model first. This type of analysis is often used to estimate outcomes such as ROI or margins:
 
 
+![](/assets/images/post3/img3.jpg)
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-
-    Image Source: [Doordash and Profitable Food Delivery - Tanay's Newsletter](https://www.tanayj.com/p/doordash-and-profitable-food-delivery/comments) 
+Image Source: [Doordash and Profitable Food Delivery - Tanay's Newsletter](https://www.tanayj.com/p/doordash-and-profitable-food-delivery/comments) 
 
 It can also be used for estimating how changes in retention impact acquisition:
 
 
     
+![](/assets/images/post3/img4.jpg)
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-
-    Image Source: [The One Growth Metric that Moves Acquisition, Monetization, and ...](https://www.reforge.com/blog/growth-metric-acquisition-monetization-virality) 
+Image Source: [The One Growth Metric that Moves Acquisition, Monetization, and ...](https://www.reforge.com/blog/growth-metric-acquisition-monetization-virality) 
 
 A particularly sophisticated example of Scenario Modeling is: [Lyft Data Science team’s marketplace simulator](https://eng.lyft.com/https-medium-com-adamgreenhall-simulating-a-ridesharing-marketplace-36007a8a31f2). 
 
 
-#### **3. Predictive Modeling - **
+#### **3. Predictive Modeling -**
 
 While Scenario Modeling helps us understand how things could be under various conditions, Predictive Modeling tells us how things are likely to be, based on past and present information. Predictive modeling involves extrapolating trends to make forecasts, such as predicting weekly or monthly usage metrics:
 
-
-    
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img5.jpg)
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post3/img6.jpg)
 
 
-
-    Image Source: [How To Predict Your Weekly or Monthly Usage Metrics - Brian Balfour](https://brianbalfour.com/essays/predict-your-weekly-metrics) 
+Image Source: [How To Predict Your Weekly or Monthly Usage Metrics - Brian Balfour](https://brianbalfour.com/essays/predict-your-weekly-metrics) 
 
 It also includes applications like establishing customer lifetime value (LTV) or predicting the likelihood of specific events, such as a user churning.
 
@@ -234,8 +220,7 @@ It also includes applications like establishing customer lifetime value (LTV) or
 Accounting models involve recording and summarizing metrics based on predefined rules. Unlike models that describe how things were and are, how they could be, or how they are likely to be, accounting models tell us how things should be. A key example is attribution modeling, which assigns credit in multitouch marketing campaigns.
 
 	•	
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img7.jpg)
 
 Image Source: [Web Analytics 2.0 by Avinash Kaushik](https://www.webanalytics20.com/) 
 
@@ -250,7 +235,7 @@ Kaushik further explains that:
 While analysts can build and maintain these models in spreadsheets, the rules and principles behind them should come from the business units (BUs) and product managers (PMs), aligned with the overall philosophy of the business.
 
 
-#### **5.Root Cause Analysis (RCA) – Also Known as Diagnostic Analytics (Including Data Validation/Reconciliation) - **
+#### **5.Root Cause Analysis (RCA) – Also Known as Diagnostic Analytics (Including Data Validation/Reconciliation) -**
 
 Root Cause Analysis (RCA) is typically conducted in response to an issue or an unexpected data trend. The unexpected trend may be due to data errors such as missing, stale, or duplicate data, or due to data interpretation issues. For example, one challenge in data interpretation is [Simpson’s Paradox](https://en.wikipedia.org/wiki/Simpson's_paradox), where trends that appear in different groups of data disappear or reverse when these groups are combined. Another example comes from [ShopKick](https://jwegan.com/growth-hacking/experiment-segmentation-avoiding-old-dogs-watered-results/), where a 20%-30% expected increase in a metric due to geofenced notifications only resulted in a 3% increase. A detailed analysis revealed that the impact was significant among new users who joined after the experiment started, but the overall metric was diluted by the large share of existing users whose habits were unresponsive to the product change. This highlights the importance of using segmented rather than blended metrics. However, there is also an argument for a blended view of metrics, as illustrated by the [Will Rogers phenomenon](https://en.wikipedia.org/wiki/Will_Rogers_phenomenon).
 
@@ -263,17 +248,12 @@ To further illustrate the application of RCA—this time triggered by an issue�
 
 A significant drop in transactions was observed on a specific day, while up-funnel metrics remained normal until the “Proceed to Checkout” button click on the View Cart page. At this point, users either left the checkout page or exited the site altogether. It was not possible to determine which users were driving the incremental drop-offs.
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post3/img8.jpg)
 
 
 **Approach:**
 
 Several factors could result in an increase in checkout drop-offs. By considering the user experience, the following potential causes were hypothesized:
-
-
 
 1. UX Changes: There may have been changes on the View Cart page impacting specific user segments.
 2. Errors on the View Cart Page: Issues such as the inability to fetch cart data or load specific components.
@@ -284,7 +264,7 @@ The challenge in RCA is the numerous plausible sources of error, requiring an ex
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img9.jpg)
 
 
 
@@ -307,31 +287,26 @@ It is important to note that RCAs may be inconclusive when small issues across v
 Another challenge of RCA is the need to compare data against a baseline, often a forecast based on past data. This introduces uncertainty over whether the problem lies in the baseline expectations or the actual outcomes.
 
 
-#### **6. Test/ Measurement design and execution - **
+#### **6. Test/ Measurement design and execution -**
 
 
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post3/img10.jpg)
 
 
 Not all launches can or [should be tested](https://medium.com/@talraviv/please-please-dont-a-b-test-that-980a9630e4fb) or even measured. Before embarking on a test or measurement design, it is essential to ask: Is the change worth measuring, or even measurable? If yes, then given the context, is it possible to measure before launch? If we measure before launch, then A/B testing might be used. Otherwise, a pre-post analysis like [Difference-in-Difference](https://theeffectbook.net/ch-DifferenceinDifference.html) or an [Event Study](https://theeffectbook.net/ch-EventStudies.html) may be needed. 
 
 In cases requiring pre-post analysis, it is important to be clear on:
 
-
-
 1. What do we want to measure?
-    1. What can we measure?
-    2. What can we not measure? Why is measurement not possible? What are the implications of the inability to measure?
+    1.a. What can we measure?
+    1.b. What can we not measure? Why is measurement not possible? What are the implications of the inability to measure?
 
 The questions in 1.b. are important to think through in advance for contingency planning. For example, if a redesigned site launch combined with extensive marketing campaigns leads to year-over-year negative trends, it may not be possible to tell _what _broke and _why_. The UX changes could eliminate [comparable benchmarks at a granular level](https://open.substack.com/pub/dataanalysis/p/how-to-measure-new-feature-adoption?r=9hzj0&utm_medium=ios), while marketing activities might alter entry points; both UX and marketing can significantly impact user behavior throughout the site.Additionally, pre-post analyses are inherently low-fidelity and, with numerous variables at play, it becomes nearly impossible to isolate the specific causes of these changes.
 
 Even when A/B testing is an option before launch, it is essential to clarify whether the goal is simply to quantify a change or to make a decision. The latter often requires a more complex test design, as it involves more metrics, more segments, additional instrumentation, deeper analysis, and potentially more extensive root cause analysis. This complexity translates into a greater time investment in both test planning and execution.
 
 In any case,any A/B test planning requires addressing the below:
-
-
 
 1. Defining the success and guardrail metrics we want to measure 
 2. Specifying the amount of change we want to measure for practical significance 
@@ -348,7 +323,7 @@ The A/B testing considerations are addressed in more details [here](https://docs
 Testing and measurement can be a lengthy process. Some tests may take up to 2 weeks just to finalize planning. While typically the execution of most tests conclude within 2 weeks, there are [situations](https://mehnazm.github.io/main/2024/06/27/main-post.html) where they need to be run for months. 
 
 
-#### **7. Monitoring - **
+#### **7. Monitoring -**
 
 This involves dedicating time to regularly check dashboards, review reports, or receive notifications about unusual behavior. For example, at eBay and Walmart Labs, we allocated time each morning to review a daily email report summarizing KPIs—covering absolute values, week-over-week, and year-over-year changes, segmented over the past seven days. Monitoring can be conducted at various levels, such as business, product, region, or customer.
 
@@ -360,14 +335,13 @@ While automated monitoring tools can alert teams to anomalies or when a metric e
 ### **Analytical Delivery Format**
 
 
-#### **1. Visuals - **
+#### **1. Visuals -**
 
 Visuals work as a compact and memorable way to represent metrics and trends. Some visuals may serve as the lynchpin of an analysis since they so clearly capture and communicate the main idea. An example of this is the chart for Baumol’s cost disease:
 
 
 
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post3/img11.jpg)
 
 
 Image Source: [Baumol effect - Wikipedia](https://en.wikipedia.org/wiki/Baumol_effect) 
@@ -375,21 +349,19 @@ Image Source: [Baumol effect - Wikipedia](https://en.wikipedia.org/wiki/Baumol_e
 Depending on the situation, some visuals may be more effective than others. For example, the two charts below illustrate the contribution of various components to the total. However, the top chart—which succinctly shows how a company transitioned from unprofitable to profitable within a year, primarily due to cost reductions in Sales & Marketing (S&M)—is more compact and information-rich compared to the bottom chart:
 
 
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img12.jpg)
 
 
 
 Image Source: [FIGs and successful DTC companies](https://open.substack.com/pub/tanay/p/figs-and-successful-dtc-companies?r=9hzj0&utm_medium=ios) 
 
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post3/img13.jpg)
 
 
 Image Source: [Instacart S-1 Breakdown](https://open.substack.com/pub/tanay/p/instacart-s-1-breakdown?r=9hzj0&utm_medium=ios) 
 
 
-#### **2. Dashboards - **
+#### **2. Dashboards -**
 
 Unlike one-time analyses, dashboards help maintain a constant pulse on how metrics are tracking against benchmarks. These benchmarks could be a business objective, a forecast, past performance, or other segments. The challenge in building dashboards lies in selecting the right information and presenting it in a concise, insightful, and actionable way.
 
@@ -401,21 +373,20 @@ Below is a dashboard view I found particularly effective. It includes a table th
 
 
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img14.jpg)
 
 
-
-Image Source: 
+Image Source: [A Better Approach to Analyzing Activation Funnels](https://www.youtube.com/watch?v=s8PWWFWPW-U&t=1580s&pp=2AGsDJACAQ%3D%3D)
 
 This view is excellent because, at a glance, it reveals whether the most critical step is improving or deteriorating over time. If our target’s performance declines, it also provides insight into why that happened.
 
 
-#### **3. Storytelling - **
+#### **3. Storytelling -**
 
 This is essentially a structured account of connected events. One effective approach is to use the [Pyramid Principle](https://towardsdatascience.com/how-to-better-communicate-as-a-data-scientist-6fc5428d3143), where we start with the main insight or takeaway, followed by supporting data, and then drill down into the details if applicable.The storytelling approach depends on the context. One example is [Amazon’s 6-pager structure](https://writingcooperative.com/the-anatomy-of-an-amazon-6-pager-fc79f31a41c9) that includes Goals, Tenets, State of the Business, Lessons Learned, and Strategic Priorities. [Another 6-pager however](https://www.forbes.com/sites/forbescommunicationscouncil/2022/08/30/why-and-how-every-company-should-use-amazons-six-page-memo-format/) starts with a press release, outlines the current state of the business, reviews historical data from the last period, sets goals for the current period, and explains how an executive plans to achieve these goals.A good rule of thumb is to consider the audience’s interest, knowledge, and expectations, and then bridge the gap between that and what we want them to take away from the story. S-1s are essentially data driven storytelling-here are examples from [Doordash](https://www.sec.gov/Archives/edgar/data/1792789/000119312520292381/d752207ds1.htm) and [Instacart](https://www.sec.gov/Archives/edgar/data/1579091/000119312523221345/d55348ds1.htm). Blogs such as this one digging into  [Netflix’s LTV and CAC](https://medium.com/@tanayj/how-much-are-you-worth-to-netflix-2fb61feb5441) or this one breaking down the [Cash Conversion Cycle](https://every.to/napkin-math/cash-conversion-cycle-bridging-the-18577406) are also good examples of analytical storytelling. 
 
 
-#### **4. Standardized reporting - **
+#### **4. Standardized reporting -**
 
 This includes output that can be templatized for e.g. an [A/B test report](https://medium.com/@talraviv/why-would-i-ever-write-a-growth-experiment-doc-6ef2649fd215) or scorecards used for weekly business reviews. This falls between a dashboard that allows self-service analytics and an explanatory story, providing a concise snapshot update.
 
@@ -423,10 +394,10 @@ This includes output that can be templatized for e.g. an [A/B test report](https
     Recommendations
 
 
-### **Data Collection and Transformation **
+### **Data Collection and Transformation**
 
 
-#### **1.Event Tracking Specs - **
+#### **1.Event Tracking Specs -**
 
 Event tracking involves defining data events and configuring tools to track and collect those events. This process is especially critical when testing a new product or feature but is also valuable for measuring new metrics for an existing feature.
 
@@ -443,7 +414,7 @@ I also appreciate the example of a simple and effective data catalog:
 
 
 
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img15.jpg)
 
 
 
@@ -453,7 +424,7 @@ The below image is also very helpful in understanding the distinction between ev
 
 
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post3/img16.jpg)
 
 
 
