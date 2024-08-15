@@ -3,7 +3,7 @@ layout: post
 title: "My Synthesis of Analytics"
 date: 2024-08-11
 categories: main 
-image: /assets/images/post3/img9.png 
+image: /assets/images/post3/img9.jpg 
 excerpt: "I will discuss the analytical paradigms I label as the Request-Response model and the Push model; the outputs of analysts; the key questions to ask requestors under the Request-Response model; and the importance of conducting meta-analyses. Note that I have placed the outputs of analysts in several buckets. However, these buckets are not mutually exclusive—some activities, such as metrics definition or segmentation, may stand alone as outputs for a meeting, or they may serve as inputs to other analytical activities, like Descriptive Modeling. The categorization reflects my impressionistic view, based on the time and mental energy devoted to various analytical activities in my experience."      
 
 ---
@@ -154,21 +154,21 @@ Descriptive analysis, grounded in these models, provides insights into how thing
 
 Examples of descriptive analytics include: weekly business reviews, year-over-year sales reports, as well the [case study here](https://open.substack.com/pub/dataanalysis/p/how-to-pass-a-technical-assignment?r=9hzj0&utm_medium=ios) (which starts with Descriptive Analysis and then moves on to Scenario Modeling).
 
-##### **Exploratory analysis :**
+**Exploratory analysis :**
 
 Exploratory analysis is a form of descriptive analysis. In such analyses, it can be tempting to dive straight into the data to extract statistics like mean, median, distributions, and correlations. However, it’s generally more effective to start with a clear list of questions and hypotheses. This approach helps manage the scope of the analysis and ensures that the findings are both interpretable and actionable. While raw statistics are valuable for building algorithmic models, in the context of business decision-making, the focus should be on generating insights that can directly inform actions.
 
-##### **Analysis of Dynamics :**
+**Analysis of Dynamics :**
 
 A significant aspect of descriptive analysis is what I call the “Analysis of Dynamics”. This involves examining changes over time, such as in [cohort analysis](https://andrewchen.com/the-easiest-spreadsheet-for-churn-mrr-and-cohort-analysis-guest-post/), or across different stages, as seen in funnel analysis, [growth loops](https://www.reforge.com/blog/growth-loops), or path analysis. These analyses are not limited to user behavior; they can also apply to [product health](https://articles.sequoiacap.com/measuring-product-health), inventory levels, and other critical business aspects.
 
 To illustrate the practical application of descriptive and dynamic analysis, consider the following case study:
 
-###### **Case Study: Analyzing the Favorites Page and Basket Building**
+##### **Case Study: Analyzing the Favorites Page and Basket Building**
 
 This case study demonstrates how descriptive and dynamic analyses were used to uncover issues with the Favorites page and understand customer behavior in basket building.
 
-###### **Favorites Page Analysis:**
+##### **Favorites Page Analysis:**
 
 The Favorites page stored items that customers explicitly favorited and all items from any past purchases. However, the product health metrics showed low overall adoption of the page (i.e., add-to-carts from that page), especially among longer-tenured customers. 
 
@@ -176,7 +176,7 @@ Data indicated that 80% of the items in returning customer baskets were already 
 
 Further analysis revealed a clear turning point in Favorites page adoption when the number of items exceeded the first page. This insight led to hypotheses that the Favorites page might be too cluttered, sparking both backend (e.g., ranking items by frequency instead of recency) and frontend experiments (e.g., grouping items into category modules similar to those on the Browse page).
 
-###### **Time to Build Basket Analysis:**
+##### **Time to Build Basket Analysis:**
 
 The analysis of the Favorites page also prompted thoughts about the efficiency of sitewide basket building. A subsequent analysis explored how quickly returning customers familiar with the site build their baskets. It was found that most returning customers build their baskets in about four sessions over a little more than a week, spending about 10 minutes per session. Since 80% of the items in the baskets were present in prior orders, it appears that customers add the same items on a recurring basis as the items run out or as the customers remember. This analysis led to discussions about features that could enable customers to build their baskets faster, potentially saving them time and enhancing customer loyalty vs. focusing on upsell and cross-sell opportunities in each visit, which might increase average order value (AOV).
 
@@ -241,9 +241,9 @@ Root Cause Analysis (RCA) is typically conducted in response to an issue or an u
 To further illustrate the application of RCA—this time triggered by an issue—consider the following case study:
 
 
-##### **Case Study: Drop in Transactions of an Online Grocery Site**
+**Case Study: Drop in Transactions of an Online Grocery Site**
 
-###### **Issue:**
+##### **Issue:**
 
 A significant drop in transactions was observed on a specific day, while up-funnel metrics remained normal until the “Proceed to Checkout” button click on the View Cart page. At this point, users either left the checkout page or exited the site altogether. It was not possible to determine which users were driving the incremental drop-offs.
 
@@ -251,7 +251,7 @@ A significant drop in transactions was observed on a specific day, while up-funn
 
 
 
-###### **Approach:**
+##### **Approach:**
 
 Several factors could result in an increase in checkout drop-offs. By considering the user experience, the following potential causes were hypothesized:
 
@@ -268,13 +268,13 @@ The challenge in RCA is the numerous plausible sources of error, requiring an ex
 
 
 
-###### **Conclusion:**
+##### **Conclusion:**
 
 In this case, the culprit was the unavailability of basket driver items (e.g., milk, eggs) from a particular high-volume store. These items were in stock when added to the cart but went out of stock before the checkout day. This was identified by examining order-level data by region, flagged by out-of-stock status and specific basket driver items.
 
 The issue was subtle because online grocery baskets are generally built over a span of a week. Users added basket driver items when they were in stock, but these items were out of stock when users proceeded to checkout. Although stores were aware of the out-of-stock status, they did not realize the impact on eCommerce orders. The absence of such items reduces Average Order Value (AOV) for in-store customers who might still buy other items, but for online customers, it leads to an order loss due to different dynamics, such as switching costs and minimum AOV for free shipping.
 
-###### **Recommendations:**
+##### **Recommendations:**
 
 
 
@@ -302,7 +302,7 @@ In cases requiring pre-post analysis, it is important to be clear on:
     1.a. What can we measure?
     1.b. What can we not measure? Why is measurement not possible? What are the implications of the inability to measure?
 
-The questions in 1.b. are important to think through in advance for contingency planning. For example, if a redesigned site launch combined with extensive marketing campaigns leads to year-over-year negative trends, it may not be possible to tell _what _broke and _why_. The UX changes could eliminate [comparable benchmarks at a granular level](https://open.substack.com/pub/dataanalysis/p/how-to-measure-new-feature-adoption?r=9hzj0&utm_medium=ios), while marketing activities might alter entry points; both UX and marketing can significantly impact user behavior throughout the site.Additionally, pre-post analyses are inherently low-fidelity and, with numerous variables at play, it becomes nearly impossible to isolate the specific causes of these changes.
+The questions in 1.b. are important to think through in advance for contingency planning. For example, if a redesigned site launch combined with extensive marketing campaigns leads to year-over-year negative trends, it may not be possible to tell _what_ broke and _why_. The UX changes could eliminate [comparable benchmarks at a granular level](https://open.substack.com/pub/dataanalysis/p/how-to-measure-new-feature-adoption?r=9hzj0&utm_medium=ios), while marketing activities might alter entry points; both UX and marketing can significantly impact user behavior throughout the site.Additionally, pre-post analyses are inherently low-fidelity and, with numerous variables at play, it becomes nearly impossible to isolate the specific causes of these changes.
 
 Even when A/B testing is an option before launch, it is essential to clarify whether the goal is simply to quantify a change or to make a decision. The latter often requires a more complex test design, as it involves more metrics, more segments, additional instrumentation, deeper analysis, and potentially more extensive root cause analysis. This complexity translates into a greater time investment in both test planning and execution.
 
