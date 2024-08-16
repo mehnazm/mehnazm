@@ -18,6 +18,17 @@ title: "Your awesome title"
   {% include pagination.html %}
 </div>
 
+<div class="wip-posts">
+  <h2>Work In Progress</h2>
+  <ul>
+    {% for wip in site.wip %}
+    <li>
+      <a href="{{ wip.url }}">{{ wip.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
 <div class="upcoming-posts">
   <h2>Upcoming Posts</h2>
   <ul>
@@ -37,12 +48,14 @@ title: "Your awesome title"
     <li>14. ANOVA, ANCOVA and their applications  </li>
     <li>15. Mapping out Data Products  </li>
     <li>16. Analyzing Rare Events  </li>
-    <li>17. Non Parametrics methods and their applications  </li>
+    <li>17. Non Parametric methods and their applications  </li>
     <li>18. Analysis and Narrative Fallacy  </li>
     <li>19. Reading Tealeaves: Indeterminable Analysis  </li>
     <li>20. Product and Business Equations  </li>
     <li>21. An eCommerce Dashboard  </li>
-    <li>22. Bias, Variance, Type 1 and 2 errors and their implications  </li>
+    <li>22. Bias, Variance, Type 1 and 2 errors and their Implications  </li>
+    <li>23. Patterns for SQL Problem Solving </li>
+    <li>24. A Repository of Analytics Problems </li>
 
 
     <!-- Add more upcoming posts as needed -->

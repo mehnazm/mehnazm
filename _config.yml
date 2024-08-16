@@ -34,6 +34,11 @@ collections:
   subposts:
     output: true
     permalink: /subposts/:path/
+  collections:
+  wip:
+    output: true
+    permalink: /:collection/:path/
+  
 
 
 plugins:
