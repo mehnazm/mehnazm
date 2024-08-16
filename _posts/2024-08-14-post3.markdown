@@ -89,8 +89,9 @@ A meta-analysis based on this updated information would help us identify the mos
 
 ## **Analytical Activity and Delivery:**
 
-**In the figure, I have bucketed x different analytical activity and y ou**tput formats that analysts are responsible for and in this section, I wanted to add nuances to each. As discussed earlier some of the buckets e.g. metrics, segments, visuals are “primitives” and are the building blocks of more complex analyses or outputs in and of itself in the context of delivering to a stakeholder. 
+In structuring the Analytical Activities, I’ve categorized them into three distinct areas: Building Blocks, Core Activity, and Delivery Format. The Building Blocks form the essential groundwork for any analysis. These activities—such as defining metrics and segmenting information—are critical because they ensure that subsequent analysis is built on a solid foundation. While distinct from Core Activities, which focus on tasks more directly leveraged by the business, the Building Blocks are integral to the analytical process and, in some contexts, can even stand alone as primary deliverables.
 
+Moving into the Core Activity, this section covers the analytical tasks that are more traditionally expected—generating insights, creating models, and formulating recommendations. These activities are the core of analysis and play a pivotal role in influencing decision-making, as demonstrated in the case studies and examples included. Finally, the Delivery Format addresses how these insights and recommendations are communicated to stakeholders. The effectiveness of this communication often determines whether the analysis will drive actionable outcomes or fade into the background.
 
 ### **Analytical Building Blocks**
 
@@ -388,9 +389,6 @@ This is essentially a structured account of connected events. One effective appr
 #### **4. Standardized reporting -**
 
 This includes output that can be templatized for e.g. an [A/B test report](https://medium.com/@talraviv/why-would-i-ever-write-a-growth-experiment-doc-6ef2649fd215) or scorecards used for weekly business reviews. This falls between a dashboard that allows self-service analytics and an explanatory story, providing a concise snapshot update.
-
-
-    Recommendations
 
 
 ### **Data Collection and Transformation**
