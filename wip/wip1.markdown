@@ -22,15 +22,15 @@ How much movement of a metric we can attribute to the test depends on the natura
 
 5. **Are there any risks to the internal validity of the A/B test:**
 
-    1. **Test and control are not independent:**
+    5.1. **Test and control are not independent:**
     
     When the test and/or control group can influence each other, it can lead to over or under estimation of impact measurement. These examples from [Lyft](https://eng.lyft.com/experimentation-in-a-ridesharing-marketplace-b39db027a66e) and [eBay](https://dominiccoey.github.io/assets/papers/marketplace_experiments.pdf) demonstrate that naively partitioning users into treatment and control groups violates the independence assumption and bias the effect estimates; using coarser randomization units —such as regions or auctions respectively instead of users in the context of these examples—may help mitigate the bias (however increase variance). 
 
-    2. **Test and control are unbalanced:**
+    5.2. **Test and control are unbalanced:**
     
     Referred to as Sample Ratio Mismatch i.e. the ratio of actual samples in test and control are different from the intended split due to selection bias,  violating the assumption of random assignment. As in the case of [Doordash](https://doordash.engineering/2023/10/17/addressing-the-challenges-of-sample-ratio-mismatch-in-a-b-testing/), the selection bias may occur during variant assignment such as when the small group of power users all end up in treatment or it can occur during the test such as due to exposure to bugs in one of the groups. 
 
-    3. **Interactions between experiments either due collisions or carryover:**
+    5.3. **Interactions between experiments either due collisions or carryover:**
     
     When multiple experiments run concurrently, the same user may be part of more than one experiment. While a full factorial experiment design generally mitigates this issue, there are instances where being in two treatments simultaneously can result in a poor user experience. For example, one experiment might test a blue button while another tests a blue background. Such experiment collisions can lead to results that either overestimate or underestimate the true impact. Similarly, users may be affected by residual effects from prior experiments. For instance, if there are two sequential tests for an ads module, users in the test group for the first experiment may exhibit ads fatigue in the second experiment. This decreased responsiveness to ads is due to fatigue, not necessarily because the ads in the second experiment are ineffective. As a result, the second experiment might show lower lift even if the test group from the first experiment is equally distributed across the test and control groups of the second experiment.
 

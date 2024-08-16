@@ -318,7 +318,7 @@ In any case,any A/B test planning requires addressing the below:
 8. Instrumentation (as elaborated in the Event Tracking section)
 9. The ramp plan and kill criteria; ensuring we are not susceptible to peeking or other p-hacking 
 
-The A/B testing considerations are addressed in more details [here](https://docs.google.com/document/d/15WHJz0_jAl8BUR59JhmvDSRsvESSCaHwLE8zGZMEFys/edit). 
+The A/B testing considerations are addressed in more details [here](https://mehnazm.github.io/wip/wip1.html). 
 
 Testing and measurement can be a lengthy process. Some tests may take up to 2 weeks just to finalize planning. While typically the execution of most tests conclude within 2 weeks, there are [situations](https://mehnazm.github.io/main/2024/06/27/main-post.html) where they need to be run for months. 
 

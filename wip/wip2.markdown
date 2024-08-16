@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reading Tea Leaves: Indeterminable Analysis "
+title: "Reading Tea Leaves: Indeterminable Analysis"
 date: 2024-08-15
 ---
 
