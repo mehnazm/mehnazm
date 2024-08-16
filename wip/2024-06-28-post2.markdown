@@ -1,20 +1,4 @@
 ---
 layout: post
 title: "CTG, Mix Shift and Performance Effect"
-     
 ---
-**The Tldr:**
-
-Contribution to growth (CTG), Mix Shift and Performance Effect are analytical tools for gaining insight into the relationship between overall vs. segment level changes-be it customer, product, marketing channel, region or time segments.
-
-CTG can be broken down to Mix Shift + Performance Effect
-
-Granular CTG adds up to independently calculated aggregate CTG. 
-
-Granular Mix Shift or Performance Effect does not however add up to independently calculated aggregate Mix Shift or Performance Effect. This is due to the presence of interaction terms. 
-
-Templates and examples for calculating CTG, Mix Shift and Performance Effect are [in this spreadsheet](https://docs.google.com/spreadsheets/d/1JAfmIyM-XRQn6iOBAYegIy9ibr70gEvQdY8jb34AiuQ/edit?usp=sharing). For details on relevant formulas, applications and their derivations, read on below.
-
-
-
-
