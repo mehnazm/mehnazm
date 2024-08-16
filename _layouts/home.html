@@ -20,13 +20,14 @@ title: "Your awesome title"
 
 <div class="wip-posts">
   <h2>Work In Progress</h2>
-  <ul>
+  <ul class="post-list">
     {% for wip in site.wip %}
     <li>
       <a href="{{ wip.url }}">{{ wip.title }}</a>
     </li>
     {% endfor %}
   </ul>
+  {% include pagination.html %}
 </div>
 
 <div class="upcoming-posts">
