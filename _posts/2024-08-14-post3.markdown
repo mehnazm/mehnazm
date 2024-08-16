@@ -3,13 +3,15 @@ layout: post
 title: "My Synthesis of Analytics"
 date: 2024-08-11
 categories: main 
-image: /assets/images/post3/img9.jpg 
+image: /assets/images/post3/img0.jpg 
 excerpt: "I will discuss the analytical paradigms I label as the Request-Response model and the Push model; the outputs of analysts; the key questions to ask requestors under the Request-Response model; and the importance of conducting meta-analyses. Note that I have placed the outputs of analysts in several buckets. However, these buckets are not mutually exclusive—some activities, such as metrics definition or segmentation, may stand alone as outputs for a meeting, or they may serve as inputs to other analytical activities, like Descriptive Modeling. The categorization reflects my impressionistic view, based on the time and mental energy devoted to various analytical activities in my experience."      
 
 ---
 Having worked in analytics across various settings—from roles embedded within business units to centralized product analytics organizations, spanning an online marketplace, a big-box retailer, a D2C brand, and from the largest employer in the US to a 200-employee startup—I have observed some common patterns in analytical needs. This post aims to synthesize those observations.
 
 The figure below illustrates the placement of analytics in relation to stakeholders, partners, and similar roles, as well as the tools, activities, and output formats used in analytics.
+
+![](/assets/images/post3/img0.jpg){: .center }
 
 In the following discussion, I will not focus on the conceptual and software tools of analytics. Instead, I will discuss the analytical paradigms I label as the Request-Response model and the Push model; the outputs of analysts; the key questions to ask requestors under the Request-Response model; and the importance of conducting meta-analyses. Note that I have placed the outputs of analysts in several buckets. However, these buckets are not mutually exclusive—some activities, such as metrics definition or segmentation, may stand alone as outputs for a meeting, or they may serve as inputs to other analytical activities, like Descriptive Modeling. The categorization reflects my impressionistic view, based on the time and mental energy devoted to various analytical activities in my experience.
 
@@ -92,6 +94,8 @@ A meta-analysis based on this updated information would help us identify the mos
 In structuring the Analytical Activities, I’ve categorized them into three distinct areas: Building Blocks, Core Activity, and Delivery Format. The Building Blocks form the essential groundwork for any analysis. These activities—such as defining metrics and segmenting information—are critical because they ensure that subsequent analysis is built on a solid foundation. While distinct from Core Activities, which focus on tasks more directly leveraged by the business, the Building Blocks are integral to the analytical process and, in some contexts, can even stand alone as primary deliverables.
 
 Moving into the Core Activity, this section covers the analytical tasks that are more traditionally expected—generating insights, creating models, and formulating recommendations. These activities are the core of analysis and play a pivotal role in influencing decision-making, as demonstrated in the case studies and examples included. Finally, the Delivery Format addresses how these insights and recommendations are communicated to stakeholders. The effectiveness of this communication often determines whether the analysis will drive actionable outcomes or fade into the background.
+
+Additionally, this section includes some activities related to the Data Layer. I have included these because, once again, they represent critical work that consumes a significant amount of an analyst's time.
 
 ### **Analytical Building Blocks**
 
