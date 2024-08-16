@@ -36,7 +36,7 @@ collections:
     permalink: /subposts/:path/
   wip:
     output: true
-    permalink: /collection/:path/
+    permalink: /wip/:year/:month/:day/:title.html
   
 
 
