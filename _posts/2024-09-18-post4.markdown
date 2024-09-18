@@ -1,0 +1,118 @@
+---
+layout: post
+title: "The Fundamentals of Hypothesis Testing Concepts "
+date: 2024-09-18
+categories: main 
+image: /assets/images/post4/img1.jpg 
+excerpt: "??"      
+
+---
+
+### Two Sample z-test for Means
+
+Now that we have familiarized ourselves with the most important concepts in Hypothesis Testing, we are ready to make our understanding more concrete by looking at a specific Hypothesis Test—namely, the two-sample z-test for means.
+
+As the name implies, this test assumes a normal distribution (z-distribution) and is used to compare the means between two independent groups. This is particularly fitting for our item recommendation module example, where we compare the mean GMV/visitor between the Test and Control groups. The underlying population in this example is assumed to be normally distributed, but even if it weren’t, the Central Limit Theorem (CLT) applies due to the large sample sizes, making the sampling distribution of the means approximately normal.
+
+In general, the two-sample z-test for means is probably the most widely used Hypothesis Test in an online A/B testing context.
+
+#### How does the two-sample z-test for means work?
+
+This test works by measuring how far the observed difference between sample means is from the expected difference under the Null Hypothesis (typically zero), in terms of standard deviations—or more accurately, standard errors. This measurement is called the z-statistic, and the area under the standard normal distribution curve beyond the absolute value of the z-statistic gives us the p-value, which indicates how extreme the observation is.
+
+In essence, the z-test involves just calculating the z-statistic and the corresponding p-value.
+
+#### Equations for Calculating the z-statistic
+
+**Distance:**
+The z-statistic measures the distance between the observed difference in sample means and the expected difference under the Null Hypothesis, which is typically zero. This can be expressed as:
+
+$$
+(\bar{X}_{\text{test}} - \bar{X}_{\text{control}})
+$$
+
+**Standard Error:**
+The z-statistic expresses this distance in terms of the standard deviation of the distribution under the Null Hypothesis. The standard deviation of the means is called the standard error, and in the case of the Null Hypothesis, which involves the difference between two means, it is calculated as follows:
+
+By definition:
+
+$$
+\text{Standard Error} = \sqrt{\text{Var}(\bar{X}_{\text{test}} - \bar{X}_{\text{control}})}
+$$
+
+Because the two samples are independent, the variance of the difference is the sum of the variances of each sample mean:
+
+$$
+\text{Standard Error} = \sqrt{\text{Var}(\bar{X}_{\text{test}}) + \text{Var}(\bar{X}_{\text{control}})}
+$$
+
+Substituting the variances of the sample means, we get:
+
+$$
+\text{Standard Error} = \sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}
+$$
+
+**Note:** The \(s\) in the above equation represents the sample standard deviation, which approximates the population standard deviation \(\sigma\). The accuracy of this approximation improves with larger sample sizes.
+
+$$
+s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2}
+$$
+
+Where:
+- \(n\) is the sample size,
+- \(X_i\) represents each individual observation,
+- \(\bar{X}\) is the sample mean.
+
+As mentioned, the Null Hypothesis assumes that there is no difference between the Test and Control distributions. This means we can assume that the standard deviations of both groups are the same. This allows us to simplify the standard error formula by using the pooled standard deviation, \(s_p\):
+
+$$
+s_p = \sqrt{\frac{(n_{\text{test}} - 1)s_{\text{test}}^2 + (n_{\text{control}} - 1)s_{\text{control}}^2}{n_{\text{test}} + n_{\text{control}} - 2}}
+$$
+
+The standard error then simplifies to:
+
+$$
+\text{Standard Error} = s_p \sqrt{\frac{1}{n_{\text{test}}} + \frac{1}{n_{\text{control}}}}
+$$
+
+Using the above, we then get the z-statistic formula:
+
+$$
+Z = \frac{\bar{X}_{\text{test}} - \bar{X}_{\text{control}}}{s_p \sqrt{\frac{1}{n_{\text{test}}} + \frac{1}{n_{\text{control}}}}}
+$$
+
+#### Finding the p-value:
+
+Once we have the z-statistic, we can find the corresponding p-value by looking it up in a Z-table or using software, considering the appropriate area under the curve depending on whether the test is left-tailed, right-tailed, or two-tailed.
+
+The above explanation fully captures what a z-test for means entails. However, there is one other important calculation related to the z-test that is typically performed before running the test: the calculation of Statistical Power.
+
+As mentioned earlier:
+
+$$
+\text{Statistical Power} = 1 - \beta
+$$
+
+Beta ( \( \beta \) ) represents the probability that the test will fail to reject the Null Hypothesis when the Alternative Hypothesis is true. This occurs when the test statistic under the Alternative Hypothesis falls within the non-significant region of the distribution under the Null Hypothesis, below the critical value \( z_{\alpha} \).
+
+To calculate beta, \( z_{\alpha} \) needs to be expressed with respect to the distribution under the Alternative Hypothesis. This transformation is necessary because the critical value \( z_{\alpha} \) was originally defined under the Null Hypothesis. To accurately assess the overlap between the Null and Alternative Hypothesis distributions, we must adjust \( z_{\alpha} \) to account for the shift in the mean when moving from the Null to the Alternative Hypothesis.
+
+This is done by first expressing the MDE (Minimum Detectable Effect) as a z-statistic ( \( z_{\text{MDE}} \) ) and then subtracting \( z_{\text{MDE}} \) from \( z_{\alpha} \).
+
+$$
+z_{\text{MDE}} = \frac{\text{MDE}}{\text{Standard Error}} = \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}
+$$
+
+Beta is therefore calculated as:
+
+$$
+\beta = P\left(z > z_{\alpha} - z_{\text{MDE}}\right)
+$$
+
+And Statistical Power is:
+
+$$
+\text{Statistical Power} = 1 - \beta = 1 - P\left(z > z_{\alpha} - \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}\right)
+$$
+
+Given that Statistical Power is conventionally fixed at 80% and alpha is set to 0.05, we can examine the relationship between MDE and the number of samples for a given sample standard deviation \( s \) in the accompanying chart.
