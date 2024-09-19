@@ -38,6 +38,8 @@ collections:
     output: true
     permalink: /wip/:path/
   
+kramdown:
+  math_engine: mathjax
 
 
 plugins:
