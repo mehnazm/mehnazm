@@ -228,3 +228,113 @@ $$
 
 - \\( \text{MDE} \\) is the Minimum Detectable Effect, expressed as the difference in proportions you want to detect.
 
+### Other Hypothesis Tests
+
+So far, we have covered two variants of the Z-test: the two-sample Z-test for means and the two-sample Z-test for proportions. However, there are other variations of the Z-test, such as the one-sample Z-test (where instead of a Test and Control group, a single group is compared to some specified threshold) and the paired Z-test (where instead of independent Test and Control groups, the group being measured is related in some way). Beyond the Z-test, there are also various other types of hypothesis tests—some that don't rely on assumptions about the sampling distribution, and others that allow us to assess changes across multiple variables.
+
+Next, we will explore a hypothesis test that measures differences in medians. This test is valuable because medians, being more robust to outliers than means, are an important statistic. Additionally, the test provides a contrast to the Z-test.
+
+### Mann-Whitney U Test
+
+This test tells us if there is a statistically significant difference between the distributions of two samples (i.e., between the Test and Control groups). From that, we can infer whether the difference in medians of the two samples is statistically significant.
+
+Unlike the Z-test, this test does not require the sampling distribution to be normal, or make any assumptions on the sampling or population distributions. In fact, this particular test does not even work directly with the data. Instead, it works by comparing the relative rank of the data across the groups.
+
+Under the Null Hypothesis, the expectation is that there is no difference between the two groups—implying that the ranks are randomly distributed between the groups. Deviations from this expectation are also assessed based on the ranked data. For large samples, these deviations can be further transformed into Z-scores for comparison to a normal distribution. The specifics of this will be illustrated below using an example.
+
+The Mann-Whitney test is applicable to continuous or ordinal data. Due to its applicability to continuous data, we can again leverage our item recommendation module example.
+
+Let us imagine we have 6 visitors in the Control group exposed to the old module and 6 visitors in the Test group exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below.
+
+As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking them from lowest to highest (1 to \\( n_{\text{control}} + n_{\text{test}} \\)).
+
+We then compare the sum of each sample’s across-group rank to its within-group rank. A data point's across-group rank is higher than its within-group rank when a lower-valued data point exists in the other group, pushing the given data point to a higher rank. The difference between the sum of across-group and within-group ranks reflects how much one group's values tend to be larger than the other’s.
+
+For example, the GMV/Visitor data point of 11.3 in the Control group has an across-group rank of 4 but a within-group rank of 3 because there is one Test group data point (11.0) that is lower. Similarly, the data point of 11.5 in the Control group has an across-group rank of 6 but a within-group rank of 4 because there are two Test group data points (11.0 and 11.4) smaller than the Control data point.
+
+In this way, there are 11 instances where the Test group’s data point is smaller than the Control group’s, reflected in the U Statistic of 11 for the Control group.
+
+The U Statistic for the Test group is 25, implying 25 instances where a Control group data point is smaller than a Test group data point.
+
+### U Statistic Formula
+
+To summarize, the formula for the U Statistic using the Control group is:
+
+$$
+U_{\text{control}} = R_{\text{control}} - \frac{n_{\text{control}} (n_{\text{control}} + 1)}{2}
+$$
+
+Where \\( R_{\text{control}} \\) is the sum of across-group ranks of the Control data, and \\( \frac{n_{\text{control}} (n_{\text{control}} + 1)}{2} \\) is the sum of within-group ranks of the Control data.
+
+The U statistic is a rank-based measure of separation between two distributions. Under the Null Hypothesis, we assume there is no difference between the Test and Control distributions, meaning half of the values in one group will rank higher than those in the other group.
+
+### Statistical Significance
+
+To determine statistical significance, we use the smaller of the two U statistics and compare it to the expected distribution under the Null Hypothesis. For small samples, we compare the U statistic to a critical value from the Mann-Whitney distribution table to get an exact p-value.
+
+For larger samples, we use the Central Limit Theorem (CLT), which guarantees that the U statistic approximates a normal distribution.
+
+The Z-score of the U statistic is calculated as:
+
+$$
+Z = \frac{U - \mu_U}{\sigma_U}
+$$
+
+Where:
+
+- \\( \mu_U \\) is the mean, calculated as \\( \mu_U = \frac{n_1 \times n_2}{2} \\).
+- \\( \sigma_U \\) is the standard deviation, calculated as:
+
+$$
+\sigma_U = \sqrt{\frac{n_1 \times n_2 \times (n_1 + n_2 + 1)}{12}}
+$$
+
+If there are ties in the rankings, the formula for \\( \sigma_U \\) changes.
+
+For our example, we get \\( \mu_U = 18 \\) and \\( \sigma_U = 6.244 \\). Given \\( U_{\text{control}} = 11 \\) and \\( U_{\text{test}} = 25 \\), we calculate:
+
+$$
+Z_{\text{control}} = \frac{11 - 18}{6.244} \approx -1.12
+$$
+
+$$
+Z_{\text{test}} = \frac{25 - 18}{6.244} \approx 1.12
+$$
+
+Both U statistics yield symmetric Z-scores and the same p-value (0.2623), which is not statistically significant.
+
+### A Disclaimer on Inferring Medians
+
+The Mann-Whitney U test can detect differences between distributions, but it does not necessarily imply that the medians are different unless the two distributions have the same shape. Differences in the shape of the distributions (e.g., spread or skewness) can lead to rejection of the Null Hypothesis even when the medians are the same.
+
+This is why Mann-Whitney tests are often reported as detecting significant differences between groups, but not necessarily differences in medians unless it is assumed that the distributions are similarly shaped.
+
+### Statistical Power
+
+The statistical power calculation for the Mann-Whitney test is more complex than that for Z-tests. For small samples, Monte Carlo simulations or exact methods are used. For large samples, the asymptotic normal approximation can be applied, similar to the Z-test.
+
+The effect size in the Mann-Whitney test is often expressed as the probability of superiority:
+
+$$
+\text{Probability of Superiority} = \frac{U}{n_1 \times n_2}
+$$
+
+This gives the likelihood that a randomly selected value from the Test group will exceed one from the Control group.
+
+In our example, if we want a probability of superiority of 0.65, we calculate the U statistic for the MDE as:
+
+$$
+U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times 0.65 = 6 \times 6 \times 0.65 = 23.4
+$$
+
+The Z-score for the MDE is then:
+
+$$
+Z_{\text{MDE}} = \frac{U_{\text{MDE}} - \mu_U}{\sigma_U} = 0.865
+$$
+
+For a 5% significance level, the critical value of \\( Z_{\alpha} \\) is 1.96, so the statistical power is:
+
+$$
+\text{Power} = P(Z > Z_{\text{MDE}} - Z_{\alpha}) \approx 86.2\%
+$$
