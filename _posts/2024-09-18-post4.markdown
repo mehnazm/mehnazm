@@ -137,21 +137,27 @@ The CLT guarantees that the sampling distribution of means approximates a normal
 
 By definition:
 
+$$
 \[
 \text{Standard Error} = \sqrt{\text{Var}(\bar{X}_{\text{test}} - \bar{X}_{\text{control}})}
 \]
+$$
 
 Since the two samples are independent, the variance of the difference is the sum of the variances of each sample mean:
 
+$$
 \[
 \text{Standard Error} = \sqrt{\text{Var}(\bar{X}_{\text{test}}) + \text{Var}(\bar{X}_{\text{control}})}
 \]
+$$
 
 Substituting the variances of the sample proportions, we use \( p_{\text{test}} \) and \( p_{\text{control}} \) to represent the sample proportions for the test and control groups, respectively:
 
+$$
 \[
 \text{Standard Error} = \sqrt{\frac{p_{\text{test}}(1 - p_{\text{test}})}{n_{\text{test}}} + \frac{p_{\text{control}}(1 - p_{\text{control}})}{n_{\text{control}}}}
 \]
+$$
 
 Where:
 - \( p_{\text{test}} = \frac{x_{\text{test}}}{n_{\text{test}}} \) is the proportion of successes in the test group, where \( x_{\text{test}} \) is the number of successes in the test group, and \( n_{\text{test}} \) is the size of the test group.
@@ -161,50 +167,64 @@ Where:
 
 Under the Null Hypothesis, we assume that the true proportions in both groups are equal, so we use a pooled estimate \( \hat{p} \), calculated as:
 
+$$
 \[
 \hat{p} = \frac{x_{\text{test}} + x_{\text{control}}}{n_{\text{test}} + n_{\text{control}}}
 \]
+$$
 
 Using \( \hat{p} \), the standard error formula becomes:
 
+$$
 \[
 \text{Standard Error} = \sqrt{\frac{\hat{p}(1 - \hat{p})}{n_{\text{test}}} + \frac{\hat{p}(1 - \hat{p})}{n_{\text{control}}}}
 \]
+$$
 
 We can then factor out \( \hat{p}(1 - \hat{p}) \):
 
+$$
 \[
 \text{Standard Error} = \sqrt{\hat{p}(1 - \hat{p}) \left( \frac{1}{n_{\text{test}}} + \frac{1}{n_{\text{control}}} \right)}
 \]
+$$
 
 ### Z-statistic for the Difference in Proportions:
 
 As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis:
 
+$$
 \[
 Z = \frac{p_{\text{test}} - p_{\text{control}}}{\sqrt{\hat{p}(1 - \hat{p}) \left( \frac{1}{n_{\text{test}}} + \frac{1}{n_{\text{control}}} \right)}}
 \]
+$$
 
 ### Statistical Power:
 
 The formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
 
+$$
 \[
 \text{Statistical Power} = 1 - \beta = 1 - P\left(z > z_{\alpha} - z_{\text{MDE}}\right)
 \]
+$$
 
 However, due to the difference in how the standard error is calculated for proportions, the formula becomes:
 
+$$
 \[
 \text{Statistical Power} = 1 - P\left(z > z_{\alpha} - \frac{\text{MDE}}{\sqrt{\hat{p}(1 - \hat{p}) \left( \frac{1}{n_{\text{test}}} + \frac{1}{n_{\text{control}}} \right)}}\right)
 \]
+$$
 
 Where:
 - \( \hat{p} \) represents the pooled proportion, calculated as:
 
+$$
 \[
 \hat{p} = \frac{\text{number of successes in both groups}}{\text{total sample size of both groups}}
 \]
+$$
 
 - \( \text{MDE} \) is the Minimum Detectable Effect, expressed as the difference in proportions you want to detect.
 
