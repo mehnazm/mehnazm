@@ -52,16 +52,16 @@ $$
 \text{Standard Error} = \sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}
 $$
 
-**Note:** The \(s\) in the above equation represents the sample standard deviation, which approximates the population standard deviation \(\sigma\). The accuracy of this approximation improves with larger sample sizes.
+**Note:** The \\(s\\) in the above equation represents the sample standard deviation, which approximates the population standard deviation \\(\sigma\\). The accuracy of this approximation improves with larger sample sizes.
 
 $$
 s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2}
 $$
 
 Where:
-- \(n\) is the sample size,
-- \(X_i\) represents each individual observation,
-- \(\bar{X}\) is the sample mean.
+- \\(n\\) is the sample size,
+- \\(X_i\\) represents each individual observation,
+- \\(\bar{X}\\) is the sample mean.
 
 As mentioned, the Null Hypothesis assumes that there is no difference between the Test and Control distributions. This means we can assume that the standard deviations of both groups are the same. This allows us to simplify the standard error formula by using the pooled standard deviation, \(s_p\):
 
