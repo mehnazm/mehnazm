@@ -63,7 +63,7 @@ Where:
 - \\(X_i\\) represents each individual observation,
 - \\(\bar{X}\\) is the sample mean.
 
-As mentioned, the Null Hypothesis assumes that there is no difference between the Test and Control distributions. This means we can assume that the standard deviations of both groups are the same. This allows us to simplify the standard error formula by using the pooled standard deviation, \(s_p\):
+As mentioned, the Null Hypothesis assumes that there is no difference between the Test and Control distributions. This means we can assume that the standard deviations of both groups are the same. This allows us to simplify the standard error formula by using the pooled standard deviation, \\(s_p\\):
 
 $$
 s_p = \sqrt{\frac{(n_{\text{test}} - 1)s_{\text{test}}^2 + (n_{\text{control}} - 1)s_{\text{control}}^2}{n_{\text{test}} + n_{\text{control}} - 2}}
@@ -93,11 +93,11 @@ $$
 \text{Statistical Power} = 1 - \beta
 $$
 
-Beta \( \beta \) represents the probability that the test will fail to reject the Null Hypothesis when the Alternative Hypothesis is true. This occurs when the test statistic under the Alternative Hypothesis falls within the non-significant region of the distribution under the Null Hypothesis, below the critical value \(\ z_{\alpha} \ \).
+Beta \\( \beta \\) represents the probability that the test will fail to reject the Null Hypothesis when the Alternative Hypothesis is true. This occurs when the test statistic under the Alternative Hypothesis falls within the non-significant region of the distribution under the Null Hypothesis, below the critical value \\(\ z_{\alpha} \ \\).
 
-To calculate beta, \( z_{\alpha} \) needs to be expressed with respect to the distribution under the Alternative Hypothesis. This transformation is necessary because the critical value \( z_{\alpha} \) was originally defined under the Null Hypothesis. To accurately assess the overlap between the Null and Alternative Hypothesis distributions, we must adjust \( z_{\alpha} \) to account for the shift in the mean when moving from the Null to the Alternative Hypothesis.
+To calculate beta, \\( z_{\alpha} \\) needs to be expressed with respect to the distribution under the Alternative Hypothesis. This transformation is necessary because the critical value \\( z_{\alpha} \\) was originally defined under the Null Hypothesis. To accurately assess the overlap between the Null and Alternative Hypothesis distributions, we must adjust \\( z_{\alpha} \\) to account for the shift in the mean when moving from the Null to the Alternative Hypothesis.
 
-This is done by first expressing the MDE (Minimum Detectable Effect) as a z-statistic ( \( z_{\text{MDE}} \) ) and then subtracting \( z_{\text{MDE}} \) from \( z_{\alpha} \).
+This is done by first expressing the MDE (Minimum Detectable Effect) as a z-statistic ( \\( z_{\text{MDE}} \\) ) and then subtracting \\( z_{\text{MDE}} \\) from \\( z_{\alpha} \\).
 
 $$
 z_{\text{MDE}} = \frac{\text{MDE}}{\text{Standard Error}} = \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}
@@ -115,7 +115,7 @@ $$
 \text{Statistical Power} = 1 - \beta = 1 - P\left(z > z_{\alpha} - \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}\right)
 $$
 
-Given that Statistical Power is conventionally fixed at 80% and alpha is set to 0.05, we can examine the relationship between MDE and the number of samples for a given sample standard deviation \( s \) in the accompanying chart.
+Given that Statistical Power is conventionally fixed at 80% and alpha is set to 0.05, we can examine the relationship between MDE and the number of samples for a given sample standard deviation \\( s \\) in the accompanying chart.
 
 ### Two Sample z-test for Proportions
 
@@ -151,7 +151,7 @@ $$
 
 $$
 
-Substituting the variances of the sample proportions, we use \( p_{\text{test}} \) and \( p_{\text{control}} \) to represent the sample proportions for the test and control groups, respectively:
+Substituting the variances of the sample proportions, we use \\( p_{\text{test}} \\) and \\( p_{\text{control}} \\) to represent the sample proportions for the test and control groups, respectively:
 
 $$
 
@@ -160,12 +160,12 @@ $$
 $$
 
 Where:
-- \( p_{\text{test}} = \frac{x_{\text{test}}}{n_{\text{test}}} \) is the proportion of successes in the test group, where \( x_{\text{test}} \) is the number of successes in the test group, and \( n_{\text{test}} \) is the size of the test group.
-- \( p_{\text{control}} = \frac{x_{\text{control}}}{n_{\text{control}}} \) is the proportion of successes in the control group, where \( x_{\text{control}} \) is the number of successes in the control group, and \( n_{\text{control}} \) is the size of the control group.
+- \\( p_{\text{test}} = \frac{x_{\text{test}}}{n_{\text{test}}} \\) is the proportion of successes in the test group, where \\( x_{\text{test}} \\) is the number of successes in the test group, and \\( n_{\text{test}} \\) is the size of the test group.
+- \\( p_{\text{control}} = \frac{x_{\text{control}}}{n_{\text{control}}} \\) is the proportion of successes in the control group, where \\( x_{\text{control}} \\) is the number of successes in the control group, and \\( n_{\text{control}} \\) is the size of the control group.
 
 #### Pooled Estimate:
 
-Under the Null Hypothesis, we assume that the true proportions in both groups are equal, so we use a pooled estimate \( \hat{p} \), calculated as:
+Under the Null Hypothesis, we assume that the true proportions in both groups are equal, so we use a pooled estimate \\( \hat{p} \\), calculated as:
 
 $$
 
@@ -173,7 +173,7 @@ $$
 
 $$
 
-Using \( \hat{p} \), the standard error formula becomes:
+Using \\( \hat{p} \\), the standard error formula becomes:
 
 $$
 
@@ -181,7 +181,7 @@ $$
 
 $$
 
-We can then factor out \( \hat{p}(1 - \hat{p}) \):
+We can then factor out \\( \hat{p}(1 - \hat{p}) \\):
 
 $$
 
@@ -218,7 +218,7 @@ $$
 $$
 
 Where:
-- \( \hat{p} \) represents the pooled proportion, calculated as:
+- \\( \hat{p} \\) represents the pooled proportion, calculated as:
 
 $$
 
@@ -226,5 +226,5 @@ $$
 
 $$
 
-- \( \text{MDE} \) is the Minimum Detectable Effect, expressed as the difference in proportions you want to detect.
+- \\( \text{MDE} \\) is the Minimum Detectable Effect, expressed as the difference in proportions you want to detect.
 
