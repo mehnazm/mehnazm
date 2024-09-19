@@ -93,7 +93,7 @@ $$
 \text{Statistical Power} = 1 - \beta
 $$
 
-Beta ( \( \beta \) ) represents the probability that the test will fail to reject the Null Hypothesis when the Alternative Hypothesis is true. This occurs when the test statistic under the Alternative Hypothesis falls within the non-significant region of the distribution under the Null Hypothesis, below the critical value \( z_{\alpha} \).
+Beta \( \beta \) represents the probability that the test will fail to reject the Null Hypothesis when the Alternative Hypothesis is true. This occurs when the test statistic under the Alternative Hypothesis falls within the non-significant region of the distribution under the Null Hypothesis, below the critical value \(\ z_{\alpha} \ \).
 
 To calculate beta, \( z_{\alpha} \) needs to be expressed with respect to the distribution under the Alternative Hypothesis. This transformation is necessary because the critical value \( z_{\alpha} \) was originally defined under the Null Hypothesis. To accurately assess the overlap between the Null and Alternative Hypothesis distributions, we must adjust \( z_{\alpha} \) to account for the shift in the mean when moving from the Null to the Alternative Hypothesis.
 
@@ -123,17 +123,17 @@ This is essentially the same as the two-sample z-test for means, in the sense th
 
 The only difference is that this test deals with proportions in categorical data—specifically binary outcomes (e.g., success/failure)—while the other uses continuous data for calculating means. Whereas the z-test for means is used for testing differences in GMV/visitors, the proportions test is used for testing differences in conversion rates.
 
-### A Quick Note on Proportions, Ratios, and Means:
+#### A Quick Note on Proportions, Ratios, and Means:
 
 Proportions, ratios, and means are often conflated with each other. These are related but different concepts. Proportions represent part of a whole—they are a fraction or percent. Ratios are a comparison or relationship between data—the data can be unrelated and do not have to form part of a whole. Notably, a proportion can be expressed as a ratio, but a ratio is not a proportion. Means are a summary of the distribution of data, i.e., a summary of a series of values to understand what is the “typical” value. This is in contrast to proportions or ratios that involve the division of one quantity by another.
 
 We could take the ratio of means (e.g., mean height of women/mean height of men) or the mean of ratios (e.g., mean of height/weight for women); however, these serve different analytical purposes. The ratio of means shows a relationship between two groups, while the mean of ratios provides a summary within a group—each offering distinct insights depending on the context.
 
-### Application of the Central Limit Theorem (CLT) to Proportions:
+#### Application of the Central Limit Theorem (CLT) to Proportions:
 
 The CLT guarantees that the sampling distribution of means approximates a normal distribution, which allows us to use the z-test. While medians and percentiles do not follow the CLT, the theorem does apply to proportions. This is because proportions can be modeled as the mean of a series of binary outcomes from a binomial distribution. Under the CLT, the sampling distribution of these means (proportions) from a binomial distribution approximates a normal distribution as the sample size increases, enabling us to apply the z-test.
 
-### Standard Error for the Difference in Proportions:
+#### Standard Error for the Difference in Proportions:
 
 By definition:
 
@@ -163,7 +163,7 @@ Where:
 - \( p_{\text{test}} = \frac{x_{\text{test}}}{n_{\text{test}}} \) is the proportion of successes in the test group, where \( x_{\text{test}} \) is the number of successes in the test group, and \( n_{\text{test}} \) is the size of the test group.
 - \( p_{\text{control}} = \frac{x_{\text{control}}}{n_{\text{control}}} \) is the proportion of successes in the control group, where \( x_{\text{control}} \) is the number of successes in the control group, and \( n_{\text{control}} \) is the size of the control group.
 
-### Pooled Estimate:
+#### Pooled Estimate:
 
 Under the Null Hypothesis, we assume that the true proportions in both groups are equal, so we use a pooled estimate \( \hat{p} \), calculated as:
 
@@ -189,7 +189,7 @@ $$
 
 $$
 
-### Z-statistic for the Difference in Proportions:
+#### Z-statistic for the Difference in Proportions:
 
 As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis:
 
@@ -199,7 +199,7 @@ Z = \frac{p_{\text{test}} - p_{\text{control}}}{\sqrt{\hat{p}(1 - \hat{p}) \left
 
 $$
 
-### Statistical Power:
+#### Statistical Power:
 
 The formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
 
