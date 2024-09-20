@@ -250,7 +250,7 @@ The Mann-Whitney test is applicable to continuous or ordinal data. Due to its ap
 
 Let us imagine we have 6 visitors in the Control group who are exposed to the old module and 6 visitors in the Test group who are exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below. 
 
-As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to \\(n_control+n_test\\), respectively.
+As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to \\(n_{\text{control}} = n_{\text{test}}\\), respectively.
 
 Next we compare the sum of each sample’s across-group rank to its within group rank.
 
@@ -325,7 +325,7 @@ As can be seen above, the two U Statistics yield symmetric  z-scores and therefo
 
 Note, the sample sizes in our example (\\(\text{control} = n_{\text{test}} = 6\\)) are too small to use the Z-score approach accurately. The rule of thumb is that we require at least 30 samples for the z-score based approach to apply. However, the above is intended to illustrate the symmetry in z-scores which still holds for larger sample sizes, where the normal approximation becomes valid.
 
-### A Disclaimer on Inferring Medians
+#### A Disclaimer on Inferring Medians
 
 The Mann-Whitney U test can detect differences between distributions, but it does not automatically imply that the medians are different unless the two distributions have the same shape. Differences in the overall shape of the distributions (e.g., spread or skewness) can also lead to a rejection of the null hypothesis, even when the medians are the same.
 
@@ -337,7 +337,7 @@ In short, the Mann-Whitney test can tell us if the distributions of two groups a
 
 This is why Mann-Whitney tests are often reported as stating: “The medians of the two groups were different, and there was a statistically significant difference detected between the two groups,” as opposed to “The medians of the two groups were statistically significantly different.”
 
-### Statistical Power
+#### Statistical Power
 
 The statistical power calculation for the Mann-Whitney test is not as straightforward as that for z-tests. For small samples, a formula-based power calculation is generally not possible due to the non-normality of the U statistic’s distribution. In these cases, we rely on Monte Carlo simulations or exact methods to estimate power (Monte Carlo is to be discussed in a later section).
 
@@ -353,7 +353,7 @@ $$
 
 This tells us the likelihood that a randomly selected value from the test group will exceed a randomly selected value from the control group, making it an intuitive measure of effect size in the Mann-Whitney test.
 
-An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of \\(n_control = n_test = 6\\), which does not technically apply but enables simpler illustration):
+An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of \\(n_{\text{control}} = n_{\text{test}} = 6\\), which does not technically apply but enables simpler illustration):
 
 As seen before, in our example \\(n_{\text{control}} = n_{\text{test}} = 6\\), \\(\mu_U = 18\\) and \\(\sigma_U = 6.244\\)
 
