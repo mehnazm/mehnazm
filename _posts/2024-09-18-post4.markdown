@@ -327,36 +327,50 @@ Note, the sample sizes in our example (\\(\text{control} = n_{\text{test}} = 6\\
 
 ### A Disclaimer on Inferring Medians
 
-The Mann-Whitney U test can detect differences between distributions, but it does not necessarily imply that the medians are different unless the two distributions have the same shape. Differences in the shape of the distributions (e.g., spread or skewness) can lead to rejection of the Null Hypothesis even when the medians are the same.
+The Mann-Whitney U test can detect differences between distributions, but it does not automatically imply that the medians are different unless the two distributions have the same shape. Differences in the overall shape of the distributions (e.g., spread or skewness) can also lead to a rejection of the null hypothesis, even when the medians are the same.
 
-This is why Mann-Whitney tests are often reported as detecting significant differences between groups, but not necessarily differences in medians unless it is assumed that the distributions are similarly shaped.
+This is an important caveat when using non-parametric tests like Mann-Whitney, as they test for differences in ranks and distributions rather than focusing solely on central tendencies like the median.
+
+For example, in the image below, the medians of both distributions are identical. However, the null hypothesis would still be rejected in this case because the distributions are skewed in different directions. 
+
+In short, the Mann-Whitney test can tell us if the distributions of two groups are different. However, it does not necessarily indicate that the medians of the distributions are different unless the distributions have the same shape. Inferring that the medians are different would require the additional assumption that the distributions are similarly shaped.
+
+This is why Mann-Whitney tests are often reported as stating: “The medians of the two groups were different, and there was a statistically significant difference detected between the two groups,” as opposed to “The medians of the two groups were statistically significantly different.”
 
 ### Statistical Power
 
-The statistical power calculation for the Mann-Whitney test is more complex than that for Z-tests. For small samples, Monte Carlo simulations or exact methods are used. For large samples, the asymptotic normal approximation can be applied, similar to the Z-test.
+The statistical power calculation for the Mann-Whitney test is not as straightforward as that for z-tests. For small samples, a formula-based power calculation is generally not possible due to the non-normality of the U statistic’s distribution. In these cases, we rely on Monte Carlo simulations or exact methods to estimate power (Monte Carlo is to be discussed in a later section).
 
-The effect size in the Mann-Whitney test is often expressed as the probability of superiority:
+For large samples, we can use the asymptotic normal approximation of the U statistic, similar to the z-test, to calculate power. However, regardless of sample size, the MDE (Minimum Detectable Effect) for the Mann-Whitney test must be handled with care.
+
+In z-tests, the MDE is typically defined as a difference in means. In the Mann-Whitney test, since the test compares the ranks of two groups rather than their raw data, it makes sense to approach the MDE as a shift in ranks, which is reflected in the U statistic. However, because the U statistic may not be easily interpretable, we often express the effect size in terms of the probability of superiority, which is a transformation of the U statistic.
+
+The probability of superiority is calculated as:
 
 $$
 \text{Probability of Superiority} = \frac{U}{n_1 \times n_2}
 $$
 
-This gives the likelihood that a randomly selected value from the Test group will exceed one from the Control group.
+This tells us the likelihood that a randomly selected value from the test group will exceed a randomly selected value from the control group, making it an intuitive measure of effect size in the Mann-Whitney test.
 
-In our example, if we want a probability of superiority of 0.65, we calculate the U statistic for the MDE as:
+An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of n_control = n_test = 6, which does not technically apply but enables simpler illustration):
 
-$$
-U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times 0.65 = 6 \times 6 \times 0.65 = 23.4
-$$
+As seen before, in our example \(n_{\text{control}} = n_{\text{test}} = 6\), \(\mu_U = 18\) and \(\sigma_U = 6.244\)
 
-The Z-score for the MDE is then:
+Let us say we want our probability of superiority to be 0.65. Therefore our \(U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times \text{Probability of Superiority} = 6 \times 6 \times 0.65 = 23.4\)
 
 $$
-Z_{\text{MDE}} = \frac{U_{\text{MDE}} - \mu_U}{\sigma_U} = 0.865
+Z_{\text{Mde}} = \frac{U_{\text{mde}} - \mu_U}{\sigma_u} = 0.865
 $$
 
-For a 5% significance level, the critical value of \\( Z_{\alpha} \\) is 1.96, so the statistical power is:
+In the section for z-test, we have seen that the formula for statistical power = 1 - P(Z > Z_{\alpha} - Z_{\text{mde}}) = P(Z > Z_{\text{mde}} - Z_{\alpha})
+
+For a two-tailed test, the critical value of \(Z_{\alpha}\) for a 5% significance level is 1.96.
 
 $$
-\text{Power} = P(Z > Z_{\text{MDE}} - Z_{\alpha}) \approx 86.2\%
+Z_{\text{Power}} = Z_{\text{MDE}} - Z_{\alpha} = 0.865 - 1.96 = -1.095
 $$
+
+From Z-tables, the probability of obtaining a Z-score greater than -1.095 is approximately 0.862.
+
+Therefore, the power of the test is approximately 86.2%.
