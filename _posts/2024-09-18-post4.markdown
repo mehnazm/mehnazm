@@ -355,9 +355,9 @@ This tells us the likelihood that a randomly selected value from the test group 
 
 An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of n_control = n_test = 6, which does not technically apply but enables simpler illustration):
 
-As seen before, in our example \(n_{\text{control}} = n_{\text{test}} = 6\), \(\mu_U = 18\) and \(\sigma_U = 6.244\)
+As seen before, in our example \\(n_{\text{control}} = n_{\text{test}} = 6\\), \\(\mu_U = 18\\) and \\(\sigma_U = 6.244\\)
 
-Let us say we want our probability of superiority to be 0.65. Therefore our \(U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times \text{Probability of Superiority} = 6 \times 6 \times 0.65 = 23.4\)
+Let us say we want our probability of superiority to be 0.65. Therefore our \\(U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times \text{Probability of Superiority} = 6 \times 6 \times 0.65 = 23.4\\)
 
 $$
 Z_{\text{Mde}} = \frac{U_{\text{mde}} - \mu_U}{\sigma_u} = 0.865
@@ -365,7 +365,7 @@ $$
 
 In the section for z-test, we have seen that the formula for statistical power = 1 - P(Z > Z_{\alpha} - Z_{\text{mde}}) = P(Z > Z_{\text{mde}} - Z_{\alpha})
 
-For a two-tailed test, the critical value of \(Z_{\alpha}\) for a 5% significance level is 1.96.
+For a two-tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
 
 $$
 Z_{\text{Power}} = Z_{\text{MDE}} - Z_{\alpha} = 0.865 - 1.96 = -1.095
