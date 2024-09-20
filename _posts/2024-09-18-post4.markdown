@@ -10,11 +10,11 @@ excerpt: "??"
 
 ### Two Sample z-test for Means
 
-Now that we have familiarized ourselves with the most important concepts in Hypothesis Testing, we are ready to make our understanding more concrete by looking at a specific Hypothesis Test—namely, the two-sample z-test for means.
+Now that we have familiarized ourselves with the most important concepts in Hypothesis Testing, we are ready to make our understanding more concrete by looking at a specific Hypothesis Test—namely, the two sample z-test for means. 
 
-As the name implies, this test assumes a normal distribution (z-distribution) and is used to compare the means between two independent groups. This is particularly fitting for our item recommendation module example, where we compare the mean GMV/visitor between the Test and Control groups. The underlying population in this example is assumed to be normally distributed, but even if it weren’t, the Central Limit Theorem (CLT) applies due to the large sample sizes, making the sampling distribution of the means approximately normal.
+As the name implies, this test assumes a normal distribution (z distribution) and is used to compare means between two independent groups. This is particularly fitting for our item recommendation module example, where we compare mean GMV/visitor between the Test and Control groups. The underlying population in this example is assumed to be normally distributed, but even if it weren’t, the Central Limit Theorem (CLT) applies due to the large sample sizes, making the sampling distribution of the means approximately normal.
 
-In general, the two-sample z-test for means is probably the most widely used Hypothesis Test in an online A/B testing context.
+In general, the two sample z-test for means is probably the most widely used Hypothesis Test in an online A/B testing context.
 
 #### How does the two-sample z-test for means work?
 
@@ -123,15 +123,20 @@ This is essentially the same as the two-sample z-test for means, in the sense th
 
 The only difference is that this test deals with proportions in categorical data—specifically binary outcomes (e.g., success/failure)—while the other uses continuous data for calculating means. Whereas the z-test for means is used for testing differences in GMV/visitors, the proportions test is used for testing differences in conversion rates.
 
+
 #### A Quick Note on Proportions, Ratios, and Means:
 
-Proportions, ratios, and means are often conflated with each other. These are related but different concepts. Proportions represent part of a whole—they are a fraction or percent. Ratios are a comparison or relationship between data—the data can be unrelated and do not have to form part of a whole. Notably, a proportion can be expressed as a ratio, but a ratio is not a proportion. Means are a summary of the distribution of data, i.e., a summary of a series of values to understand what is the “typical” value. This is in contrast to proportions or ratios that involve the division of one quantity by another.
+As an aside, proportions, ratios, and means are often conflated with each other. These are related but different concepts. Proportions represent part of a whole—they are a fraction or percent. Ratios are a comparison or relationship between data—the data can be unrelated and do not have to form part of a whole. Notably, a proportion can be expressed as a ratio, but a ratio is not a proportion. Means are a summary of the distribution of data, i.e., a summary of a series of values to understand what is the “typical” value. This is in contrast to proportions or ratios that involve the division of one quantity by another. We could take the ratio of means (e.g., mean height of women/mean height of men) or the mean of ratios (e.g., mean of height/weight for women); however, these serve different analytical purposes. The ratio of means shows a relationship between two groups, while the mean of ratios provides a summary within a group—each offering distinct insights depending on the context.
 
-We could take the ratio of means (e.g., mean height of women/mean height of men) or the mean of ratios (e.g., mean of height/weight for women); however, these serve different analytical purposes. The ratio of means shows a relationship between two groups, while the mean of ratios provides a summary within a group—each offering distinct insights depending on the context.
 
 #### Application of the Central Limit Theorem (CLT) to Proportions:
 
-The CLT guarantees that the sampling distribution of means approximates a normal distribution, which allows us to use the z-test. While medians and percentiles do not follow the CLT, the theorem does apply to proportions. This is because proportions can be modeled as the mean of a series of binary outcomes from a binomial distribution. Under the CLT, the sampling distribution of these means (proportions) from a binomial distribution approximates a normal distribution as the sample size increases, enabling us to apply the z-test.
+It was mentioned in the case of the z-test for means that the CLT guarantees that the sampling distribution of means approximates a normal distribution, which in turn allows us to use the z-test. On the other hand, it was mentioned earlier that the CLT does not necessarily apply to all statistics—medians and percentiles being examples.
+
+To clarify, the CLT does indeed apply to proportions. This is because proportions can be modeled as the mean of a series of binary outcomes from a binomial distribution. Under the CLT, the sampling distribution of these means (proportions) from a binomial distribution approximates a normal distribution as the sample size increases, enabling us to apply the z-test.
+
+But going back to the two-sample z-test for proportions, the formula for calculating the standard error, and therefore the z-statistic, looks slightly different from what was used in the case of means, as shown below.
+
 
 #### Standard Error for the Difference in Proportions:
 
@@ -143,7 +148,7 @@ $$
 
 $$
 
-Since the two samples are independent, the variance of the difference is the sum of the variances of each sample mean:
+Because the two samples are independent, the variance of the difference is the sum of the variances of each sample mean:
 
 $$
 
@@ -232,76 +237,93 @@ $$
 
 So far, we have covered two variants of the Z-test: the two-sample Z-test for means and the two-sample Z-test for proportions. However, there are other variations of the Z-test, such as the one-sample Z-test (where instead of a Test and Control group, a single group is compared to some specified threshold) and the paired Z-test (where instead of independent Test and Control groups, the group being measured is related in some way). Beyond the Z-test, there are also various other types of hypothesis tests—some that don't rely on assumptions about the sampling distribution, and others that allow us to assess changes across multiple variables.
 
-Next, we will explore a hypothesis test that measures differences in medians. This test is valuable because medians, being more robust to outliers than means, are an important statistic. Additionally, the test provides a contrast to the Z-test.
+Next, we will explore a hypothesis test that measures differences in medians. This test is valuable because medians, being more robust to outliers than means, are an important statistic. Additionally, the test provides a contrast to the z-test.
 
 ### Mann-Whitney U Test
 
-This test tells us if there is a statistically significant difference between the distributions of two samples (i.e., between the Test and Control groups). From that, we can infer whether the difference in medians of the two samples is statistically significant.
+This test tells us if there is a statistically significant difference between the distributions of two samples (i.e. between the Test and Control groups). And from that, we in turn infer if the difference in medians of the two samples are statistically significant.
 
-Unlike the Z-test, this test does not require the sampling distribution to be normal, or make any assumptions on the sampling or population distributions. In fact, this particular test does not even work directly with the data. Instead, it works by comparing the relative rank of the data across the groups.
+Unlike the z-test, this test does not require the sampling distribution to be normal, or make any other assumptions on the sampling or population distributions. In fact this particular test does not even work directly with the data. Instead, it works by comparing the relative rank of the data across the groups.
 
-Under the Null Hypothesis, the expectation is that there is no difference between the two groups—implying that the ranks are randomly distributed between the groups. Deviations from this expectation are also assessed based on the ranked data. For large samples, these deviations can be further transformed into Z-scores for comparison to a normal distribution. The specifics of this will be illustrated below using an example.
+Under the Null Hypothesis, the expectation is that there is no difference between the two groups—implying that the ranks are randomly distributed between the groups. Deviations from this expectation are also assessed based on the ranked data; although for large samples, these deviations can be further transformed into z-scores for comparison to a normal distribution. The specifics of all this will be illustrated below using an example.
+The Mann-Whitney test is applicable to continuous or ordinal data. Due to its applicability to continuous data, we can in fact once again leverage our item recommendation module example.
 
-The Mann-Whitney test is applicable to continuous or ordinal data. Due to its applicability to continuous data, we can again leverage our item recommendation module example.
+Let us imagine we have 6 visitors in the Control group who are exposed to the old module and 6 visitors in the Test group who are exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below. 
 
-Let us imagine we have 6 visitors in the Control group exposed to the old module and 6 visitors in the Test group exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below.
+As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to n_control+n_test, respectively.
 
-As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking them from lowest to highest (1 to \\( n_{\text{control}} + n_{\text{test}} \\)).
+Next we compare the sum of each sample’s across-group rank to its within group rank.
 
-We then compare the sum of each sample’s across-group rank to its within-group rank. A data point's across-group rank is higher than its within-group rank when a lower-valued data point exists in the other group, pushing the given data point to a higher rank. The difference between the sum of across-group and within-group ranks reflects how much one group's values tend to be larger than the other’s.
+A data point's across-group rank is higher than its within-group rank when a lower-valued data point exists in the other group (which pushes the given data point to a higher rank). The difference between the sum of across-group and within-group ranks reflects the number of times the other group's values are smaller than those in the given group. This difference effectively measures how much one group's values tend to be larger than the other's.
 
-For example, the GMV/Visitor data point of 11.3 in the Control group has an across-group rank of 4 but a within-group rank of 3 because there is one Test group data point (11.0) that is lower. Similarly, the data point of 11.5 in the Control group has an across-group rank of 6 but a within-group rank of 4 because there are two Test group data points (11.0 and 11.4) smaller than the Control data point.
+So for instance, the GMV/Visitor datapoint of 11.3 in the Control group has an across-group rank of 4 but a within-group rank of 3 because when the samples are combined, there is one Test group datapoint i.e. 11.0 that is lower than that Control group datapoint. 
+
+Similarly the datapoint of 11.5 in the Control group has an across-group rank of 6 but a within-group rank of 4, because there are two Test group datapoints – 11.0 and 11.4 that are smaller than the Control group datapoint.
+In this way there are 11 instances when the Test group datapoint is smaller than the Control group datapoint, as reflected in the U Statistic of 11 for the Control group.
 
 In this way, there are 11 instances where the Test group’s data point is smaller than the Control group’s, reflected in the U Statistic of 11 for the Control group.
 
-The U Statistic for the Test group is 25, implying 25 instances where a Control group data point is smaller than a Test group data point.
+The U Statistic for the Test group is 25, implying that there are 25 instances where there is a Control group datapoint smaller than a Test group datapoint.
 
-### U Statistic Formula
-
-To summarize, the formula for the U Statistic using the Control group is:
+To summarize, the formula for the U Statistic is (using the Control group for example):
 
 $$
-U_{\text{control}} = R_{\text{control}} - \frac{n_{\text{control}} (n_{\text{control}} + 1)}{2}
+U_{\text{control}} = R_{\text{control}} - \left(n_{\text{control}} \times \left(n_{\text{control}} + 1\right)\right)/2,
 $$
 
-Where \\( R_{\text{control}} \\) is the sum of across-group ranks of the Control data, and \\( \frac{n_{\text{control}} (n_{\text{control}} + 1)}{2} \\) is the sum of within-group ranks of the Control data.
+where \\(R_{\text{control}}\\) is the sum of the across-group rank of the Control data and  \\(\left(n_{\text{control}} \times \left(n_{\text{control}} + 1\right)\right)/2\\) is the sum of the within-group rank of the Control data, derived using arithmetic mean.
 
-The U statistic is a rank-based measure of separation between two distributions. Under the Null Hypothesis, we assume there is no difference between the Test and Control distributions, meaning half of the values in one group will rank higher than those in the other group.
+The U statistic can be thought of as a rank-based measure of separation between two distributions. Under the null hypothesis, we assume there is no difference between the Test and Control distributions, which implies that, on average, half of the values in one group will rank higher than those in the other group.
 
-### Statistical Significance
+To determine statistical significance, we use the smaller of the two U statistic values and compare it to the expected distribution under the null hypothesis. For small samples, this involves comparing the U statistic to a critical value from the Mann-Whitney distribution table, which gives an exact p-value.
 
-To determine statistical significance, we use the smaller of the two U statistics and compare it to the expected distribution under the Null Hypothesis. For small samples, we compare the U statistic to a critical value from the Mann-Whitney distribution table to get an exact p-value.
+It’s important to note that the choice of the smaller U value is purely a matter of convention. The two U statistics are symmetric (i.e., \\(U_{\text{control}} + U_{\text{test}} = n_{\text{control}} \times n_{\text{test}}\\)), meaning they carry the same information. However, Mann-Whitney tables are designed for comparison using the smaller U statistic.
 
-For larger samples, we use the Central Limit Theorem (CLT), which guarantees that the U statistic approximates a normal distribution.
+For larger samples, it becomes computationally impractical to create a distribution table for exact p-values. In such cases, we leverage the Central Limit Theorem (CLT). While the CLT is often associated with the convergence of sample means to a normal distribution for large samples, it more generally states that for independent and identically distributed (i.i.d.) large samples, the scaled sum of the data (which includes the mean but not the median or percentiles) converges to a normal distribution.
 
-The Z-score of the U statistic is calculated as:
+The U statistic, being based on the sum of across-group ranks and within-group ranks, fits this framework. Thus, for large samples, the CLT guarantees that the U statistic approximates a normal distribution.
 
-$$
-Z = \frac{U - \mu_U}{\sigma_U}
-$$
+Any U statistic can therefore be converted to a z-score and compared to the normal distribution under the null hypothesis to assess how extreme the observed value is. As mentioned earlier, under the null hypothesis, we expect half the values in one group to be higher than that in the other group. It was also mentioned that \\(U_{\text{control}} + U_{\text{test}}\\) is always \\(n_1 \times n_2\\). Given this, the mean value under the Null Hypothesis is \\((n_1 \times n_2)/2\\)
 
-Where:
-
-- \\( \mu_U \\) is the mean, calculated as \\( \mu_U = \frac{n_1 \times n_2}{2} \\).
-- \\( \sigma_U \\) is the standard deviation, calculated as:
+Additionally, the standard deviation of the U statistic under the null hypothesis is given by:
 
 $$
 \sigma_U = \sqrt{\frac{n_1 \times n_2 \times (n_1 + n_2 + 1)}{12}}
 $$
 
-If there are ties in the rankings, the formula for \\( \sigma_U \\) changes.
-
-For our example, we get \\( \mu_U = 18 \\) and \\( \sigma_U = 6.244 \\). Given \\( U_{\text{control}} = 11 \\) and \\( U_{\text{test}} = 25 \\), we calculate:
+(Note that the formula for standard deviation changes when there are ties in the rankings to 
 
 $$
-Z_{\text{control}} = \frac{11 - 18}{6.244} \approx -1.12
+\sigma_U = \sqrt{ \frac{n_1 \times n_2 \times (n_1 + n_2 + 1)}{12} - \frac{\sum_{i} (t_i^3 - t_i)}{12(n_1 + n_2)(n_1 + n_2 - 1)} }
 $$
 
+Where \\( t_i \\) is the number of tied ranks in the \\( i \\)-th group of ties. However, further details on this are beyond the scope of this discussion.)
+
+The z-score of the U statistic is then calculated as:
+
 $$
-Z_{\text{test}} = \frac{25 - 18}{6.244} \approx 1.12
+Z = \frac{U - \mu_U}{\sigma_U}
 $$
 
-Both U statistics yield symmetric Z-scores and the same p-value (0.2623), which is not statistically significant.
+This z-score can be compared to the standard normal distribution to determine statistical significance.
+
+Note that, it was mentioned earlier that using the smaller U was a matter of convention, necessary when finding exact p-values from the Mann-Whitney distribution table. In contrast, for large samples, either of the U Statistic yields the same p-value.
+
+In our example, we get \\(\mu_U = 18\\), and  \\(\sigma_U = 6.244\\). Since \\(U_{\text{control}} = 11\\) and \\(U_{\text{test}} = 25\\), we get
+
+$$
+Z_{\text{control}} = \frac{11 - 18}{6.244} \approx \frac{-7}{6.244} \approx -1.12
+$$
+
+and
+
+$$
+Z_{\text{test}} = \frac{25 - 18}{6.244} \approx \frac{7}{6.244} \approx 1.12
+$$
+
+As can be seen above, the two U Statistics yield symmetric  z-scores and therefore the same p-value i.e. 0.2623 (which is not statistically significant). 
+
+Note, the sample sizes in our example (\\(\text{control} = n_{\text{test}} = 6\\)) are too small to use the Z-score approach accurately. The rule of thumb is that we require at least 30 samples for the z-score based approach to apply. However, the above is intended to illustrate the symmetry in z-scores which still holds for larger sample sizes, where the normal approximation becomes valid.
 
 ### A Disclaimer on Inferring Medians
 
