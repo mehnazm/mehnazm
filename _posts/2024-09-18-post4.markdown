@@ -363,7 +363,7 @@ $$
 Z_{\text{Mde}} = \frac{U_{\text{mde}} - \mu_U}{\sigma_u} = 0.865
 $$
 
-In the section for z-test, we have seen that the formula for statistical power = 1 - P(Z > Z_{\alpha} - Z_{\text{mde}}) = P(Z > Z_{\text{mde}} - Z_{\alpha})
+In the section for z-test, we have seen that the formula for statistical power = \\(1 - P(Z > Z_{\alpha} - Z_{\text{mde}}) = P(Z > Z_{\text{mde}} - Z_{\alpha})\\)
 
 For a two-tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
 
