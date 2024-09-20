@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Fundamentals of Hypothesis Testing Concepts "
+title: "The Fundamentals Concepts of Hypothesis Testing"
 date: 2024-09-18
 categories: main 
 image: /assets/images/post4/img1.jpg 
@@ -250,7 +250,7 @@ The Mann-Whitney test is applicable to continuous or ordinal data. Due to its ap
 
 Let us imagine we have 6 visitors in the Control group who are exposed to the old module and 6 visitors in the Test group who are exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below. 
 
-As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to n_control+n_test, respectively.
+As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to \\(n_control+n_test\\), respectively.
 
 Next we compare the sum of each sample’s across-group rank to its within group rank.
 
@@ -353,17 +353,17 @@ $$
 
 This tells us the likelihood that a randomly selected value from the test group will exceed a randomly selected value from the control group, making it an intuitive measure of effect size in the Mann-Whitney test.
 
-An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of n_control = n_test = 6, which does not technically apply but enables simpler illustration):
+An example of power calculation for large sample Mann-Whitney test is as follows (however we will still use our previous example of \\(n_control = n_test = 6\\), which does not technically apply but enables simpler illustration):
 
 As seen before, in our example \\(n_{\text{control}} = n_{\text{test}} = 6\\), \\(\mu_U = 18\\) and \\(\sigma_U = 6.244\\)
 
 Let us say we want our probability of superiority to be 0.65. Therefore our \\(U_{\text{MDE}} = n_{\text{control}} \times n_{\text{test}} \times \text{Probability of Superiority} = 6 \times 6 \times 0.65 = 23.4\\)
 
 $$
-Z_{\text{Mde}} = \frac{U_{\text{mde}} - \mu_U}{\sigma_u} = 0.865
+Z_{\text{MDE}} = \frac{U_{\text{MDE}} - \mu_U}{\sigma_u} = 0.865
 $$
 
-In the section for z-test, we have seen that the formula for statistical power = \\(1 - P(Z > Z_{\alpha} - Z_{\text{mde}}) = P(Z > Z_{\text{mde}} - Z_{\alpha})\\)
+In the section for z-test, we have seen that the formula for statistical power = \\(1 - P(Z > Z_{\alpha} - Z_{\text{MDE}}) = P(Z > Z_{\text{MDE}} - Z_{\alpha})\\)
 
 For a two-tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
 
