@@ -3,7 +3,7 @@ layout: post
 title: "The Fundamental Concepts of Hypothesis Testing"
 date: 2024-09-18
 categories: main 
-image: /assets/images/post4/img1.jpg 
+image: /assets/images/post4/img4.png 
 excerpt: "??"      
 
 ---
