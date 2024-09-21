@@ -1,12 +1,247 @@
 ---
 layout: post
-title: "The Fundamentals Concepts of Hypothesis Testing"
+title: "The Fundamental Concepts of Hypothesis Testing"
 date: 2024-09-18
 categories: main 
 image: /assets/images/post4/img1.jpg 
 excerpt: "??"      
 
 ---
+
+A/B testing is an experimental approach that facilitates Hypothesis Testing. This process is best understood through an example.
+
+Imagine an eCommerce site that implements a change to its item recommendation module, believing that this update will promote upsells and thereby increase Gross Merchandise Value per visitor (GMV/visitor). To evaluate the impact of this change, the site conducts an A/B test, splitting visitors into two groups: a Control group that continues to see the original recommendations module, and a Test group that experiences the updated module.
+
+Let’s assume that the average GMV/visitor in the Control group is $100, while the Test group averages $102. At first glance, it might seem obvious that the new module led to a $2 increase in GMV/visitor, suggesting it is the better option.
+
+### Sampling Variability, Sampling Distribution and Standard Error
+
+However, the situation is more complex—this $2 increase may have occurred by random chance.
+
+Both the Test and Control groups are samples of the broader population of site visitors. Because of this, they are subject to sampling variability (or sampling error), meaning that even if the new recommendation module had no real effect, we might still observe a difference in GMV/visitor due to random fluctuations in who ended up in each group and what they purchased.
+
+To illustrate how sampling variability can arise, consider the GMV/visitor for all visitors on the site over a given time period, independent of any A/B tests. Suppose during that period, there were 10,000 visitors whose GMVs ranged from $20 to $180. For simplicity, assume the GMV/visitor follows a normal distribution—a reasonable assumption in many A/B testing scenarios.
+
+
+
+![](/assets/images/post4/img0.png){: .center }
+
+
+
+This represents the population distribution of GMV/visitor, encompassing all visitors during that time period. Now, if we randomly split these visitors into two groups, we would observe the sampled GMV/visitor for each group.
+
+
+
+![](/assets/images/post4/img1.png){: .center }
+
+
+
+Even though both groups originate from the same population distribution, each will have its own sample distribution with different sample statistics, such as the mean, median, and standard deviation.
+
+To further illustrate this, imagine repeating the sampling process multiple times. Even though all samples come from the same population distribution, the sample means will vary from one sample to the next due to sampling variability.
+
+
+
+![](/assets/images/post4/img2.png){: .center }
+
+
+
+In this scenario, no A/B test was actually conducted, no changes were made, and we simply sampled from the same population distribution—yet the sample means of the groups differ by some amount purely due to chance.
+
+Despite our best efforts to ensure that similar types of visitors are represented in both groups in similar proportions, some variability will always exist.
+
+To clarify, there are three types of distributions at play here:
+
+
+
+1. Population Distribution: The distribution of GMV/visitor for all visitors during the time period. It has its own statistics, such as the population mean, median, and standard deviation. 
+2. Sample Distributions: Each time we draw a sample from the population, we get a sample distribution with its own sample statistics, such as the sample mean, sample median, and sample standard deviation. These sample distributions vary due to sampling variability.
+3. Sampling Distribution: If we were to repeatedly take many samples from the population and calculate the sample statistic (e.g., the mean) for each sample, the distribution of these sample statistics forms the sampling distribution. For instance, the sampling distribution of the mean represents the distribution of sample means from all possible samples of a given size drawn from the population.
+
+In A/B testing, when we compare statistics like the mean between Test and Control groups, we are not comparing the population means directly—we are comparing sample means, which are drawn from the sampling distributions of each group.
+
+The standard error of a statistic is the standard deviation of its sampling distribution. If the statistic is the sample mean, we refer to the standard error of the sample mean.
+
+
+
+![](/assets/images/post4/img3.png){: .center }
+
+
+
+This concept is crucial because sampling variability leads to the formation of a sampling distribution, and the standard error quantifies the extent of this variability.
+
+It is the presence of standard error that complicates drawing conclusions from an A/B test, as it means the observed difference between groups could be due to chance rather than a real effect.
+
+### Chance vs. Genuine Impact
+
+So far, we’ve discussed how sampling variability can lead to differences in sample statistics even when there is no real effect, leading to “chance impact”. But what happens when there is a genuine impact?
+
+When a change has a real effect, it alters the population distribution of the group exposed to the change. Before an A/B test begins, both the Control and Test groups are assumed to share the same population distribution. However, during the test, the Test group’s population distribution shifts due to the impact of the change, while the Control group’s distribution remains the same.
+
+
+
+![](/assets/images/post4/img4.png){: .center }
+
+
+
+Continuing the example from earlier: initially, both the Control and Test groups have the same population distribution of 100 visitors with GMVs ranging from $0 to $80, though their sample distributions may differ. By the end of the test, if the new module has a genuine impact, the Test group’s population distribution (and consequently its sampling distribution) will have shifted, while the Control group’s distributions remain consistent with those observed before the test.
+
+In summary, when we talk about genuine impact, we are referring to changes in the underlying population parameters due to the tested intervention. These population parameters are not directly observable and must be estimated from sample statistics. However, as we’ve seen, sample statistics are distributed across a sampling distribution, leading to potentially noisy comparisons.
+
+The role of Hypothesis Testing is to determine whether the observed difference between the Test and Control groups is merely due to chance or represents a genuine effect (i.e., statistically significant).
+
+### Null Hypothesis and Alternative Hypothesis 
+
+So it looks like we are in a real pickle. We want to see if a change, such as in the item recommendations module, made a genuine impact on GMV/visitor—that is, whether it changed the population distribution of GMV/visitor. But we cannot observe both a change and its counterfactual effects on the entire population; therefore, the population must be split into samples. This, however, introduces sampling variability, making it hard to tell real impact from chance.
+
+Hypothesis testing offers a framework to address this challenge by providing a structured approach to determine whether an observed difference between Test and Control sample statistics is likely due to chance or indicates a real effect. Specifically, under the Null Hypothesis, we assume that any observed difference is due to random sampling variability and that there is no real impact.
+
+Our goal in hypothesis testing is to gather evidence that allows us to reject the Null Hypothesis. By demonstrating that the observed difference is too extreme to be attributed to chance alone, we indirectly support the Alternative Hypothesis, which posits that there is a genuine impact.
+
+This process might seem counterintuitive at first. Why do we focus on rejecting the Null Hypothesis rather than directly rejecting or supporting the Alternative Hypothesis?
+
+The reason lies in the nature of statistical inference. Unlike in formal logic, where something can be definitively proven true or false, statistical inference deals with data that is subject to sampling variability. This variability means that we can never observe every possible outcome in the population; we can only work with samples. Population parameters, such as the true mean or the true difference in means, are not directly observable. Consequently, we cannot achieve the absolute certainty that mathematical proofs require.
+
+Instead of seeking absolute proof, we assess the likelihood of the observed data under the Null Hypothesis. If this probability is sufficiently low, we reject the Null Hypothesis.
+
+But why focus on rejecting the Null Hypothesis and not on rejecting the Alternative Hypothesis?
+
+Although the Null and Alternative Hypotheses are symmetrical in the sense that rejecting one lends support to the other, they are not symmetrical in terms of the burden of proof.
+
+To reject the Null Hypothesis requires just one comparison: if the observed data is too extreme compared to what we would expect if there were no impact—which is what the Null Hypothesis assumes—we may reject the Null Hypothesis.
+
+On the other hand, to reject the Alternative Hypothesis, which posits that some genuine impact exists, would require comparing the observed data against all possible scenarios where a genuine impact could occur. Only if the observation is too extreme for all these scenarios can we reject the Alternative Hypothesis in favor of the Null Hypothesis, effectively supporting the idea that no genuine impact exists.
+
+This complexity makes it much more sensible to focus on rejecting the Null Hypothesis.
+
+### Central Limit Theorem and the Law of Large Numbers
+
+In the above section, it was mentioned that in Hypothesis Testing, to establish a genuine impact, we have to show that the observed difference between Test and Control sample means is too extreme compared to what we would expect if there were no impact.
+
+Before expanding on what that entails, let’s take a slight detour to discuss some other statistical concepts that:
+
+
+
+1. Will simplify our discussion of Hypothesis Testing
+2. Are widely applicable to online A/B Testing
+
+These concepts are the Central Limit Theorem and the Law of Large Numbers.
+
+The Central Limit Theorem (CLT) essentially guarantees that under certain conditions, the sampling distributions of the Test and Control group means will approximate a normal distribution. Interestingly, this is true even when the samples themselves or the underlying population distribution are not normal.
+
+
+
+![](/assets/images/post4/img5.png){: .center }
+
+
+Image Source: [Illustration of Central Limit Theorem for a skewed population of values... | Download Scientific Diagram](https://www.researchgate.net/figure/Illustration-of-Central-Limit-Theorem-for-a-skewed-population-of-values-Panel-A-shows-the_fig7_254276271) 
+
+The fact that the sampling distribution of means approximates a normal distribution implies that the difference between the means of the Test and Control groups will also follow a normal distribution.
+
+Under the Null Hypothesis, this sampling distribution of differences will be centered around zero, indicating no real effect.
+
+
+
+![](/assets/images/post4/img6.png){: .center }
+
+
+
+If we model the Alternative Hypothesis (as we will see in an example later), the sampling distribution of differences under it will also follow a normal distribution, but will be centered around some non-zero value, reflecting the presence of an effect.
+
+The Law of Large Numbers (LLN), on the other hand, guarantees that under certain conditions, as the sample size increases, the sample mean converges to the population mean. This reassures us that sampling variability reduces with an increase in sample size—i.e., the sampling distribution of means becomes tighter around its center—making the comparison of observations against the Null or Alternative Hypothesis less noisy.
+
+In other words, the LLN leads to a reduction in the standard error of the mean, thereby reducing the probability that observed differences are due to chance rather than a real effect.
+
+Both CLT and LLN hold under the same set of assumptions:
+
+
+
+1. Sample Size: There must be a large number of samples. A common rule of thumb is that 30 samples are often sufficient for the LLN and CLT to apply. However, in the case of fat-tailed distributions like the 80/20 Pareto distribution, it can take about [1014 samples for the LLN to take effect, and the CLT may not apply at all](https://www.youtube.com/watch?v=nDY_fh2TVlI).
+2. Independence and Identically Distributed (i.i.d.) Samples: The samples must be independent and identically distributed. This means that drawing one sample does not influence any other sample, and each sample is drawn from the same distribution with the same statistical properties.
+3. Finite Mean and Variance: The underlying population distribution must have a finite mean and variance. The CLT does not apply to distributions like the Cauchy distribution, which has an undefined variance.
+
+These conditions generally hold in most online A/B testing environments, where experiments usually run with at least thousands of data points. The experimentation setup ensures i.i.d. distribution of samples (to be discussed more later). The underlying distributions generally have finite means and variances, especially after outlier removal (also to be discussed later).
+
+We have taken this detour from discussing Hypothesis Testing because, as we shall see, it is easier to illustrate the concepts of Hypothesis Testing using a normal distribution and means—situations where the CLT applies. However, it’s important to note that Hypothesis Testing concepts such as statistical significance and statistical power are general and do not inherently rely on assumptions of normality.
+
+This distinction is crucial because while normal distributions and means are common in many online A/B testing scenarios, they are not universal. For example, when the statistic of interest is a median or percentile, the CLT does not apply. We will explore these cases after addressing the core concepts of Hypothesis Testing using normal distributions and means.
+
+### Statistical Significance and False Positives
+
+We now return to the process of determining whether the observed difference between sample means is too extreme compared to what we would expect if there were no real impact.
+
+In Hypothesis Testing, the rule of thumb is that any observation with less than a 5% probability of belonging to the distribution under the Null Hypothesis is considered statistically significant, suggesting a genuine impact. This is often expressed as a situation where the p-value is less than 0.05.
+
+This means that when the Central Limit Theorem (CLT) applies and the distribution under the Null Hypothesis is normal with a mean of zero, any observation more than two standard errors away from the mean is typically considered statistically significant.
+
+
+
+![](/assets/images/post4/img7.png){: .center }
+
+
+This might seem counterintuitive. After all, there is still a 5% chance that the observed difference is simply due to random chance—that is, it comes from the distribution under the Null Hypothesis.
+
+That is correct, and such a situation is known as a False Positive or Type I error—where we mistakenly reject the Null Hypothesis and attribute the difference to a genuine impact when it is actually due to chance.
+
+
+
+![](/assets/images/post4/img8.png){: .center }
+
+
+
+Ultimately, this 5% threshold is a convention—a balance between rigor and practicality. It is more of an art than a science, and in some cases, this threshold is lowered to reduce the risk of False Positives. However, as we will see in the next section, lowering the threshold introduces a different tradeoff.
+
+Before moving on, it’s important to clarify a key concept: the idea of statistical significance. It’s crucial not to confuse statistical significance with practical significance.
+
+Statistical significance relates specifically to the Null Hypothesis, while practical significance is defined in the context of the business, product, or other factors motivating the A/B test.
+
+For instance, in the context of our item recommendations module, a $2 difference might be practically significant for the business, but not statistically significant if sampling variability is high, resulting in a high standard error. Conversely, a $0.20 difference might be statistically significant if sampling variability is low, even if it is not practically significant for the business.
+
+### False Negatives and Statistical Power
+
+In the previous section, we introduced the concept of a False Positive or Type I error. The flip side of this is a False Negative, or Type II error, which occurs when there is a genuine impact, but we mistakenly attribute the observed result to chance, failing to reject the Null Hypothesis even though the Alternative Hypothesis is true.
+
+Just as in the case of False Positives, the concept of False Negatives is general to Hypothesis Testing. However for simplicity, we once again lean on the CLT and normal distributions for illustration.
+
+
+
+![](/assets/images/post4/img9.png){: .center }
+
+
+
+False Negatives are more likely when the difference between the means of the two distributions (i.e., the effect size) is small, the underlying population has high variability, or the sample size is low. These factors increase the overlap between the sampling distributions under the Null and Alternative Hypotheses, making it harder to detect a real effect. Additionally, choosing a lower p-value threshold can further increase the risk of False Negatives by making it more difficult to reject the Null Hypothesis.
+
+It was mentioned in the previous section that we tolerate some False Positives by design. It may be clear by now that this is done to strike a balance against False Negatives (as indicated by the yellow stripes vs. black stripes in the chart above).
+
+False Negatives reduce the effectiveness of testing. Therefore, during the test design phase, we focus on understanding the probability of avoiding False Negatives—a measure known as Statistical Power.
+
+Statistical Power is calculated by modeling our desired effect size, known as the minimum detectable effect (MDE), as the center of the distribution under the Alternative Hypothesis. The overlap between this Alternative Hypothesis distribution and the Null Hypothesis distribution represents the probability of False Negatives—this probability is known as beta (β). Therefore, Statistical Power, calculated as 1 - β, represents the probability that the test will correctly detect the effect if it exists.
+
+Understanding Statistical Power is crucial for decision-making.
+
+For example, if the Statistical Power is low and we cannot improve it by adjusting the MDE or increasing the sample size, and the test is expensive to run, we might decide against conducting the test.
+
+Conversely, if the test is inexpensive to run or if we can improve Statistical Power by increasing the sample size or reducing variability, we may proceed with the test.
+
+The general convention is to aim for at least 80% Statistical Power, meaning we accept a maximum of 20% probability of False Negatives.
+
+Often, sample size is the primary variable we can control to increase Statistical Power. This is why sample size estimation is a critical aspect of test design—it directly impacts our ability to detect genuine effects with statistical significance. We will explore how to calculate Statistical Power more concretely when we discuss z-tests.
+
+### The Direction of Tests
+
+We have covered nearly all the essential concepts for Hypothesis Testing, with one last topic to address: the direction of tests. The direction, also known as the tail of a test, refers to whether we are interested in detecting a change that is only greater than the baseline, only less than the baseline, or if we're interested in changes in either direction—that is, greater or less than the baseline.
+
+For instance, a right-tailed test only assesses whether the statistic of interest (e.g., the mean of the Test group) is greater than that of the Control group. A left-tailed test, on the other hand, evaluates whether the Test statistic (e.g., mean) is less than that of the Control group. Meanwhile, a two-tailed test examines whether the Test statistic is either greater than or less than that of the Control group.
+
+
+
+![](/assets/images/post4/img10.png){: .center }
+
+
+
+Determining the tail of a test is crucial because it affects the threshold for statistical significance, which in turn influences the statistical power of the test. In a one-tailed test (whether left-tailed or right-tailed), the entire significance level (alpha), typically 0.05, is allocated to one tail of the distribution. In contrast, a two-tailed test divides the significance level between both tails of the distribution, meaning the alpha is 0.025 in each direction. This approach is more conservative because it requires stronger evidence to reject the Null Hypothesis in either direction, ensuring the test is sensitive to deviations from the baseline in both directions. While this reduces the risk of Type I errors (false positives) in both directions, it also slightly reduces the statistical power compared to a one-tailed test when the true effect is expected in one specific direction.
+
+Choosing between a one-tailed and two-tailed test depends on the specific hypothesis being tested and the research question at hand. If there is a strong theoretical reason to expect a change only in one direction, a one-tailed test may be appropriate. Otherwise, a two-tailed test is generally preferred to capture potential changes in either direction.
 
 ### Two Sample z-test for Means
 
@@ -86,6 +321,8 @@ $$
 Once we have the z-statistic, we can find the corresponding p-value by looking it up in a Z-table or using software, considering the appropriate area under the curve depending on whether the test is left-tailed, right-tailed, or two-tailed.
 
 The above explanation fully captures what a z-test for means entails. However, there is one other important calculation related to the z-test that is typically performed before running the test: the calculation of Statistical Power.
+
+#### Statistical Power:
 
 As mentioned earlier:
 
@@ -323,9 +560,9 @@ $$
 
 As can be seen above, the two U Statistics yield symmetric  z-scores and therefore the same p-value i.e. 0.2623 (which is not statistically significant). 
 
-Note, the sample sizes in our example (\\(\text{control} = n_{\text{test}} = 6\\)) are too small to use the Z-score approach accurately. The rule of thumb is that we require at least 30 samples for the z-score based approach to apply. However, the above is intended to illustrate the symmetry in z-scores which still holds for larger sample sizes, where the normal approximation becomes valid.
+Note, the sample sizes in our example (\\n_(\text{control} = n_{\text{test}} = 6\\)) are too small to use the Z-score approach accurately. The rule of thumb is that we require at least 30 samples for the z-score based approach to apply. However, the above is intended to illustrate the symmetry in z-scores which still holds for larger sample sizes, where the normal approximation becomes valid.
 
-#### A Disclaimer on Inferring Medians
+#### A Disclaimer on Inferring Medians:
 
 The Mann-Whitney U test can detect differences between distributions, but it does not automatically imply that the medians are different unless the two distributions have the same shape. Differences in the overall shape of the distributions (e.g., spread or skewness) can also lead to a rejection of the null hypothesis, even when the medians are the same.
 
@@ -337,7 +574,7 @@ In short, the Mann-Whitney test can tell us if the distributions of two groups a
 
 This is why Mann-Whitney tests are often reported as stating: “The medians of the two groups were different, and there was a statistically significant difference detected between the two groups,” as opposed to “The medians of the two groups were statistically significantly different.”
 
-#### Statistical Power
+#### Statistical Power:
 
 The statistical power calculation for the Mann-Whitney test is not as straightforward as that for z-tests. For small samples, a formula-based power calculation is generally not possible due to the non-normality of the U statistic’s distribution. In these cases, we rely on Monte Carlo simulations or exact methods to estimate power (Monte Carlo is to be discussed in a later section).
 
