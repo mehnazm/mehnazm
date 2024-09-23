@@ -32,7 +32,7 @@ This represents the population distribution of GMV/visitor, encompassing all vis
 
 
 
-![](/assets/images/post4/img1.png){: .center }
+![](/assets/images/post4/img1.png){: .half-size.center }
 
 
 
@@ -42,7 +42,7 @@ To further illustrate this, imagine repeating the sampling process multiple time
 
 
 
-![](/assets/images/post4/img2.png){: .center }
+![](/assets/images/post4/img2.png){: .half-size.center }
 
 
 
@@ -142,7 +142,7 @@ Under the Null Hypothesis, this sampling distribution of differences will be cen
 
 
 
-![](/assets/images/post4/img6.png){: .center }
+![](/assets/images/post4/img6.png){: .half-size.center }
 
 
 
@@ -176,7 +176,7 @@ This means that when the Central Limit Theorem (CLT) applies and the distributio
 
 
 
-![](/assets/images/post4/img7.png){: .center }
+![](/assets/images/post4/img7.png){: .half-size.center }
 
 
 This might seem counterintuitive. After all, there is still a 5% chance that the observed difference is simply due to random chance—that is, it comes from the distribution under the Null Hypothesis.
@@ -185,7 +185,7 @@ That is correct, and such a situation is known as a False Positive or Type I err
 
 
 
-![](/assets/images/post4/img8.png){: .center }
+![](/assets/images/post4/img8.png){: .half-size.center }
 
 
 
