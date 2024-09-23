@@ -156,7 +156,7 @@ Both CLT and LLN hold under the same set of assumptions:
 
 
 
-1. Sample Size: There must be a large number of samples. A common rule of thumb is that 30 samples are often sufficient for the LLN and CLT to apply. However, in the case of fat-tailed distributions like the 80/20 Pareto distribution, it can take about [10^{14} samples for the LLN to take effect, and the CLT may not apply at all](https://www.youtube.com/watch?v=nDY_fh2TVlI).
+1. Sample Size: There must be a large number of samples. A common rule of thumb is that 30 samples are often sufficient for the LLN and CLT to apply. However, in the case of fat-tailed distributions like the 80/20 Pareto distribution, it can take about [\\(10^{14}\\) samples for the LLN to take effect, and the CLT may not apply at all](https://www.youtube.com/watch?v=nDY_fh2TVlI).
 2. Independence and Identically Distributed (i.i.d.) Samples: The samples must be independent and identically distributed. This means that drawing one sample does not influence any other sample, and each sample is drawn from the same distribution with the same statistical properties.
 3. Finite Mean and Variance: The underlying population distribution must have a finite mean and variance. The CLT does not apply to distributions like the Cauchy distribution, which has an undefined variance.
 
