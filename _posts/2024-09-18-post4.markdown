@@ -24,7 +24,7 @@ To illustrate how sampling variability can arise, consider the GMV/visitor for a
 
 
 
-![](/assets/images/post4/img0.png){: .center.qtr-size }
+![](/assets/images/post4/img0.png){: .qtr-size.center }
 
 
 
