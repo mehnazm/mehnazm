@@ -45,6 +45,11 @@
   height: auto;
 }
 
+.qtr-size {
+  width: 25%;
+  height: auto;
+}
+
 .center {
   display: block;
   margin-left: auto;
