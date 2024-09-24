@@ -134,7 +134,7 @@ The Central Limit Theorem (CLT) essentially guarantees that under certain condit
 ![](/assets/images/post4/img5.png){: .center }
 
 
-Image Source: [Illustration of Central Limit Theorem for a skewed population of values...](https://www.researchgate.net/figure/Illustration-of-Central-Limit-Theorem-for-a-skewed-population-of-values-Panel-A-shows-the_fig7_254276271)
+Image Source: [Illustration of Central Limit Theorem for a skewed population of values](https://www.researchgate.net/figure/Illustration-of-Central-Limit-Theorem-for-a-skewed-population-of-values-Panel-A-shows-the_fig7_254276271)
 
 
 The fact that the sampling distribution of means approximates a normal distribution implies that the difference between the means of the Test and Control groups will also follow a normal distribution.
@@ -585,7 +585,8 @@ For example, in the image below, the medians of both distributions are identical
 ![](/assets/images/post4/img17.jpg){: .center }
 
 
-Image Source: [The Mann Whitney U test (Wilcoxon Mann Whitney test) part 2/2 | exact p-value](https://www.youtube.com/watch?v=0qhJRtTgvUc) 
+Image Source: [The Mann Whitney U test (Wilcoxon Mann Whitney test) part 2/2 | exact p-value](https://www.youtube.com/watch?v=0qhJRtTgvUc)
+
 
 
 In short, the Mann-Whitney test can tell us if the distributions of two groups are different. However, it does not necessarily indicate that the medians of the distributions are different unless the distributions have the same shape. Inferring that the medians are different would require the additional assumption that the distributions are similarly shaped.
