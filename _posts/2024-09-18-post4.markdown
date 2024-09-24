@@ -868,9 +868,9 @@ So in contrast to Permutation tests, which assume that both the test and control
 
 As mentioned earlier, Monte Carlo methods are used to calculate statistical power for small samples in the Mann-Whitney test. This will be illustrated with the following example.
 
-An adjacent example for using Monte Carlo to calculate the minimum sample size is in this excellent video: 
+An adjacent example for using Monte Carlo to calculate the minimum sample size is [in this excellent video](https://www.youtube.com/watch?v=PW1fMtAn48M&feature=youtu.be) 
 
- ## Wrapping it up
+ ### Wrapping it up
 
 This essay covered the central concepts of Hypothesis Testing such as sampling variability, sampling distributions, statistical significance, Null and Alternative Hypothesis, statistical power, Type 1 and 2 errors, the Central Limit Theorem and the Law of Large Numbers. It then illustrated these concepts with specific tests such as z-tests for means and proportions, Mann-Whitney test; as well as simulation methods like Permutation Tests, Bootstrapping and Monte Carlo.
 
