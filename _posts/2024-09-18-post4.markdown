@@ -134,7 +134,8 @@ The Central Limit Theorem (CLT) essentially guarantees that under certain condit
 ![](/assets/images/post4/img5.png){: .center }
 
 
-Image Source: [Illustration of Central Limit Theorem for a skewed population of values... | Download Scientific Diagram](https://www.researchgate.net/figure/Illustration-of-Central-Limit-Theorem-for-a-skewed-population-of-values-Panel-A-shows-the_fig7_254276271) 
+Image Source: [Illustration of Central Limit Theorem for a skewed population of values...](https://www.researchgate.net/figure/Illustration-of-Central-Limit-Theorem-for-a-skewed-population-of-values-Panel-A-shows-the_fig7_254276271)
+
 
 The fact that the sampling distribution of means approximates a normal distribution implies that the difference between the means of the Test and Control groups will also follow a normal distribution.
 
