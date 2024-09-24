@@ -4,7 +4,7 @@ title: "The Fundamental Concepts of Hypothesis Testing"
 date: 2024-09-18
 categories: main 
 image: /assets/images/post4/img4.png 
-excerpt: "??"      
+excerpt: "This essay covers the central concepts of Hypothesis Testing such as sampling variability, sampling distributions, statistical significance, Null and Alternative Hypothesis, statistical power, Type 1 and 2 errors, the Central Limit Theorem and the Law of Large Numbers. It then illustrated these concepts with specific tests such as z-tests for means and proportions, Mann-Whitney test; as well as simulation methods like Permutation Tests, Bootstrapping and Monte Carlo. However we are only considering univariate tests. Multivariate tests will be explored in a future essay. There are also related concepts such as handling outliers, p-hacking, time to run tests, internal and external validity that will be tackled in future essays."      
 
 ---
 
@@ -636,16 +636,14 @@ Therefore, the power of the test is approximately 13.7%.
 There are a very large number of statistical tests depending on data type, sample size, number of groups, test statistic, type of comparison, number of dependent variables and so on. The internet is replete with flow charts that help determine which statistical test is appropriate for a given situation. A couple of these are shared below: 
 
 
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post4/img18.png){: .center }
 
 
 Image Source: [How to choose an appropriate statistical test](https://www.youtube.com/watch?v=dYJLUvo0Q6g&t=15s)
 
 
 
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img19.png){: .center }
 
 
 
@@ -659,15 +657,15 @@ In the following sections, we will explore the aforementioned methods and demons
 
 ### Permutation Tests
 
-**Permutation Tests** work by assuming the test and control groups come from the **same distribution**, which reflects the **Null Hypothesis**. Under this assumption, if we reshuffle and randomly reassign the data points between test and control groups, the resulting groups are statistically equivalent to the original ones, as they all come from the same underlying distribution. (Note: These reshuffled groups are the same size as the original.)
+Permutation Tests work by assuming the test and control groups come from the same distribution, which reflects the Null Hypothesis. Under this assumption, if we reshuffle and randomly reassign the data points between test and control groups, the resulting groups are statistically equivalent to the original ones, as they all come from the same underlying distribution. (Note: These reshuffled groups are the same size as the original.)
 
-The difference between the test statistic of the original test/control groups and that of the reshuffled groups is entirely due to **sampling variability**. The permutation test repeats this reshuffling and recalculation of the test statistic many times to create a **Null Distribution** of the test statistic.
+The difference between the test statistic of the original test/control groups and that of the reshuffled groups is entirely due to sampling variability. The permutation test repeats this reshuffling and recalculation of the test statistic many times to create a Null Distribution of the test statistic.
 
-Finally, the test compares the **observed test statistic** to this **generated** null distribution to calculate a **p-value**, which measures how likely the observed test statistic is under the null hypothesis. This tells us how extreme the observed test statistic is, providing evidence for or against the null hypothesis.
+Finally, the test compares the observed test statistic to this generated null distribution to calculate a p-value, which measures how likely the observed test statistic is under the null hypothesis. This tells us how extreme the observed test statistic is, providing evidence for or against the null hypothesis.
 
 It may be illuminating to see how Permutation Tests work by first considering a test and control group which comes from two well separated distributions and then considering the case where test and control groups come from overlapping distributions.
 
-Case 1: Permutation Test for the mean difference of well-separated distributions
+**Case 1: Permutation Test for the mean difference of well-separated distributions**
 
 Suppose our Control group follows a normal distribution with mean of 3 and standard deviation of 1, while the test group follows a normal distribution with mean of 8 and standard deviation of 1. These are the true population parameters that we are able to dictate since we are doing a simulation. 
 
@@ -677,7 +675,7 @@ This Original Control group has a mean of 3.02 and a standard deviation of 0.98;
 
 
 
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img20.png){: .center }
 
 
 
@@ -693,7 +691,7 @@ Even though the Reshuffled Control and Reshuffled Test data come from the same d
 
 
 
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img21.png){: .center }
 
 
 
@@ -703,11 +701,11 @@ In fact we do a total of 10,000 reshuffles to get the sampling distribution of t
 
 
 
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img22.png){: .center }
 
 
 
-Case 2: Permutation Test for the mean difference of overlapping distributions
+**Case 2: Permutation Test for the mean difference of overlapping distributions**
 
 We now consider the case when the Control and Test groups are not as well separated. This time suppose our true population parameters are as follows: the Control group follows a normal distribution with a mean of 3 and a standard deviation of 40. The Test group follows a normal distribution with a mean of 4 and a standard deviation of 40.
 
@@ -717,7 +715,7 @@ This Original Control group has a mean of 3.77 and a standard deviation of 39.15
 
 
 
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img23.png){: .center }
 
 
 
@@ -725,29 +723,27 @@ Reshuffling the data does not lead to a bimodal distribution in this case, which
 
 
 
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post4/img24.png){: .center }
 
 
 A total of 10,000 reshuffles yields the distribution of mean differences as can be seen in the plot below. Once again, the dashed red line indicates our original mean difference. This time however it does overlap with the sampling distribution of mean differences. To calculate the p-value, we measure the proportion of reshuffled mean differences that are as extreme or more extreme than the original observed mean difference, relative to the total number of reshuffled mean differences. The p-value turns out to be 0.083 in this case indicating that our observation is not statistically significant.
 
 
 
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post4/img25.png){: .center }
 
 
 In the examples above, we applied the Permutation Test to assess the difference in means, but it can be similarly applied to test differences in medians. The key assumption of Permutation Tests is that the data are exchangeable (i.e., identically distributed under the null hypothesis) and independent. Consequently, permutation tests may not perform well in cases of small sample sizes, multivariate data, time-series data, heavily skewed distributions, or non-independent data (such as clustered observations).
 
-**Bootstrapping (and Confidence Intervals)**
+### Bootstrapping (and Confidence Intervals)
 
 Having looked at Permutation Tests, we now turn our gaze on to another simulation method—bootstrapping. In the words of statistician [Phillip Good](https://en.wikipedia.org/wiki/Phillip_Good): "Permutations test hypotheses concerning distributions; bootstraps test hypotheses concerning parameters.” So whereas for permutation tests, we assume that under the null hypothesis, the test and control data come from the same distribution, bootstrapping makes no such assumption. Instead, bootstrapping assumes that each group (i.e., sample) represents its respective population. By resampling with replacement from the observed data, bootstrapping allows us to estimate the variability of a statistic (e.g., mean, median, or 90th percentile), providing insights into the population without needing to assume any specific underlying distribution.
 
 Resampling with replacement is fundamental to the concept of bootstrapping. Resampling without replacement would not allow us to maintain the same sample size as the original, which is why bootstrapping relies on resampling with replacement. By keeping the bootstrapped sample sizes consistent with the original, this method mimics the natural variability that occurs when sampling from a population, allowing us to approximate how the statistic would behave if we repeatedly sampled from the population. I do, however, have an open question regarding this process, but I will set it aside for now and revisit it later.
 
-Bootstrapping generates a sampling distribution of a statistic. From this distribution, we can calculate the **mean** of the statistic (i.e. the mean of the mean, median, or 90th percentile) and determine the range within which 95% of the resampled statistics lie around this mean. This range is known as the **confidence interval**, and it provides an estimate of the uncertainty around the statistic. Confidence intervals can also be used in hypothesis testing to assess whether a specific value (e.g., a null hypothesis parameter) falls within this range, offering a way to evaluate statistical significance without assuming any specific underlying distribution. All this shall be illustrated through the example below.
+Bootstrapping generates a sampling distribution of a statistic. From this distribution, we can calculate the mean of the statistic (i.e. the mean of the mean, median, or 90th percentile) and determine the range within which 95% of the resampled statistics lie around this mean. This range is known as the confidence interval, and it provides an estimate of the uncertainty around the statistic. Confidence intervals can also be used in hypothesis testing to assess whether a specific value (e.g., a null hypothesis parameter) falls within this range, offering a way to evaluate statistical significance without assuming any specific underlying distribution. All this shall be illustrated through the example below.
 
-Case 1: Bootstrapping for the mean difference of well-separated distributions
+**Case 1: Bootstrapping for the mean difference of well-separated distributions**
 
 In the previous section we had looked at applying the Permutation Test to a Control and Test Distribution drawn from two well separated population distributions.
 
@@ -757,7 +753,7 @@ In the chart below, we see the distribution of the bootstrapped sample means ove
 
 
 
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img26.png){: .center }
 
 
 
@@ -765,7 +761,7 @@ A closer look at the bootstrapped sampled means shows the mean of the bootstrapp
 
 
 
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img27.png){: .center }
 
 
 
@@ -773,21 +769,21 @@ We can also take a look at the distribution of the difference of the bootstrappe
 
 .
 
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img28.png){: .center }
 
 
 
-Case 2: Bootstrapping for the mean difference of overlapping distributions
+**Case 2: Bootstrapping for the mean difference of overlapping distributions**
 
 
 
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img29.png){: .center }
 
 
 
 
 
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img30.png){: .center }
 
 
 
@@ -795,7 +791,7 @@ In this case, we can see that the confidence intervals of the bootstrapped Contr
 
 
 
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img31.png){: .center }
 
 
 
@@ -803,7 +799,7 @@ We can also see that the confidence interval around the difference of the bootst
 
 Note that the results of bootstrapping is consistent with what we saw using Permutation Tests for Case 1 and 2 respectively.
 
-Case 3: Bootstrapping for the 90th percentile difference of overlapping distributions
+**Case 3: Bootstrapping for the 90th percentile difference of overlapping distributions**
 
 So far we have considered means as our statistic of interest just to illustrate how bootstrapping works. However bootstrapping is most useful when calculating statistics like percentiles, as mentioned earlier.
 
@@ -813,15 +809,14 @@ In the chart below, we see the distribution of the 90th percentiles of bootstrap
 
 
 
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+![](/assets/images/post4/img32.png){: .center }
 
 
 Since the confidence intervals of the 90th percentile of the bootstrapped Control and Test groups overlap, this indicates that there ***isn’t*** a statistically significant difference between the 90th percentile of the original Control and Test groups.
 
 
 
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img33.png){: .center }
 
 
 
@@ -829,7 +824,7 @@ The confidence interval around the difference of the 90th percentile of bootstra
 
 
 
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img34.png){: .center }
 
 
 
@@ -843,7 +838,7 @@ Comparison of parameter estimation for the Normal distribution using bootstrappi
 
 
 
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img35.png){: .center }
 
 
 
@@ -851,7 +846,7 @@ Comparison of parameter estimation for the Lognormal distribution using bootstra
 
 
 
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img36.png){: .center }
 
 
 
@@ -859,13 +854,13 @@ Comparison of parameter estimation for the Exponential distribution using bootst
 
 
 
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![](/assets/images/post4/img37.png){: .center }
 
 
 
 For now, I’ll adhere to the traditional approach of bootstrapping with replacement, which ensures sample size consistency and minimizes bias across a range of distributions. But the results of this simulation are compelling, and I plan to explore the implications of reduced sample size in more detail later.
 
-**Monte Carlo**
+### Monte Carlo
 
 Monte Carlo works by generating synthetic data according to known rules. Sometimes these rules may not be exactly known, but we still make an assumption for the purpose of generating synthetic data. This assumption doesn’t have to be correct in the real world but is used to approximate how the test behaves under certain conditions.
 
@@ -875,8 +870,8 @@ As mentioned earlier, Monte Carlo methods are used to calculate statistical powe
 
 An adjacent example for using Monte Carlo to calculate the minimum sample size is in this excellent video: 
 
- **Wrapping it up**
+ ## Wrapping it up
 
-This essay covered the central concepts of Hypothesis Testing such as sampling variability, sampling distributions, statistical significance, Null and Alternative Hypothesis, statistical power, Central Limit Theorem, Law of Large Numbers. It illustrated these concepts with specific tests such as z-tests for means and proportions, Mann-Whitney test; as well as simulation methods like Permutation Tests, Bootstrapping, Monte Carlo.
+This essay covered the central concepts of Hypothesis Testing such as sampling variability, sampling distributions, statistical significance, Null and Alternative Hypothesis, statistical power, Type 1 and 2 errors, the Central Limit Theorem and the Law of Large Numbers. It then illustrated these concepts with specific tests such as z-tests for means and proportions, Mann-Whitney test; as well as simulation methods like Permutation Tests, Bootstrapping and Monte Carlo.
 
 However we have only considered univariate tests. Multivariate tests will be explored in a future essay. There are also related concepts such as handling outliers, p-hacking, time to run tests, internal and external validity that will be tackled in future essays.
