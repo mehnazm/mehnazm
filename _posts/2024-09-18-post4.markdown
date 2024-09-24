@@ -175,7 +175,6 @@ In Hypothesis Testing, the rule of thumb is that any observation with less than 
 This means that when the Central Limit Theorem (CLT) applies and the distribution under the Null Hypothesis is normal with a mean of zero, any observation more than two standard errors away from the mean is typically considered statistically significant.
 
 
-
 ![](/assets/images/post4/img7.png){: .half-size.center }
 
 
@@ -340,6 +339,8 @@ $$
 z_{\text{MDE}} = \frac{\text{MDE}}{\text{Standard Error}} = \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}
 $$
 
+![](/assets/images/post4/img11.png){: .center }
+
 Beta is therefore calculated as:
 
 $$
@@ -353,6 +354,8 @@ $$
 $$
 
 Given that Statistical Power is conventionally fixed at 80% and alpha is set to 0.05, we can examine the relationship between MDE and the number of samples for a given sample standard deviation \\( s \\) in the accompanying chart.
+
+![](/assets/images/post4/img12.png){: .center }
 
 ### Two Sample z-test for Proportions
 
@@ -487,9 +490,15 @@ The Mann-Whitney test is applicable to continuous or ordinal data. Due to its ap
 
 Let us imagine we have 6 visitors in the Control group who are exposed to the old module and 6 visitors in the Test group who are exposed to the new module. The GMV/visitor for each visitor in each group is illustrated below. 
 
+![](/assets/images/post4/img13.png){: .center }
+
 As mentioned, the test involves pooling the observations from the two samples into one combined sample, keeping track of which sample each observation comes from, and then ranking lowest to highest from 1 to \\(n_{\text{control}} = n_{\text{test}}\\), respectively.
 
+![](/assets/images/post4/img14.png){: .center }
+
 Next we compare the sum of each sample’s across-group rank to its within group rank.
+
+![](/assets/images/post4/img15.png){: .center }
 
 A data point's across-group rank is higher than its within-group rank when a lower-valued data point exists in the other group (which pushes the given data point to a higher rank). The difference between the sum of across-group and within-group ranks reflects the number of times the other group's values are smaller than those in the given group. This difference effectively measures how much one group's values tend to be larger than the other's.
 
@@ -499,6 +508,8 @@ Similarly the datapoint of 11.5 in the Control group has an across-group rank of
 In this way there are 11 instances when the Test group datapoint is smaller than the Control group datapoint, as reflected in the U Statistic of 11 for the Control group.
 
 In this way, there are 11 instances where the Test group’s data point is smaller than the Control group’s, reflected in the U Statistic of 11 for the Control group.
+
+![](/assets/images/post4/img16.png){: .center }
 
 The U Statistic for the Test group is 25, implying that there are 25 instances where there is a Control group datapoint smaller than a Test group datapoint.
 
@@ -569,6 +580,11 @@ The Mann-Whitney U test can detect differences between distributions, but it doe
 This is an important caveat when using non-parametric tests like Mann-Whitney, as they test for differences in ranks and distributions rather than focusing solely on central tendencies like the median.
 
 For example, in the image below, the medians of both distributions are identical. However, the null hypothesis would still be rejected in this case because the distributions are skewed in different directions. 
+
+![](/assets/images/post4/img17.png){: .center }
+
+
+Image Source: [The Mann Whitney U test (Wilcoxon Mann Whitney test) part 2/2 | exact p-value](https://www.youtube.com/watch?v=0qhJRtTgvUc) 
 
 In short, the Mann-Whitney test can tell us if the distributions of two groups are different. However, it does not necessarily indicate that the medians of the distributions are different unless the distributions have the same shape. Inferring that the medians are different would require the additional assumption that the distributions are similarly shaped.
 
