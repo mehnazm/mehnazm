@@ -585,7 +585,7 @@ For example, in the image below, the medians of both distributions are identical
 ![](/assets/images/post4/img17.jpg){: .center }
 
 
-Image Source: [The Mann Whitney U test (Wilcoxon Mann Whitney test) part 2/2 | exact p-value](https://www.youtube.com/watch?v=0qhJRtTgvUc)
+Image Source: [The Mann Whitney U test (Wilcoxon Mann Whitney test)](https://www.youtube.com/watch?v=0qhJRtTgvUc)
 
 
 
