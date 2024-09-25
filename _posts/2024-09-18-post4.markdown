@@ -714,7 +714,7 @@ Drawing 1000 samples from the Control and Test populations respectively gives us
 This Original Control group has a mean of 3.77 and a standard deviation of 39.15; while this Original Test group has a mean of 6.83 and a standard deviation of 39.88. The difference between the means of the original data is 3.06.
 
 
-![](/assets/images/post4/img20.png){: .half-size.center }
+![](/assets/images/post4/img23.png){: .half-size.center }
 
 
 
