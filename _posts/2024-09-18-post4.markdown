@@ -84,7 +84,7 @@ When a change has a real effect, it alters the population distribution of the gr
 
 
 
-Continuing the example from earlier: initially, both the Control and Test groups have the same population distribution of 100 visitors with GMVs ranging from $0 to $80, though their sample distributions may differ. By the end of the test, if the new module has a genuine impact, the Test group’s population distribution (and consequently its sampling distribution) will have shifted, while the Control group’s distributions remain consistent with those observed before the test.
+Continuing the example from earlier: initially, both the Control and Test groups have the same population distribution of 10,000 visitors with GMVs ranging from $20 to $180, though their sample distributions may differ. By the end of the test, if the new module has a genuine impact, the Test group’s population distribution (and consequently its sampling distribution) will have shifted, while the Control group’s distributions remain consistent with those observed before the test.
 
 In summary, when we talk about genuine impact, we are referring to changes in the underlying population parameters due to the tested intervention. These population parameters are not directly observable and must be estimated from sample statistics. However, as we’ve seen, sample statistics are distributed across a sampling distribution, leading to potentially noisy comparisons.
 
