@@ -675,7 +675,7 @@ This Original Control group has a mean of 3.02 and a standard deviation of 0.98;
 
 
 
-![](/assets/images/post4/img20.png){: .center }
+![](/assets/images/post4/img20.png){: .half-size.center }
 
 
 
@@ -870,7 +870,7 @@ As mentioned earlier, Monte Carlo methods are used to calculate statistical powe
 
 An adjacent example for using Monte Carlo to calculate the minimum sample size is [in this excellent video](https://www.youtube.com/watch?v=PW1fMtAn48M&feature=youtu.be) 
 
- ### Wrapping it up
+### Wrapping it up
 
 This essay covered the central concepts of Hypothesis Testing such as sampling variability, sampling distributions, statistical significance, Null and Alternative Hypothesis, statistical power, Type 1 and 2 errors, the Central Limit Theorem and the Law of Large Numbers. It then illustrated these concepts with specific tests such as z-tests for means and proportions, Mann-Whitney test; as well as simulation methods like Permutation Tests, Bootstrapping and Monte Carlo.
 
