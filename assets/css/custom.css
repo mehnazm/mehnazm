@@ -26,6 +26,7 @@
 .post-summary-content-cell {
   padding-left: 20px;
   text-align: left; /* Left-align the content */
+  font-size: inherit; /* This makes the link text inherit the font size of the paragraph */
 }
 
 .post-summary h2 {
