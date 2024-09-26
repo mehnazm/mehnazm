@@ -342,13 +342,13 @@ $$
 
 ![](/assets/images/post4/img11.png){: .center }
 
-Beta is therefore calculated as:
+Beta, for a right tailed test as in the image above, is therefore calculated as:
 
 $$
 \beta = P\left(z < z_{\alpha} - z_{\text{MDE}}\right)
 $$
 
-And Statistical Power is:
+And the corresponding Statistical Power is:
 
 $$
 \text{Statistical Power} = 1 - \beta = 1 - P\left(z < z_{\alpha} - \frac{\text{MDE}}{\sqrt{\frac{s^2_{\text{test}}}{n_{\text{test}}} + \frac{s^2_{\text{control}}}{n_{\text{control}}}}}\right)
@@ -357,6 +357,12 @@ $$
 Given that Statistical Power is conventionally fixed at 80% and alpha is set to 0.05, we can examine the relationship between MDE and the number of samples for a given sample standard deviation \\( s \\) in the accompanying chart.
 
 ![](/assets/images/post4/img12.png){: .center }
+
+Note that for a two-tailed test, the formula for beta changes to:
+
+$$
+\beta = P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) + P\left(z > - z_{\alpha/2} + z_{\text{MDE}}\right)
+$$
 
 ### Two Sample z-test for Proportions
 
