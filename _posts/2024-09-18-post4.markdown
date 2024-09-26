@@ -647,7 +647,7 @@ From Z-tables, the probability of obtaining a Z-score less than -1.095 is approx
 
 Therefore, the power of the test is approximately 13.7%.
 
-On the other hand, the formula for statistical power for a two tailed test = \\(1 - (P(Z < Z_{\alpha/2} - Z_{\text{MDE}}) + P(Z > -Z_{\alpha/2} + Z_{\text{MDE}}))\\) = P(Z > Z_{\text{MDE} - Z_{\alpha/2}) + P(Z < Z_{\alpha/2} - Z_{\text{MDE})
+On the other hand, the formula for statistical power for a two tailed test = \\(1 - (P(Z < Z_{\alpha/2} - Z_{\text{MDE}}) + P(Z > -Z_{\alpha/2} + Z_{\text{MDE}})) = P(Z > Z_{\text{MDE} - Z_{\alpha/2}) + P(Z < Z_{\alpha/2} - Z_{\text{MDE}) \\)
 
 ### Family of Hypothesis Tests
 
