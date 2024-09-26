@@ -364,6 +364,8 @@ $$
 \beta = P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) + P\left(z > - z_{\alpha/2} + z_{\text{MDE}}\right)
 $$
 
+Although not shown, in this case, the Statistical Power and the relationship between MDE and number of samples would also change accordingly. 
+
 ### Two Sample z-test for Proportions
 
 This is essentially the same as the two-sample z-test for means, in the sense that it deals with independent groups, requires the sampling distribution to be normal, and determines how extreme the observed data is with respect to the distribution under the Null Hypothesis, by calculating the z-statistic and p-value.
@@ -443,7 +445,7 @@ $$
 
 #### Z-statistic for the Difference in Proportions:
 
-As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis:
+As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis. Below is the formula for the Statistical Power of a right-tailed test.
 
 $$
 
@@ -453,7 +455,7 @@ $$
 
 #### Statistical Power:
 
-The formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
+The corresponding formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
 
 $$
 
@@ -479,6 +481,14 @@ $$
 $$
 
 - \\( \text{MDE} \\) is the Minimum Detectable Effect, expressed as the difference in proportions you want to detect.
+
+Once again note that the formula for a two-tailed test would be:
+
+$$
+
+\text{Statistical Power} = 1 - \beta = 1 - (P\left(z < z_{\alpha} - z_{\text{MDE}}\right) + P\left(z > -z_{\alpha} + z_{\text{MDE}}\right))
+
+$$
 
 ### Other Hypothesis Tests
 
