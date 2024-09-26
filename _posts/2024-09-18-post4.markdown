@@ -342,7 +342,7 @@ $$
 
 ![](/assets/images/post4/img11.png){: .center }
 
-Beta, for a right tailed test as in the image above, is therefore calculated as:
+Beta (for a one-tailed test) is therefore calculated as:
 
 $$
 \beta = P\left(z < z_{\alpha} - z_{\text{MDE}}\right)
@@ -358,10 +358,10 @@ Given that Statistical Power is conventionally fixed at 80% and alpha is set to 
 
 ![](/assets/images/post4/img12.png){: .center }
 
-Note that for a two-tailed test, the formula for beta changes to:
+Note that for a two-tailed test, the formula for beta changes to the below i.e. the alpha is halved to account for both tails of the Null Hypothesis.
 
 $$
-\beta = P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) + P\left(z > - z_{\alpha/2} + z_{\text{MDE}}\right)
+\beta = P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right)
 $$
 
 Although not shown, in this case, the Statistical Power and the relationship between MDE and number of samples would also change accordingly. 
@@ -445,7 +445,7 @@ $$
 
 #### Z-statistic for the Difference in Proportions:
 
-As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis. Below is the formula for the Statistical Power of a right-tailed test.
+As before, the z-statistic is calculated by dividing the observed difference by the standard error, to measure how many standard errors the observed difference is from the expected difference under the Null Hypothesis. Below is the formula for the Statistical Power of a one tailed test.
 
 $$
 
@@ -455,7 +455,7 @@ $$
 
 #### Statistical Power:
 
-The corresponding formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
+The formula for Statistical Power in the case of the difference in proportions is fundamentally similar to that in the case of the difference in means:
 
 $$
 
@@ -486,7 +486,7 @@ Once again note that the formula for a two-tailed test would be:
 
 $$
 
-\text{Statistical Power} = 1 - \beta = 1 - (P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) + P\left(z > -z_{\alpha/2} + z_{\text{MDE}}\right))
+\text{Statistical Power} = 1 - \beta = 1 - P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right)
 
 $$
 
@@ -635,19 +635,27 @@ $$
 Z_{\text{MDE}} = \frac{U_{\text{MDE}} - \mu_U}{\sigma_u} = 0.865
 $$
 
-In the section for z-test, we have seen that the formula for statistical power for a right tailed test = \\(1 - P(Z < Z_{\alpha} - Z_{\text{MDE}}) = P(Z < Z_{\text{MDE}} - Z_{\alpha})\\)
+In the section for z-test, we have seen that the formula for statistical power for a right tailed test = \\(1 - P(Z < Z_{\alpha} - Z_{\text{MDE}}\\)
 
-For a right tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
+For a one tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.64.
 
 $$
-Z_{\text{Power}} = Z_{\text{MDE}} - Z_{\alpha} = 0.865 - 1.96 = -1.095
+Z_{\text{\alpha}} - Z_{\MDE} = 1.64 - 0.865 = 0.775
 $$
 
-From Z-tables, the probability of obtaining a Z-score less than -1.095 is approximately 0.137.
+From Z-tables, the probability of obtaining a Z-score less than 0.775 is approximately 0.78.
 
-Therefore, the power of the test is approximately 13.7%.
+Therefore, the power of the test is approximately 1 - 0.78 = 0.22 i.e. 22%
 
-On the other hand, the formula for statistical power for a two tailed test = \\(1 - (P(Z < Z_{\alpha/2} - Z_{\text{MDE}}) + P(Z > -Z_{\alpha/2} + Z_{\text{MDE}})) = P(Z > Z_{\text{MDE} - Z_{\alpha/2}) + P(Z < Z_{\alpha/2} - Z_{\text{MDE}) \\)
+On the other hand, for a two tailed test, the critical value of \\(Z_{\alpha/2}\\) for an overall 5% significance level is 1.96.
+
+$$
+Z_{\text{\alpha/2}} - Z_{\MDE} = 1.96 - 0.865 = 1.095
+$$
+
+therefore  \\((P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) = 0.863 \\)
+
+and Statistical Power = 1 - 0.863 = 0.137 i.e. 13.7%
 
 ### Family of Hypothesis Tests
 
@@ -883,7 +891,56 @@ Monte Carlo works by generating synthetic data according to known rules. Sometim
 
 So in contrast to Permutation tests, which assume that both the test and control groups come from the same distribution, and Bootstrapping, which assumes the observed data is representative of the population, Monte Carlo methods aim to mimic the data-generating process itself. By generating synthetic data, we can analyze the resulting statistics and relationships of interest.
 
-As mentioned earlier, Monte Carlo methods are used to calculate statistical power for small samples in the Mann-Whitney test. This will be illustrated with the following example.
+As mentioned earlier, Monte Carlo methods are used to calculate statistical power for small samples in the Mann-Whitney test. This will be illustrated by revisiting the example from the Mann-Whitney test section where we considered sample size of 6 for both test and control group, as well as a probability of superiority of 65%.
+
+We perform Monte Carlo as follows:
+
+1. **Generate Distributions:** We first create two distributions reflecting the stated probability of superiority.
+2. **Repeated Testing:** We then conduct the Mann-Whitney U test multiple times (for example, 10,000 iterations), using randomly selected groups of six samples from each distribution.
+3. **Evaluate Power:** We assess the proportion of these tests where the null hypothesis (that the distributions are identical) is rejected. This provides an estimate of the test's power.
+
+It's important to note that while we assume the generated distributions are normal for simplicity, the Monte Carlo method can be adapted to work with any type of distribution.
+
+The code for the test is as follows:
+
+<pre><code class="language-python">
+import numpy as np
+import scipy.stats as stats
+
+def generate_data(n_control, n_test, prob_superiority):
+    # Control group: Standard Normal Distribution
+    control = np.random.normal(0, 1, n_control)
+    # Test group: Shifted distribution based on probability of superiority
+    # Finding the required shift using the inverse of the cumulative distribution function
+    shift = stats.norm.ppf(prob_superiority)
+    test = np.random.normal(shift, 1, n_test)
+    return control, test
+
+def perform_mann_whitney(control, test):
+    # Perform Mann-Whitney U test
+    u_stat, p_value = stats.mannwhitneyu(control, test, alternative='two-sided')
+    return p_value
+
+def monte_carlo_simulation(n_control, n_test, prob_superiority, n_simulations=10000, alpha=0.05):
+    significant_count = 0
+    for _ in range(n_simulations):
+        control, test = generate_data(n_control, n_test, prob_superiority)
+        p_value = perform_mann_whitney(control, test)
+        if p_value < alpha:
+            significant_count += 1
+    return significant_count / n_simulations
+
+# Simulation parameters
+n_control = n_test = 6
+prob_superiority = 0.65
+n_simulations = 10000
+alpha = 0.05  # Significance level
+
+# Run Monte Carlo simulation
+power = monte_carlo_simulation(n_control, n_test, prob_superiority, n_simulations, alpha)
+print(f"Estimated power of the test: {power:.4f}")
+
+</code></pre>
 
 An adjacent example for using Monte Carlo to calculate the minimum sample size is [in this excellent video](https://www.youtube.com/watch?v=PW1fMtAn48M&feature=youtu.be) 
 
