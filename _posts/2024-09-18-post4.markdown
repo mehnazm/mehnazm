@@ -486,7 +486,7 @@ Once again note that the formula for a two-tailed test would be:
 
 $$
 
-\text{Statistical Power} = 1 - \beta = 1 - (P\left(z < z_{\alpha} - z_{\text{MDE}}\right) + P\left(z > -z_{\alpha} + z_{\text{MDE}}\right))
+\text{Statistical Power} = 1 - \beta = 1 - (P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) + P\left(z > -z_{\alpha/2} + z_{\text{MDE}}\right))
 
 $$
 
@@ -635,9 +635,9 @@ $$
 Z_{\text{MDE}} = \frac{U_{\text{MDE}} - \mu_U}{\sigma_u} = 0.865
 $$
 
-In the section for z-test, we have seen that the formula for statistical power = \\(1 - P(Z < Z_{\alpha} - Z_{\text{MDE}}) = P(Z < Z_{\text{MDE}} - Z_{\alpha})\\)
+In the section for z-test, we have seen that the formula for statistical power for a right tailed test = \\(1 - P(Z < Z_{\alpha} - Z_{\text{MDE}}) = P(Z < Z_{\text{MDE}} - Z_{\alpha})\\)
 
-For a two-tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
+For a right tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.96.
 
 $$
 Z_{\text{Power}} = Z_{\text{MDE}} - Z_{\alpha} = 0.865 - 1.96 = -1.095
@@ -646,6 +646,8 @@ $$
 From Z-tables, the probability of obtaining a Z-score less than -1.095 is approximately 0.137.
 
 Therefore, the power of the test is approximately 13.7%.
+
+On the other hand, the formula for statistical power for a two tailed test = \\(1 - (P(Z < Z_{\alpha/2} - Z_{\text{MDE}}) + P(Z > -Z_{\alpha/2} + Z_{\text{MDE}}))\\) = P(Z > Z_{\text{MDE} - Z_{\alpha/2}) + P(Z < Z_{\alpha/2} - Z_{\text{MDE})
 
 ### Family of Hypothesis Tests
 
