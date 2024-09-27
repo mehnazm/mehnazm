@@ -826,6 +826,7 @@ In this case, we can see that the confidence intervals of the bootstrapped Contr
 We can also see that the confidence interval around the difference of the bootstrapped sample means includes zero, meaning that the difference between the Control and Test groups is not statistically significant. 
 
 Note that the results of bootstrapping is consistent with what we saw using Permutation Tests for Case 1 and 2 respectively.
+[Also note the code for bootstrapping means and generating the associated charts is here.](https://docs.google.com/document/d/10u4F9IaGyZIk5boJNAPTjRx2rsnEyoPBMedc6-Whslo/edit?usp=sharing)
 
 **Case 3: Bootstrapping for the 90th percentile difference of overlapping distributions**
 
@@ -854,7 +855,7 @@ The confidence interval around the difference of the 90th percentile of bootstra
 
 ![](/assets/images/post4/img34.png){: .center }
 
-
+[The code for bootstrapping means and generating the associated charts is here.](https://docs.google.com/document/d/1VvqNybd5z3P3bBL1NloF-hPLPNuVb1lK0qkSylqTLNk/edit?usp=sharing)
 
 Sampling with replacement or without replacement
 
@@ -887,6 +888,8 @@ Comparison of parameter estimation for the Exponential distribution using bootst
 
 
 For now, I’ll adhere to the traditional approach of bootstrapping with replacement, which ensures sample size consistency and minimizes bias across a range of distributions. But the results of this simulation are compelling, and I plan to explore the implications of reduced sample size in more detail later.
+
+[The code for sampling with or without replacement is here.](https://docs.google.com/document/d/1A4c99vuxVYUHsUwuYFPq9_PugLiriNlf-ukeaLs_3Gc/edit?usp=sharing)
 
 ### Monte Carlo
 
