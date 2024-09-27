@@ -640,7 +640,7 @@ In the section for z-test, we have seen that the formula for statistical power f
 For a one tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.64.
 
 $$
-P\left(z_{\alpha} - z_{\text{MDE}}\right) = 1.64 - 0.865 = 0.775
+\left(z_{\alpha} - z_{\text{MDE}}\right) = 1.64 - 0.865 = 0.775
 $$
 
 
@@ -651,7 +651,7 @@ Therefore, the power of the test is approximately 1 - 0.78 = 0.22 i.e. 22%
 On the other hand, for a two tailed test, the critical value of \\(Z_{\alpha/2}\\) for an overall 5% significance level is 1.96.
 
 $$
-P\left(z_{\alpha/2} - z_{\text{MDE}}\right) = 1.96 - 0.865 = 1.095
+\left(z_{\alpha/2} - z_{\text{MDE}}\right) = 1.96 - 0.865 = 1.095
 $$
 
 therefore  \\((P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) = 0.863 \\)
