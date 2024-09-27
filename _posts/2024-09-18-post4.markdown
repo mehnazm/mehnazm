@@ -640,8 +640,9 @@ In the section for z-test, we have seen that the formula for statistical power f
 For a one tailed test, the critical value of \\(Z_{\alpha}\\) for a 5% significance level is 1.64.
 
 $$
-Z_{\text{\alpha}} - Z_{\MDE} = 1.64 - 0.865 = 0.775
+P\left(z_{\alpha} - z_{\text{MDE}}\right) = 1.64 - 0.865 = 0.775
 $$
+
 
 From Z-tables, the probability of obtaining a Z-score less than 0.775 is approximately 0.78.
 
@@ -650,7 +651,7 @@ Therefore, the power of the test is approximately 1 - 0.78 = 0.22 i.e. 22%
 On the other hand, for a two tailed test, the critical value of \\(Z_{\alpha/2}\\) for an overall 5% significance level is 1.96.
 
 $$
-Z_{\text{\alpha/2}} - Z_{\MDE} = 1.96 - 0.865 = 1.095
+P\left(z_{\alpha/2} - z_{\text{MDE}}\right) = 1.96 - 0.865 = 1.095
 $$
 
 therefore  \\((P\left(z < z_{\alpha/2} - z_{\text{MDE}}\right) = 0.863 \\)
@@ -939,7 +940,6 @@ alpha = 0.05  # Significance level
 # Run Monte Carlo simulation
 power = monte_carlo_simulation(n_control, n_test, prob_superiority, n_simulations, alpha)
 print(f"Estimated power of the test: {power:.4f}")
-
 </code></pre>
 
 An adjacent example for using Monte Carlo to calculate the minimum sample size is [in this excellent video](https://www.youtube.com/watch?v=PW1fMtAn48M&feature=youtu.be) 
